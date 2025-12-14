@@ -2,17 +2,18 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#36454f",   // Main theme
+        primary: "#36454f",
+        accent: "#d4af37",
         cardDark: "#2f3e49",
         cardLight: "#455a64",
-        accent: "#d4af37",    // Buttons / highlights
+        white: "#ffffff",
       },
     },
   },
   plugins: [],
-}
+};
