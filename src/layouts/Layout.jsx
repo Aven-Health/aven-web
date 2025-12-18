@@ -1,16 +1,19 @@
-import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import { useAuth } from "../context/AuthContext";
+import Navbar from "../components/Navbar";
 
 export default function Layout({ children }) {
-  const { user } = useAuth();
-
   return (
-    <div className="flex flex-col min-h-screen bg-primary text-white">
-      <Navbar isLoggedIn={!!user} />
-      <main className="flex-grow">{children}</main>
-      <Footer />
+    <div className="min-h-screen flex flex-col bg-primary text-white">
+      <Navbar />
+
+      {/* Main content */}
+      <main className="flex-1 pt-20 px-6 max-w-7xl mx-auto w-full">
+        {children}
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-accent/30 py-6 mt-16 text-center text-sm text-gray-300">
+        © {new Date().getFullYear()} AVEN Health. All rights reserved.
+      </footer>
     </div>
   );
 }
