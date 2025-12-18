@@ -11,7 +11,6 @@ export default {
         accent: "#d4af37",
         cardDark: "#2f3e49",
         cardLight: "#455a64",
-        white: "#ffffff",
       },
     },
   },
