@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
-import { AuthProvider } from "./context/AuthContext";
 
 import Home from "./pages/Home.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
@@ -13,48 +12,48 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
 import MeetTheTeam from "./pages/MeetTheTeam.jsx";
 
+// Services related pages (add these pages/components accordingly)
+import DoctorDirectory from "./pages/DoctorDirectory.jsx";
+import DoctorProfile from "./pages/DoctorProfile.jsx";
+import AppointmentBooking from "./pages/AppointmentBooking.jsx";
+import PharmacyDirectory from "./pages/PharmacyDirectory.jsx";
+import CommunityFeed from "./pages/CommunityFeed.jsx";
+import CentralSearch from "./pages/CentralSearch.jsx";
+
+// Auth pages
 import SignIn from "./pages/SignIn.jsx";
 import SignUp from "./pages/SignUp.jsx";
-
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
-
-// Example of a protected page (you can protect any page similarly)
-import AppointmentBooking from "./pages/AppointmentBooking.jsx";
 
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <Layout>
-          <Routes>
-            {/* Public routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/our-app" element={<OurApp />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/how-it-works" element={<HowItWorks />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-conditions" element={<TermsConditions />} />
-            <Route path="/meet-the-team" element={<MeetTheTeam />} />
+      <Layout>
+        <Routes>
+          {/* Main pages */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/our-app" element={<OurApp />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/meet-the-team" element={<MeetTheTeam />} />
 
-            <Route path="/sign-in" element={<SignIn />} />
-            <Route path="/sign-up" element={<SignUp />} />
+          {/* Services pages */}
+          <Route path="/doctors" element={<DoctorDirectory />} />
+          <Route path="/doctors/:id" element={<DoctorProfile />} />
+          <Route path="/appointment-booking" element={<AppointmentBooking />} />
+          <Route path="/pharmacies" element={<PharmacyDirectory />} />
+          <Route path="/community-feed" element={<CommunityFeed />} />
+          <Route path="/search" element={<CentralSearch />} />
 
-            {/* Protected routes */}
-            <Route
-              path="/appointments"
-              element={
-                <ProtectedRoute>
-                  <AppointmentBooking />
-                </ProtectedRoute>
-              }
-            />
-            {/* Add other protected routes as needed */}
-          </Routes>
-        </Layout>
-      </AuthProvider>
+          {/* Authentication */}
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }
