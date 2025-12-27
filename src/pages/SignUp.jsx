@@ -1,107 +1,70 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
-  const { signUp, error, loading } = useAuth();
-  const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [formError, setFormError] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormError(null);
-
-    if (!name || !email || !password || !confirmPassword) {
-      setFormError("Please fill all fields");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setFormError("Passwords do not match");
-      return;
-    }
-
-    try {
-      await signUp({ name, email, password });
-      navigate("/");
-    } catch (err) {
-      setFormError(err);
-    }
-  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-primary px-4">
-      <div className="bg-cardDark p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-white text-3xl font-bold mb-6 text-center">Sign Up</h2>
-        {formError && <p className="text-accent mb-4 text-center font-semibold">{formError}</p>}
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <label className="block">
-            <span className="text-white font-semibold">Full Name</span>
+    <section className="min-h-[60vh] flex items-center justify-center">
+      <div className="w-full max-w-md bg-cardDark p-8 rounded-xl shadow-lg">
+        <h1 className="text-3xl font-bold text-white mb-6 text-center">
+          Create Account
+        </h1>
+
+        <form className="space-y-5">
+          <div>
+            <label className="block text-sm mb-1 text-gray-300">
+              Full Name
+            </label>
             <input
               type="text"
-              className="mt-2 block w-full p-3 rounded-md border border-accent bg-cardLight text-white placeholder-accent focus:outline-none focus:ring-2 focus:ring-accent"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="John Doe"
-              required
+              className="w-full px-4 py-3 rounded-lg bg-cardLight text-white focus:outline-none focus:ring-2 focus:ring-accent"
             />
-          </label>
-          <label className="block">
-            <span className="text-white font-semibold">Email</span>
+          </div>
+
+          <div>
+            <label className="block text-sm mb-1 text-gray-300">
+              Email Address
+            </label>
             <input
               type="email"
-              className="mt-2 block w-full p-3 rounded-md border border-accent bg-cardLight text-white placeholder-accent focus:outline-none focus:ring-2 focus:ring-accent"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              required
-              autoComplete="username"
+              className="w-full px-4 py-3 rounded-lg bg-cardLight text-white focus:outline-none focus:ring-2 focus:ring-accent"
             />
-          </label>
-          <label className="block">
-            <span className="text-white font-semibold">Password</span>
+          </div>
+
+          <div>
+            <label className="block text-sm mb-1 text-gray-300">
+              Password
+            </label>
             <input
               type="password"
-              className="mt-2 block w-full p-3 rounded-md border border-accent bg-cardLight text-white placeholder-accent focus:outline-none focus:ring-2 focus:ring-accent"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-              required
-              autoComplete="new-password"
+              className="w-full px-4 py-3 rounded-lg bg-cardLight text-white focus:outline-none focus:ring-2 focus:ring-accent"
             />
-          </label>
-          <label className="block">
-            <span className="text-white font-semibold">Confirm Password</span>
-            <input
-              type="password"
-              className="mt-2 block w-full p-3 rounded-md border border-accent bg-cardLight text-white placeholder-accent focus:outline-none focus:ring-2 focus:ring-accent"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="••••••••"
-              required
-              autoComplete="new-password"
-            />
-          </label>
+          </div>
+
           <button
             type="submit"
-            disabled={loading}
-            className="w-full py-3 mt-4 bg-accent text-primary font-semibold rounded-md hover:bg-yellow-500 disabled:opacity-50 transition"
+            className="w-full bg-accent text-primary py-3 rounded-lg font-semibold hover:opacity-90 transition"
           >
-            {loading ? "Signing up..." : "Sign Up"}
+            Sign Up
           </button>
         </form>
-        <p className="mt-6 text-center text-white">
+
+        <p className="mt-6 text-center text-sm text-gray-300">
           Already have an account?{" "}
-          <Link to="/sign-in" className="text-accent underline hover:text-yellow-400">
+          <Link to="/sign-in" className="text-accent hover:underline">
             Sign In
           </Link>
         </p>
       </div>
-    </div>
+    </section>
   );
 }

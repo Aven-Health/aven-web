@@ -1,45 +1,72 @@
-import { useState } from "react";
-
-const mockDoctors = [
-  { id: 1, name: "Dr. Sarah Johnson", specialty: "Cardiology", rating: 4.8 },
-  { id: 2, name: "Dr. Mike Lee", specialty: "Dermatology", rating: 4.5 },
-  { id: 3, name: "Dr. Angela Smith", specialty: "Pediatrics", rating: 4.7 },
-  { id: 4, name: "Dr. David Kim", specialty: "General Medicine", rating: 4.3 },
-];
+import { Link } from "react-router-dom";
+import doc1 from "../assets/appointment01.png";
+import doc2 from "../assets/appointment02.png";
+import doc3 from "../assets/appointment03.png";
 
 export default function DoctorDirectory() {
-  const [search, setSearch] = useState("");
-
-  const filteredDoctors = mockDoctors.filter(
-    (doc) =>
-      doc.name.toLowerCase().includes(search.toLowerCase()) ||
-      doc.specialty.toLowerCase().includes(search.toLowerCase())
-  );
+  const doctors = [
+    {
+      id: 1,
+      name: "Dr. Mathias",
+      specialty: "General Practitioner",
+      location: "Nairobi",
+      availability: "Available Today",
+      image: doc1,
+    },
+    {
+      id: 2,
+      name: "Dr. Safia Ahmed",
+      specialty: "Mental Health Specialist",
+      location: "Telehealth",
+      availability: "Available Tomorrow",
+      image: doc2,
+    },
+    {
+      id: 3,
+      name: "Dr. Paul Njoroge",
+      specialty: "Chronic Care Specialist",
+      location: "Westlands",
+      availability: "Available This Week",
+      image: doc3,
+    },
+  ];
 
   return (
-    <section className="max-w-6xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold text-white">Doctor Directory</h1>
+    <section className="space-y-10">
+      <header className="text-center">
+        <h1 className="text-4xl font-bold">Find a Doctor</h1>
+        <p className="text-gray-300 max-w-2xl mx-auto">
+          Browse verified healthcare professionals and book appointments easily.
+        </p>
+      </header>
 
-      <input
-        type="text"
-        placeholder="Search by name or specialty"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full max-w-md p-3 rounded bg-cardLight text-white placeholder-gray-400 focus:outline-accent"
-      />
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {doctors.map((doc) => (
+          <div
+            key={doc.id}
+            className="bg-cardDark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src={doc.image}
+              alt={doc.name}
+              className="h-48 w-full object-cover"
+            />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredDoctors.length > 0 ? (
-          filteredDoctors.map(({ id, name, specialty, rating }) => (
-            <div key={id} className="bg-cardDark p-6 rounded-lg shadow hover:shadow-lg transition">
-              <h2 className="text-xl font-semibold text-white">{name}</h2>
-              <p className="text-accent font-medium">{specialty}</p>
-              <p className="text-gray-300">Rating: {rating} ★</p>
+            <div className="p-6 space-y-2">
+              <h3 className="text-xl font-semibold">{doc.name}</h3>
+              <p className="text-accent text-sm">{doc.specialty}</p>
+              <p className="text-gray-300 text-sm">{doc.location}</p>
+              <p className="text-green-400 text-sm">{doc.availability}</p>
+
+              <Link
+                to={`/doctors/${doc.id}`}
+                className="inline-block mt-4 px-4 py-2 bg-accent text-primary rounded-md font-semibold"
+              >
+                View Profile
+              </Link>
             </div>
-          ))
-        ) : (
-          <p className="text-gray-400">No doctors found.</p>
-        )}
+          </div>
+        ))}
       </div>
     </section>
   );

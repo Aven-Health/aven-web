@@ -1,128 +1,65 @@
-import { useState } from "react";
-
-const doctors = [
-  { id: 1, name: "Dr. Sarah Johnson" },
-  { id: 2, name: "Dr. Mike Lee" },
-  { id: 3, name: "Dr. Angela Smith" },
-];
+import doctor1 from "../assets/01.png";
+import doctor2 from "../assets/02.png";
+import doctor3 from "../assets/03.png";
 
 export default function AppointmentBooking() {
-  const [formData, setFormData] = useState({
-    doctorId: "",
-    date: "",
-    time: "",
-    reason: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
-
-  function validate() {
-    const errs = {};
-    if (!formData.doctorId) errs.doctorId = "Please select a doctor.";
-    if (!formData.date) errs.date = "Please select a date.";
-    if (!formData.time) errs.time = "Please select a time.";
-    if (!formData.reason.trim()) errs.reason = "Please provide a reason.";
-    return errs;
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const errs = validate();
-    if (Object.keys(errs).length === 0) {
-      setSubmitted(true);
-    } else {
-      setErrors(errs);
-    }
-  }
-
-  if (submitted) {
-    return (
-      <section className="max-w-3xl mx-auto p-6 bg-cardDark rounded-xl text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Appointment Booked!</h2>
-        <p>Thank you for scheduling your appointment. We'll be in touch soon.</p>
-      </section>
-    );
-  }
+  const doctors = [
+    {
+      name: "Dr. Mathias",
+      specialty: "General Practitioner",
+      availability: "Available Today",
+      image: doctor1,
+    },
+    {
+      name: "Dr. Safia Ahmed",
+      specialty: "Mental Health Specialist",
+      availability: "Available Tomorrow",
+      image: doctor2,
+    },
+    {
+      name: "Dr. Paul Njoroge",
+      specialty: "Chronic Care Specialist",
+      availability: "Available This Week",
+      image: doctor3,
+    },
+  ];
 
   return (
-    <section className="max-w-3xl mx-auto p-6 bg-cardDark rounded-xl space-y-6">
-      <h1 className="text-3xl font-bold text-white">Book an Appointment</h1>
+    <section className="space-y-16">
+      {/* HEADER */}
+      <header className="space-y-4 max-w-3xl">
+        <h1 className="text-3xl font-bold">Book Appointments</h1>
+        <p className="text-gray-300">
+          Find trusted healthcare professionals and book appointments at your
+          convenience.
+        </p>
+      </header>
 
-      <form onSubmit={handleSubmit} className="space-y-4 text-white">
-
-        <label className="block">
-          <span className="text-accent font-semibold">Select Doctor</span>
-          <select
-            value={formData.doctorId}
-            onChange={(e) =>
-              setFormData({ ...formData, doctorId: e.target.value })
-            }
-            className="mt-1 block w-full rounded bg-cardLight p-2 text-white"
+      {/* DOCTOR GRID */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {doctors.map((doctor, index) => (
+          <div
+            key={index}
+            className="bg-cardDark rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
           >
-            <option value="">-- Choose a doctor --</option>
-            {doctors.map(({ id, name }) => (
-              <option key={id} value={id}>
-                {name}
-              </option>
-            ))}
-          </select>
-          {errors.doctorId && (
-            <p className="text-red-500 text-sm mt-1">{errors.doctorId}</p>
-          )}
-        </label>
+            <img
+              src={doctor.image}
+              alt={doctor.name}
+              className="h-48 w-full object-cover"
+            />
 
-        <label className="block">
-          <span className="text-accent font-semibold">Date</span>
-          <input
-            type="date"
-            value={formData.date}
-            onChange={(e) =>
-              setFormData({ ...formData, date: e.target.value })
-            }
-            className="mt-1 block w-full rounded bg-cardLight p-2 text-white"
-          />
-          {errors.date && (
-            <p className="text-red-500 text-sm mt-1">{errors.date}</p>
-          )}
-        </label>
+            <div className="p-6 space-y-4">
+              <h3 className="text-xl font-semibold">{doctor.name}</h3>
+              <p className="text-accent text-sm">{doctor.specialty}</p>
+              <p className="text-gray-300 text-sm">{doctor.availability}</p>
 
-        <label className="block">
-          <span className="text-accent font-semibold">Time</span>
-          <input
-            type="time"
-            value={formData.time}
-            onChange={(e) =>
-              setFormData({ ...formData, time: e.target.value })
-            }
-            className="mt-1 block w-full rounded bg-cardLight p-2 text-white"
-          />
-          {errors.time && (
-            <p className="text-red-500 text-sm mt-1">{errors.time}</p>
-          )}
-        </label>
-
-        <label className="block">
-          <span className="text-accent font-semibold">Reason for Appointment</span>
-          <textarea
-            rows="3"
-            value={formData.reason}
-            onChange={(e) =>
-              setFormData({ ...formData, reason: e.target.value })
-            }
-            className="mt-1 block w-full rounded bg-cardLight p-2 text-white"
-          />
-          {errors.reason && (
-            <p className="text-red-500 text-sm mt-1">{errors.reason}</p>
-          )}
-        </label>
-
-        <button
-          type="submit"
-          className="bg-accent text-primary px-6 py-3 rounded font-semibold hover:bg-yellow-500 transition"
-        >
-          Book Appointment
-        </button>
-      </form>
+              <button className="w-full mt-4 px-4 py-2 bg-accent text-primary rounded-lg font-semibold hover:opacity-90">
+                Book Appointment
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

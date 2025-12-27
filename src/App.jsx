@@ -19,6 +19,9 @@ import AppointmentBooking from "./pages/AppointmentBooking.jsx";
 import PharmacyDirectory from "./pages/PharmacyDirectory.jsx";
 import CommunityFeed from "./pages/CommunityFeed.jsx";
 import CentralSearch from "./pages/CentralSearch.jsx";
+import CommunityDetail from "./pages/CommunityDetail";
+
+
 
 // Auth pages
 import SignIn from "./pages/SignIn.jsx";
@@ -48,6 +51,7 @@ function App() {
           <Route path="/pharmacies" element={<PharmacyDirectory />} />
           <Route path="/community-feed" element={<CommunityFeed />} />
           <Route path="/search" element={<CentralSearch />} />
+          <Route path="/community/:slug" element={<CommunityDetail />} />
 
           {/* Authentication */}
           <Route path="/sign-in" element={<SignIn />} />
