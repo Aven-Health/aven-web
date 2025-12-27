@@ -1,164 +1,152 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo2.jpeg";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
+    function handleClickOutside(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpenDropdown(null);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const mainLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about-us", label: "About Us" },
-    { to: "/our-app", label: "Our App" },
-    { to: "/features", label: "Features" },
-    { to: "/how-it-works", label: "How It Works" },
-    { to: "/contact-us", label: "Contact" },
-    { to: "/faq", label: "FAQ" },
-    { to: "/meet-the-team", label: "Team" },
-  ];
-
-  const servicesLinks = [
-    { to: "/doctors", label: "Doctor Directory" },
-    { to: "/doctors/1", label: "Doctor Profile" },
-    { to: "/appointment-booking", label: "Appointment Booking" },
-    { to: "/pharmacies", label: "Pharmacy Directory" },
-    { to: "/community-feed", label: "Community Feed" },
-    { to: "/search", label: "Central Search" },
-  ];
+  const navLinkClass = ({ isActive }) =>
+    `text-sm font-medium transition ${
+      isActive ? "text-accent" : "text-white hover:text-accent"
+    }`;
 
   return (
-    <nav className="bg-primary text-white fixed w-full z-30 top-0 left-0 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
-        
-        {/* Logo */}
-        <Link to="/" className="text-accent font-bold text-2xl">
-          AVEN
+    <header className="fixed top-0 left-0 w-full z-50 bg-primary border-b border-white/10">
+      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        {/* LEFT — LOGO */}
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="AVEN Health Logo" className="h-8 w-auto" />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-10">
-          
-          {/* Main Links */}
-          <div className="flex items-center gap-6">
-            {mainLinks.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-accent font-semibold"
-                    : "hover:text-accent"
-                }
-              >
-                {label}
-              </NavLink>
-            ))}
-
-            {/* Services Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setDropdownOpen((prev) => !prev)}
-                className="flex items-center gap-1 hover:text-accent"
-              >
-                Services
-                <svg
-                  className={`w-4 h-4 transition-transform ${
-                    dropdownOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {dropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-cardDark rounded-lg shadow-lg py-2">
-                  {servicesLinks.map(({ to, label }) => (
-                    <NavLink
-                      key={to}
-                      to={to}
-                      onClick={() => setDropdownOpen(false)}
-                      className="block px-4 py-2 hover:bg-accent hover:text-primary"
-                    >
-                      {label}
-                    </NavLink>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Auth Links */}
-          <div className="flex items-center gap-4">
-            <NavLink
-              to="/sign-in"
-              className="hover:text-accent"
-            >
-              Sign In
-            </NavLink>
-            <NavLink
-              to="/sign-up"
-              className="bg-accent text-primary px-4 py-2 rounded-lg font-semibold hover:opacity-90"
-            >
-              Sign Up
-            </NavLink>
-          </div>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen((prev) => !prev)}
+        {/* CENTER — MAIN NAV */}
+        <div
+          className="hidden md:flex items-center gap-4"
+          ref={dropdownRef}
         >
-          <svg
-            className="w-8 h-8 text-accent"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
-      </div>
+          <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/community-feed" className={navLinkClass}>Communities</NavLink>
+          <NavLink to="/doctors" className={navLinkClass}>Book Appointments</NavLink>
+          <NavLink to="/pharmacies" className={navLinkClass}>Pharmacies</NavLink>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-primary px-6 py-6 space-y-3">
-          {[...mainLinks, { to: "/sign-in", label: "Sign In" }, { to: "/sign-up", label: "Sign Up" }].map(
-            ({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                onClick={() => setIsOpen(false)}
-                className="block text-lg hover:text-accent"
-              >
-                {label}
-              </NavLink>
-            )
-          )}
+          {/* HOW IT WORKS */}
+          <div className="relative">
+            <button
+              onClick={() =>
+                setOpenDropdown(openDropdown === "how" ? null : "how")
+              }
+              className="text-sm font-medium text-white hover:text-accent flex items-center gap-1"
+            >
+              How It Works <span className="text-xs">▾</span>
+            </button>
+
+            {openDropdown === "how" && (
+              <div className="absolute top-full mt-2 w-48 bg-cardDark rounded-lg shadow-lg overflow-hidden">
+                <NavLink
+                  to="/how-it-works"
+                  className="block px-4 py-3 text-sm hover:bg-accent hover:text-primary"
+                >
+                  How It Works
+                </NavLink>
+                <NavLink
+                  to="/faq"
+                  className="block px-4 py-3 text-sm hover:bg-accent hover:text-primary"
+                >
+                  FAQs
+                </NavLink>
+              </div>
+            )}
+          </div>
+
+          {/* ABOUT US */}
+          <div className="relative">
+            <button
+              onClick={() =>
+                setOpenDropdown(openDropdown === "about" ? null : "about")
+              }
+              className="text-sm font-medium text-white hover:text-accent flex items-center gap-1"
+            >
+              About Us <span className="text-xs">▾</span>
+            </button>
+
+            {openDropdown === "about" && (
+              <div className="absolute top-full mt-2 w-48 bg-cardDark rounded-lg shadow-lg overflow-hidden">
+                <NavLink
+                  to="/about-us"
+                  className="block px-4 py-3 text-sm hover:bg-accent hover:text-primary"
+                >
+                  About Us
+                </NavLink>
+                <NavLink
+                  to="/meet-the-team"
+                  className="block px-4 py-3 text-sm hover:bg-accent hover:text-primary"
+                >
+                  Team
+                </NavLink>
+              </div>
+            )}
+          </div>
+
+          <NavLink to="/contact-us" className={navLinkClass}>Contact Us</NavLink>
         </div>
-      )}
-    </nav>
+
+        {/* RIGHT — AUTH + SEARCH */}
+        <div className="hidden md:flex items-center gap-3">
+
+          <NavLink
+            to="/sign-up"
+            className="px-4 py-2 text-sm font-semibold bg-accent text-primary rounded-lg hover:opacity-90"
+          >
+            Sign Up
+          </NavLink>
+
+          <NavLink
+            to="/sign-in"
+            className="text-sm font-medium text-white hover:text-accent"
+          >
+            Sign In
+          </NavLink>
+
+          {/* COMPACT SEARCH */}
+          <input
+            type="text"
+            placeholder="Search..."
+            className="
+              w-40
+              bg-cardDark
+              border border-white/15
+              rounded-full
+              px-4 py-1.5
+              text-sm
+              text-white
+              placeholder-gray-400
+              focus:outline-none
+              focus:ring-2
+              focus:ring-accent
+            "
+          />
+        </div>
+
+        {/* MOBILE TOGGLE */}
+        <button
+          className="md:hidden text-accent text-2xl"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
   );
 }
