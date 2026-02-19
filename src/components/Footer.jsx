@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-cardDark border-t border-white/10 mt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 grid gap-12 md:grid-cols-4">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 grid gap-12 md:grid-cols-5">
 
         {/* Brand */}
         <div className="space-y-4">
@@ -20,10 +20,26 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Explore</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link to="/about-us" className="hover:text-accent">About Us</Link></li>
-            <li><Link to="/how-it-works" className="hover:text-accent">How It Works</Link></li>
-            <li><Link to="/faq" className="hover:text-accent">FAQs</Link></li>
-            <li><Link to="/community-feed" className="hover:text-accent">Communities</Link></li>
+            <li>
+              <Link to="/about-us" className="hover:text-accent">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/how-it-works" className="hover:text-accent">
+                How It Works
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-accent">
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link to="/community-feed" className="hover:text-accent">
+                Communities
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -31,9 +47,48 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link to="/doctors" className="hover:text-accent">Book Appointments</Link></li>
-            <li><Link to="/pharmacies" className="hover:text-accent">Pharmacies</Link></li>
-            <li><Link to="/search" className="hover:text-accent">Search</Link></li>
+            <li>
+              <Link to="/doctors" className="hover:text-accent">
+                Book Appointments
+              </Link>
+            </li>
+            <li>
+              <Link to="/pharmacies" className="hover:text-accent">
+                Pharmacies
+              </Link>
+            </li>
+            <li>
+              <Link to="/search" className="hover:text-accent">
+                Search
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h4 className="text-white font-semibold mb-4">Legal</h4>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li>
+              <Link to="/privacy-policy-users" className="hover:text-accent">
+                Privacy Policy (Users)
+              </Link>
+            </li>
+            <li>
+              <Link to="/user-agreement" className="hover:text-accent">
+                User Agreement
+              </Link>
+            </li>
+            <li>
+              <Link to="/medical-professional-agreement" className="hover:text-accent">
+                Medical Professional Agreement
+              </Link>
+            </li>
+            <li>
+              <Link to="/pharmacy-agreement" className="hover:text-accent">
+                Pharmacy Agreement
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,11 +109,16 @@ export default function Footer() {
 
       </div>
 
+      {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} AVEN Health. All rights reserved ·{" "}
-        <Link to="/privacy-policy" className="hover:text-accent">Privacy Policy</Link>{" "}
+        <Link to="/privacy-policy" className="hover:text-accent">
+          General Privacy Policy
+        </Link>{" "}
         ·{" "}
-        <Link to="/terms-conditions" className="hover:text-accent">Terms & Conditions</Link>
+        <Link to="/terms-conditions" className="hover:text-accent">
+          Terms & Conditions
+        </Link>
       </div>
     </footer>
   );
