@@ -9,7 +9,6 @@ export default function AboutUs() {
   return (
     <div className="space-y-20 md:space-y-24">
 
-      {/* ================= HEADER + HERO IMAGE ================= */}
       <motion.section
         variants={stagger}
         initial="hidden"

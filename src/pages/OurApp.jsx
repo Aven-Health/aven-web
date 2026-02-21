@@ -72,7 +72,7 @@ export default function OurApp() {
         <p className="mt-6 text-gray-300 text-lg">
           AVEN is not a replacement for healthcare providers. It is the bridge
           that connects people to the right care, at the right time, with the
-          right information — empowering healthier daily decisions.
+          right information, empowering healthier daily decisions.
         </p>
       </div>
 
