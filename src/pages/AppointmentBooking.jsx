@@ -24,40 +24,74 @@ export default function AppointmentBooking() {
     },
   ];
 
+  const features = [
+    {
+      title: "Easy 2-Step Booking",
+      description: "Select a doctor and confirm your appointment in just 2 simple steps.",
+    },
+    {
+      title: "Secure One-on-One Appointments",
+      description: "Enjoy private and fully encrypted consultations with your doctor.",
+    },
+    {
+      title: "Physical & Online Consultations",
+      description: "Choose between in-person visits or virtual appointments from home.",
+    },
+    {
+      title: "Meet Any Medical Professional",
+      description: "Access verified general practitioners, specialists, and mental health experts.",
+    },
+    {
+      title: "Quick Appointments",
+      description: "Get fast scheduling without waiting weeks to see a doctor.",
+    },
+    {
+      title: "Web Booking Coming Soon",
+      description: "Currently available in the app. Web-based booking will be live in the next update.",
+    },
+  ];
+
   return (
-    <section className="space-y-20">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
 
-      {/* HEADER */}
-      <header className="space-y-4 max-w-3xl">
-        <h1 className="text-3xl font-bold">Book Appointments</h1>
-        <p className="text-gray-300">
-          Find trusted healthcare professionals and book appointments with ease.
-          Online consultations and in-person visits will be available soon.
-        </p>
-      </header>
+      <div className="text-start mb-12">
+        <header className="space-y-4">
+          <h1 className="font-bold text-3xl text-left">Book Appointments</h1>
+          <p className="text-gray-300 max-w-2xl text-left">
+            Browse verified healthcare professionals and book appointments easily via the Aven app. Web booking coming soon!
+          </p>
+        </header>
+      </div>
 
-      {/* DOCTOR GRID */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="bg-cardDark rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+          >
+            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+            <p className="text-gray-400 text-sm">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {doctors.map((doctor, index) => (
           <div
             key={index}
             className="group bg-cardDark rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
           >
-            {/* IMAGE */}
             <div className="relative">
               <img
                 src={doctor.image}
                 alt={doctor.name}
                 className="h-56 w-full object-cover"
               />
-
-              {/* AVAILABILITY BADGE */}
               <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold text-accent">
                 {doctor.availability}
               </div>
             </div>
 
-            {/* CONTENT */}
             <div className="p-6 space-y-5">
               <div className="space-y-1">
                 <h3 className="text-xl font-semibold">{doctor.name}</h3>
@@ -65,7 +99,7 @@ export default function AppointmentBooking() {
               </div>
 
               <p className="text-gray-400 text-sm">
-                Online and in-person consultations will be available once bookings go live.
+                Online and in-person consultations are currently available in the app. Web booking will be live soon.
               </p>
 
               <button
@@ -79,11 +113,9 @@ export default function AppointmentBooking() {
         ))}
       </div>
 
-      {/* FOOTER NOTE */}
-      <div className="text-center text-sm text-gray-400">
-        Appointment booking will be available in a future update. Stay tuned.
-      </div>
-
+      <p className="text-sm text-gray-400 max-w-2xl mt-8">
+        Book appointments now via the Aven app. Web booking will be available in an upcoming update.
+      </p>
     </section>
   );
 }

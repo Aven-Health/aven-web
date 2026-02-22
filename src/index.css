@@ -18,3 +18,7 @@ body {
   background: rgba(212, 175, 55, 0.15);
   color: #d4af37;
 }
+/* Force global left alignment (fixes root-level centering bug) */
+body, #root {
+  text-align: left !important;
+}

@@ -37,7 +37,7 @@ export default function PharmacyDirectory() {
   ];
 
   return (
-    <section className="space-y-12">
+    <section className="space-y-12 text-left">
 
       {/* PAGE POPUP */}
       <ComingSoonModal
@@ -56,9 +56,9 @@ export default function PharmacyDirectory() {
       />
 
       {/* Header */}
-      <header className="text-center space-y-2">
+      <header className="space-y-2 w-full text-left">
         <h1 className="text-4xl font-bold text-white">Pharmacies</h1>
-        <p className="text-gray-300 max-w-xl mx-auto">
+        <p className="text-gray-300 max-w-xl">
           Locate trusted pharmacies, explore available products, and connect
           with verified sellers near you.
         </p>

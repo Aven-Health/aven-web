@@ -5,7 +5,6 @@ import React, { lazy, Suspense } from "react";
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 
-// Main pages
 import Home from "./pages/Home.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import OurApp from "./pages/OurApp.jsx";
@@ -16,7 +15,6 @@ import FAQ from "./pages/FAQ.jsx";
 import TermsConditions from "./pages/TermsConditions.jsx";
 import MeetTheTeam from "./pages/MeetTheTeam.jsx";
 
-// Services pages
 import DoctorDirectory from "./pages/DoctorDirectory.jsx";
 import DoctorProfile from "./pages/DoctorProfile.jsx";
 import AppointmentBooking from "./pages/AppointmentBooking.jsx";
@@ -25,15 +23,11 @@ import CommunityFeed from "./pages/CommunityFeed.jsx";
 import CentralSearch from "./pages/CentralSearch.jsx";
 import CommunityDetail from "./pages/CommunityDetail.jsx";
 
-// Auth pages
 import SignIn from "./pages/SignIn.jsx";
 import SignUp from "./pages/SignUp.jsx";
 
-// ================= LEGAL =================
-// Landing page
 import LegalLandingPage from "./pages/LegalLandingPage.jsx";
 
-// Lazy-loaded legal documents
 const UserPrivacyPolicy = lazy(() => import("./pages/legalDocs/UserPrivacyPolicy.jsx"));
 const UserAgreement = lazy(() => import("./pages/legalDocs/UserAgreement.jsx"));
 const MedicalPrivacyPolicy = lazy(() => import("./pages/legalDocs/MedicalPrivacyPolicy.jsx"));
@@ -41,7 +35,6 @@ const MedicalAgreement = lazy(() => import("./pages/legalDocs/MedicalAgreement.j
 const PharmacyPrivacyPolicy = lazy(() => import("./pages/legalDocs/PharmacyPrivacyPolicy.jsx"));
 const PharmacyAgreement = lazy(() => import("./pages/legalDocs/PharmacyAgreement.jsx"));
 
-// ================= ERROR BOUNDARY =================
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +48,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="p-6 text-center text-red-500">
+        <div className="p-1 text-center text-red-500">
           Something went wrong loading this page.
         </div>
       );
@@ -70,7 +63,7 @@ function App() {
       <ScrollToTop />
       <Layout>
         <ErrorBoundary>
-          <Suspense fallback={<div className="p-6 text-center">Loading...</div>}>
+          <Suspense fallback={<div className="p-1 text-center">Loading...</div>}>
             <Routes>
               {/* Main pages */}
               <Route path="/" element={<Home />} />

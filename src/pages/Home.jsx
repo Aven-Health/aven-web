@@ -1,21 +1,39 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, stagger, scaleHover } from "../utils/motion";
 import Tilt from "react-parallax-tilt";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import heroImage from "../assets/01.png";
+import heroImage from "../assets/01.jpg";
 import sectionImage1 from "../assets/02.png";
-import sectionImage2 from "../assets/03.png";
-import sectionImage3 from "../assets/04.png";
+import sectionImage2 from "../assets/03.jpg";
+import sectionImage3 from "../assets/04.jpg";
 import sectionImage4 from "../assets/05.png";
+import sectionImage5 from "../assets/06.jpg";
 
 export default function Home() {
+  const slides = [
+    {
+      text: `AVEN is a leading digital healthcare platform that simplifies how individuals and communities access, understand, and engage with healthcare services, putting people at the center of their health journey.`,
+    },
+    {
+      text: `Experience a fully integrated digital health ecosystem, connect seamlessly with trusted healthcare providers, pharmacies, and wellness tools, all in one secure and user-friendly platform.`,
+    },
+    {
+      text: `Take control of your health with actionable preventive care insights, personalized health data, and community support, making everyday healthcare smarter, more accessible, and proactive.`,
+    },
+  ];
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 12000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="space-y-20 md:space-y-28">
-
-      {/* ================= HERO ================= */}
       <section className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           variants={stagger}
@@ -25,19 +43,35 @@ export default function Home() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+            className="text-2.5xl sm:text-3xl md:text-5xl font-bold leading-tight"
           >
             Your Health, <br className="hidden sm:block" />
-            Connected & Simplified
+            Connected & Integrated
           </motion.h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0"
-          >
-            AVEN exists to simplify how people access, understand, and engage
-            with healthcare — putting individuals and communities at the center.
-          </motion.p>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={current}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="text-gray-300 text-base sm:text-lg"
+            >
+              {slides[current].text}
+            </motion.p>
+          </AnimatePresence>
+
+          <div className="flex justify-center lg:justify-start gap-2 mt-2">
+            {slides.map((_, index) => (
+              <span
+                key={index}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  current === index ? "bg-accent" : "bg-white/30"
+                }`}
+              />
+            ))}
+          </div>
 
           <motion.div
             variants={fadeUp}
@@ -58,25 +92,62 @@ export default function Home() {
             </motion.button>
           </motion.div>
         </motion.div>
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+  className="relative w-full overflow-hidden bg-cardDark"
+>
+  {/* Full border blending overlay */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      backgroundImage: `url(${heroImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      filter: "blur(150px) brightness(0.7)",
+      zIndex: 0,
+      // fade out top, bottom, left, right
+      maskImage: `
+        linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+        linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
+      `,
+      WebkitMaskImage: `
+        linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+        linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
+      `,
+      maskRepeat: "no-repeat",
+      WebkitMaskRepeat: "no-repeat",
+      maskSize: "cover",
+      WebkitMaskSize: "cover",
+    }}
+  />
 
-        {/* 3D HERO IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative"
-        >
-          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.05}>
-            <img
-              src={heroImage}
-              alt="Digital healthcare experience"
-              className="rounded-2xl shadow-2xl w-full"
-            />
-          </Tilt>
-        </motion.div>
+  <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02}>
+    <img
+      src={heroImage}
+      alt="Digital healthcare experience"
+      className="w-full h-auto object-cover relative z-10"
+      style={{
+        // same mask for the image itself
+        WebkitMaskImage: `
+          linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+          linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
+        `,
+        maskImage: `
+          linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+          linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
+        `,
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskSize: "cover",
+        maskSize: "cover",
+      }}
+    />
+  </Tilt>
+</motion.div>
       </section>
 
-      {/* ================= AVEN VALUES ================= */}
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -105,7 +176,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* ================= MISSION & VISION ================= */}
       <section className="grid lg:grid-cols-2 gap-16 items-center">
         <motion.div
           variants={stagger}
@@ -115,9 +185,7 @@ export default function Home() {
           className="space-y-8"
         >
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-              Our Mission
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Mission</h2>
             <p className="text-gray-300">
               Our mission is to empower individuals and communities with
               accessible, preventative, and connected healthcare tools that
@@ -126,9 +194,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-              Our Vision
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Vision</h2>
             <p className="text-gray-300">
               To create healthier, more informed communities by becoming the
               everyday health companion that bridges people, care, and data.
@@ -168,7 +234,7 @@ export default function Home() {
             A Community-First Health Platform
           </h2>
           <p className="text-gray-300 text-base sm:text-lg">
-            AVEN is not hospital-first. It is community-first — technology-enabled
+            AVEN is not hospital-first. It is community-first technology-enabled
             but human-centered. Discover care providers, pharmacies, insights,
             and conversations that support better decisions every day.
           </p>
@@ -187,7 +253,7 @@ export default function Home() {
           {[
             { title: "Trusted Care", image: sectionImage2 },
             { title: "Connected Ecosystem", image: sectionImage4 },
-            { title: "Everyday Wellness", image: sectionImage3 },
+            { title: "Everyday Wellness", image: sectionImage5 },
           ].map((item) => (
             <motion.div
               key={item.title}
@@ -256,7 +322,6 @@ export default function Home() {
           Get Started
         </motion.button>
       </motion.section>
-
     </div>
   );
 }

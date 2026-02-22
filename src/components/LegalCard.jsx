@@ -37,6 +37,8 @@ const renderContent = (content) => {
 
           {item.content && renderContent(item.content)}
 
+          {item.structuredContent && renderContent(item.structuredContent)}
+
           {item.example && (
             <div className="mt-2 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
               <h6 className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1 uppercase tracking-wide">
@@ -50,9 +52,7 @@ const renderContent = (content) => {
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-700 dark:text-gray-300">
-                  {item.example}
-                </p>
+                <p className="text-gray-700 dark:text-gray-300">{item.example}</p>
               )}
             </div>
           )}
@@ -70,9 +70,7 @@ const renderContent = (content) => {
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-700 dark:text-gray-300">
-                  {item.summary}
-                </p>
+                <p className="text-gray-700 dark:text-gray-300">{item.summary}</p>
               )}
             </div>
           )}
@@ -89,9 +87,7 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
     <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-200">
       <div className="flex items-center mb-4">
         {icon && <span className="text-3xl mr-4">{icon}</span>}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-          {title}
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h2>
       </div>
 
       <div className="space-y-6">
@@ -122,13 +118,13 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
             )}
 
             {section.content && renderContent(section.content)}
+            {section.structuredContent && renderContent(section.structuredContent)}
 
             {section.example && (
               <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
                 <h6 className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-2 uppercase tracking-wide">
                   Example
                 </h6>
-
                 {Array.isArray(section.example) ? (
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-4">
                     {section.example.map((ex, exIdx) => (
@@ -136,9 +132,7 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {section.example}
-                  </p>
+                  <p className="text-gray-700 dark:text-gray-300">{section.example}</p>
                 )}
               </div>
             )}
@@ -148,7 +142,6 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
                 <h6 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2 uppercase tracking-wide">
                   Summary
                 </h6>
-
                 {Array.isArray(section.summary) ? (
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-4">
                     {section.summary.map((sum, sumIdx) => (
@@ -156,9 +149,7 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-gray-700 dark:text-gray-300">
-                    {section.summary}
-                  </p>
+                  <p className="text-gray-700 dark:text-gray-300">{section.summary}</p>
                 )}
               </div>
             )}
@@ -183,5 +174,4 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
   );
 });
 
-export default LegalCard;  
-;
+export default LegalCard;

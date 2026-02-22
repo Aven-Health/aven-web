@@ -32,7 +32,6 @@ export default function CommunityDetail() {
   return (
     <div className="space-y-16">
 
-      {/* HEADER */}
       <section className="relative rounded-3xl overflow-hidden shadow-xl">
         <img
           src={communityBanner}
