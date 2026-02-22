@@ -1046,7 +1046,7 @@ const PharmacyPrivacyPolicy = () => {
   heading: "5. Legal Basis for Processing",
   content: [
     "Aven Health processes Health Store data only when there is a clear and lawful basis under applicable data protection and regulatory frameworks, including the Kenya Data Protection Act 2019 and other relevant international standards. Each processing activity is linked to one or more of the following legal bases:"
-  ],
+  
   subheading: "5.1 Contractual Necessity",
   content: [
     "Certain data processing is required to fulfill the contractual relationship between Aven Health and Health Stores.",
@@ -1064,7 +1064,8 @@ const PharmacyPrivacyPolicy = () => {
         "This processing ensures that Aven Health can deliver platform services as agreed with Health Stores, including lawful participation in the marketplace and timely financial settlements."
       ]
     }
-  ]
+  ],
+    ],
 },
 {
   subheading: "5.2 Legal Obligations",
