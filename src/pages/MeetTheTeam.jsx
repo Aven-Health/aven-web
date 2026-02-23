@@ -89,7 +89,7 @@ export default function MeetTheTeam() {
           Meet the Team
         </h1>
 
-        <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+        <p className="text-gray-300 text-lg  mx-auto text-left">
           Aven Health is built by people who believe healthcare should be accessible,
           connected, and centered around everyday life.
         </p>

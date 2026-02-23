@@ -71,14 +71,7 @@ export default function Footer() {
                 Health Stores
               </Link>
             </li>
-            <li>
-              <Link
-                to="/search"
-                className="hover:text-accent transition-colors"
-              >
-                Search
-              </Link>
-            </li>
+          
           </ul>
         </div>
 
