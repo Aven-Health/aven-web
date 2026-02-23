@@ -21,12 +21,14 @@ export default function Navbar() {
     }`;
 
   return (
+
+    <>
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "backdrop-blur-lg bg-primary/80 shadow-lg"
-          : "bg-primary"
-      } border-b border-white/10`}
+className={`fixed top-0 left-0 w-full z-50 
+  backdrop-blur-lg bg-primary/90 will-change-transform
+  transition-shadow duration-300
+  ${scrolled ? "shadow-lg" : ""} 
+  border-b border-white/10`}
     >
       <nav className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
 
@@ -41,8 +43,8 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-10">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/community-feed" className={navLinkClass}>Communities</NavLink>
-          <NavLink to="/doctors" className={navLinkClass}>Book Appointments</NavLink>
-          <NavLink to="/pharmacies" className={navLinkClass}>Pharmacies</NavLink>
+          <NavLink to="/doctors" className={navLinkClass}>Book Appointment</NavLink>
+          <NavLink to="/pharmacies" className={navLinkClass}>Health Stores</NavLink>
 
           <Dropdown label="How It Works">
             <NavLink to="/how-it-works" className="dropdown-link">
@@ -53,7 +55,6 @@ export default function Navbar() {
             </NavLink>
           </Dropdown>
 
-          {/* ABOUT */}
           <Dropdown label="About Us">
             <NavLink to="/about-us" className="dropdown-link">
               About Us
@@ -68,24 +69,6 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        {/* RIGHT */}
-        {/* <div className="hidden md:flex items-center gap-6">
-          <NavLink
-            to="/sign-up"
-            className="px-6 py-3 text-base font-semibold bg-accent text-primary rounded-xl hover:opacity-90 transition"
-          >
-            Sign Up
-          </NavLink>
-
-          <NavLink
-            to="/sign-in"
-            className="text-base font-medium text-white hover:text-accent transition"
-          >
-            Sign In
-          </NavLink>
-        </div> */}
-
-        {/* MOBILE BUTTON */}
         <button
           className="md:hidden text-accent text-3xl"
           onClick={() => setMobileOpen(true)}
@@ -94,42 +77,60 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* MOBILE MENU */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="fixed top-0 right-0 h-full w-80 bg-primary shadow-2xl p-8 z-50"
-          >
-            <button
-              className="text-accent text-3xl mb-10"
-              onClick={() => setMobileOpen(false)}
-            >
-              ✕
-            </button>
-
-            <div className="flex flex-col gap-7 text-lg">
-              <NavLink to="/" onClick={() => setMobileOpen(false)}>Home</NavLink>
-              <NavLink to="/community-feed" onClick={() => setMobileOpen(false)}>Communities</NavLink>
-              <NavLink to="/doctors" onClick={() => setMobileOpen(false)}>Book Appointments</NavLink>
-              <NavLink to="/pharmacies" onClick={() => setMobileOpen(false)}>Pharmacies</NavLink>
-              <NavLink to="/how-it-works" onClick={() => setMobileOpen(false)}>How It Works</NavLink>
-              <NavLink to="/about-us" onClick={() => setMobileOpen(false)}>About Us</NavLink>
-              <NavLink to="/contact-us" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>
-
-             
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+   
     </header>
+<AnimatePresence>
+  {mobileOpen && (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="fixed inset-0 bg-primary backdrop-blur-md z-40"
+        onClick={() => setMobileOpen(false)}
+      />
+
+<motion.div
+  initial={{ x: "100%" }}
+  animate={{ x: 0 }}
+  exit={{ x: "100%" }}
+  transition={{ duration: 0.4, ease: "easeOut" }}
+  className="fixed top-0 right-0 h-full w-80 bg-primary shadow-2xl p-8 z-50"
+>
+  <button
+    className="text-accent text-3xl mb-10"
+    onClick={() => setMobileOpen(false)}
+  >
+    ✕
+  </button>
+
+  <div className="flex flex-col gap-5 text-lg">
+    <NavLink to="/" onClick={() => setMobileOpen(false)}>Home</NavLink>
+    <NavLink to="/community-feed" onClick={() => setMobileOpen(false)}>Communities</NavLink>
+    <NavLink to="/doctors" onClick={() => setMobileOpen(false)}>Book Appointments</NavLink>
+    <NavLink to="/pharmacies" onClick={() => setMobileOpen(false)}>Health Stores</NavLink>
+
+    <MobileDropdown label="How It Works">
+      <NavLink to="/how-it-works" onClick={() => setMobileOpen(false)}>How It Works</NavLink>
+      <NavLink to="/faq" onClick={() => setMobileOpen(false)}>FAQs</NavLink>
+    </MobileDropdown>
+
+    <MobileDropdown label="About Us">
+      <NavLink to="/about-us" onClick={() => setMobileOpen(false)}>About Us</NavLink>
+      <NavLink to="/meet-the-team" onClick={() => setMobileOpen(false)}>Team</NavLink>
+    </MobileDropdown>
+
+    <NavLink to="/contact-us" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>
+  </div>
+</motion.div>
+    </>
+  )}
+</AnimatePresence>
+    </>
   );
 }
 
-/* ---------------- DROPDOWN ---------------- */
 
 function Dropdown({ label, children }) {
   const [open, setOpen] = useState(false);
@@ -158,6 +159,37 @@ function Dropdown({ label, children }) {
             exit={{ opacity: 0, y: 12 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="absolute top-full mt-4 w-56 bg-cardDark rounded-2xl shadow-xl overflow-hidden border border-white/10"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+
+function MobileDropdown({ label, children }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex justify-between items-center text-white hover:text-accent font-medium py-2"
+      >
+        {label}
+        <span className={`transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="flex flex-col pl-4 mt-1 gap-1 overflow-hidden"
           >
             {children}
           </motion.div>

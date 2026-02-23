@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import howImage2 from "../assets/how02.png";
+import Banner from "../components/banner";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -7,28 +9,40 @@ const fadeUp = {
 };
 
 export default function HowItWorks() {
+
+    const slides = [
+    {
+      title: "Your Digital Health Companion",
+      description:
+        "Aven Health makes healthcare simple, connected, and personal. Explore providers, access resources, and engage with communities.",
+    },
+    {
+      title: "Seamless Access to Care",
+      description:
+        "Connect with verified healthcare providers, pharmacies, and wellness resources with just a few taps.",
+    },
+    {
+      title: "Empower Your Health Decisions",
+      description:
+        "Stay proactive with personalized guidance, preventative care insights, and trusted community advice.",
+    },
+    {
+      title: "Healthcare That Fits Your Life",
+      description:
+        "Integrate health management into your daily routine and never miss critical updates or appointments.",
+    },
+    {
+      title: "Trusted & Secure",
+      description:
+        "All your health information is safely managed and easily accessible anytime, anywhere.",
+    },
+  ];
+
+
   return (
     <section className="space-y-20">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeUp}
-        className="text-center space-y-6"
-      >
-        <h1 className="text-left md:text-5xl font-bold text-white">
-          How Aven Health Works: Your Digital Health Companion
-        </h1>
-
-        <div className=" mx-auto px-">
-          <div className="bg-cardDark p-8 rounded-2xl shadow-lg">
-            <p className="text-left text-gray-300 text-lg leading-relaxed">
-              Aven Health makes healthcare simple, connected, and personal.
-              Explore providers, access resources, and engage with communities
-              all in one app designed to support your wellness journey.
-            </p>
-          </div>
-        </div>
-      </motion.div>
+     <Banner backgroundImage={howImage2} slides={slides} interval={6000} />
+   
 
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -95,7 +109,7 @@ export default function HowItWorks() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="bg-cardLight p-12 rounded-2xl shadow-xl space-y-6"
+          className=" "
         >
           <h2 className="text-3xl font-bold text-white">
             Built Around Everyday Life
