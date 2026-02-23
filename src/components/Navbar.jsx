@@ -35,8 +35,8 @@ export default function Navbar() {
         <Link to="/" className="flex items-center">
           <img
             src={logo}
-            alt="AVEN Health Logo"
-            className="h-11 w-auto object-contain"
+            alt="Aven Health Logo"
+            className="h-12 w-auto object-contain"
           />
         </Link>
 
@@ -124,12 +124,7 @@ export default function Navbar() {
               <NavLink to="/about-us" onClick={() => setMobileOpen(false)}>About Us</NavLink>
               <NavLink to="/contact-us" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>
 
-              <NavLink
-                to="/sign-up"
-                className="mt-8 px-6 py-3 bg-accent text-primary rounded-xl text-center font-semibold"
-              >
-                Sign Up
-              </NavLink>
+             
             </div>
           </motion.div>
         )}

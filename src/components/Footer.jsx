@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-cardDark border-t border-white/10 mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 grid gap-12 md:grid-cols-6">
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-accent">AVEN</h3>
+          <h3 className="text-xl font-bold text-accent">Aven Health</h3>
           <p className="text-gray-300 text-sm leading-relaxed">
             Access. Vitality. Empowerment. Network.
           </p>
@@ -190,7 +190,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-4 md:mt-0">
-            © {new Date().getFullYear()} AVEN Health. All rights reserved.
+            © {new Date().getFullYear()} Aven Health. All rights reserved.
           </div>
         </div>
       </div>

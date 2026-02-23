@@ -3,13 +3,14 @@ import PostComposerModal from "../components/community/PostComposerModal";
 import PostCard from "../components/community/PostCard";
 import CommunityCard from "../components/community/CommunityCard";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
-
+import Banner from "../components/banner";
 import communityImg1 from "../assets/community01.jpg";
 import communityImg2 from "../assets/community02.jpg";
 import communityImg3 from "../assets/community03.jpg";
 
+
 export default function CommunityFeed() {
-  const [openComposer, setOpenComposer] = useState(false);
+
   const [showNotice, setShowNotice] = useState(false);
 
   useEffect(() => {
@@ -25,7 +26,28 @@ export default function CommunityFeed() {
       image: communityImg3,
     },
   ];
-
+const features = [
+  {
+    title: "Share Your Thoughts",
+    description: "Post updates, ask questions, and interact with other users’ thoughts in a supportive environment.",
+    image: communityImg1,
+  },
+  {
+    title: "Join Different Communities",
+    description: "Explore communities focused on mental wellness, fitness, nutrition, chronic care support, and more.",
+    image: communityImg2,
+  },
+  {
+    title: "Safe Space",
+    description: "Engage freely in a moderated, safe, and supportive environment where health discussions are respected.",
+    image: communityImg3,
+  },
+  {
+    title: "Create Your Own Community",
+    description: "Start your own community around topics that matter to you and invite others to join and share.",
+    image: communityImg1,
+  },
+];
 
 
   const handleFeatureClick = () => {
@@ -34,56 +56,52 @@ export default function CommunityFeed() {
 
   return (
     <div className="space-y-20">
-      <section className="space-y-6">
-        <h1 className="text-3xl font-bold text-white">
-          Welcome to the Aven Community: Health-Focused Social App for Wellness
-        </h1>
+<Banner
+  backgroundImage={communityImg1}
+  interval={7000}
+  slides={[
+    {
+      title:
+        "Welcome to the Aven Health Community",
+      description:
+        "Connect, share, and grow with people who care about health. Join mental wellness, fitness, nutrition, and chronic care support communities built for real conversations.",
+    },
+    {
+      title: "Improve Health Outcomes Together",
+      description:
+        "A community-driven approach to wellness where shared experiences, expert insights, and support networks help build stronger, healthier lives.",
+    },
+    {
+      title: "Think of It as a Social App for Health",
+      description:
+        "Post updates, join communities, discuss what matters, and stay motivated on your wellness journey. Web communities coming soon — explore in the app today.",
+    },
+  ]}
+/>
 
-        <div className="space-y-6">
-          <div className="bg-cardDark p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-accent mb-2">
-              Connect and Share in Health Communities
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Aven Community is your space to{" "}
-              <strong>connect, share, and learn</strong> with others who care
-              about health just like you. Join{" "}
-              <strong>mental wellness communities</strong>,
-              <strong>fitness and nutrition groups</strong>, or{" "}
-              <strong>chronic care support networks</strong>. Post updates, ask
-              questions, and support each other on your journey to better
-              health.
-            </p>
-          </div>
+<section className="space-y-12">
+  <h2 className="text-2xl font-semibold text-center">Aven Community Features</h2>
 
-          <div className="bg-cardDark p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-accent mb-2">
-              Improve Health Outcomes Together
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Our goal is to <strong>improve health outcomes</strong> by
-              bringing people together. Share experiences, provide support, and
-              access expert insights in a{" "}
-              <strong>community-driven approach to wellness</strong>. Every
-              interaction helps build a stronger, healthier network of members
-              committed to holistic well-being.
-            </p>
-          </div>
-
-          <div className="bg-cardDark p-6 rounded-xl">
-            <h2 className="text-2xl font-semibold text-accent mb-2">
-              A Social App for Health: Post, Join, and Explore
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Think of it like a <strong>social app for health</strong>: post
-              updates, join communities, discuss topics that matter, and stay
-              motivated on your journey to wellness.
-              <strong>Web communities coming soon</strong>, so for now, explore
-              and engage in the app!
-            </p>
-          </div>
+  <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+    {features.map((feature, index) => (
+      <div
+        key={index}
+        onClick={handleFeatureClick}
+        className="cursor-pointer group hover:shadow-lg transition-shadow rounded-xl overflow-hidden"
+      >
+        <img
+          src={feature.image}
+          alt={feature.title}
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+        />
+        <div className="p-4 bg-gray-800">
+          <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+          <p className="text-gray-300 mt-2">{feature.description}</p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+  </section>
       <section className="space-y-8">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-semibold">Explore Communities In the app</h2>

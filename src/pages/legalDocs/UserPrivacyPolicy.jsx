@@ -7,7 +7,7 @@ const UserPrivacyPolicy = () => {
     {
       heading: "1. Introduction and Scope",
       content: [
-        "Aven Health (“Aven,” “we,” “our,” or “us”) is a digital health platform that enables users to participate in health-focused communities, book and attend appointments with licensed healthcare professionals, communicate through secure messaging, and purchase products from verified pharmacies.",
+        "Aven Health (“Aven Health,” “we,” “our,” or “us”) is a digital health platform that enables users to participate in health-focused communities, book and attend appointments with licensed healthcare professionals, communicate through secure messaging, and purchase products from verified pharmacies.",
         "This Privacy Policy explains how we collect, use, process, store, disclose, and protect personal data when individuals access or use the Aven Health mobile application, website, and related services (collectively, the “Platform”).",
         "This Policy applies to:",
         [
@@ -397,7 +397,7 @@ const UserPrivacyPolicy = () => {
     ],
     "Additional notes:",
     [
-      "Aven does not store card numbers or sensitive authentication data.",
+      "Aven Health does not store card numbers or sensitive authentication data.",
       "All payment data is handled in accordance with Paystack’s security and compliance standards."
     ]
   ]
@@ -421,7 +421,7 @@ const UserPrivacyPolicy = () => {
     ],
     "Lawful basis:",
     [
-      "Legitimate interests of Aven to ensure security, reliability, and quality of services"
+      "Legitimate interests of Aven Health to ensure security, reliability, and quality of services"
     ]
   ]
 },
@@ -470,7 +470,7 @@ const UserPrivacyPolicy = () => {
     ],
     "Lawful basis:",
     [
-      "Legitimate interests of Aven to enhance user experience and engagement",
+      "Legitimate interests of Aven Health to enhance user experience and engagement",
       "Consent, where applicable, for processing profile and community data"
     ]
   ]
@@ -488,7 +488,7 @@ const UserPrivacyPolicy = () => {
     {
       minorSubheading: "Definition:",
       content: [
-        "Consent is freely given, informed, specific, and unambiguous agreement by the user for Aven to process their Personal Data."
+        "Consent is freely given, informed, specific, and unambiguous agreement by the user for Aven Health to process their Personal Data."
       ]
     },
     {
@@ -643,7 +643,7 @@ const UserPrivacyPolicy = () => {
       content: [
         "All chat messages between users and other users are protected using end-to-end encryption.",
         "Messages between users and healthcare professionals are end-to-end encrypted.",
-        "Users’ sensitive communications are inaccessible to Aven in readable form."
+        "Users’ sensitive communications are inaccessible to Aven Health in readable form."
       ]
     },
     {
@@ -812,7 +812,7 @@ const UserPrivacyPolicy = () => {
     "7.7 Limitations on Sharing",
     "Users are fully responsible for any information they voluntarily share with professionals beyond the Platform.",
     "The Platform has a screenshot prevention feature for sensitive areas to reduce data leakage.",
-    "Aven does not share any user data for external advertising, marketing, or third-party promotions.",
+    "Aven Health does not share any user data for external advertising, marketing, or third-party promotions.",
     "No data is shared with partners for profiling, advertising, or analytics beyond what is listed above."
   ]
 },
@@ -947,7 +947,7 @@ const UserPrivacyPolicy = () => {
     {
       subheading: "9.5 Legal Compliance",
       content: [
-        "All retention periods are subject to applicable laws and regulations in Kenya and other jurisdictions in which Aven operates.",
+        "All retention periods are subject to applicable laws and regulations in Kenya and other jurisdictions in which Aven Health operates.",
         "Where retention is legally mandated, users’ deletion requests may be limited, and only the minimum required data is retained for compliance purposes."
       ]
     }
@@ -960,8 +960,8 @@ const UserPrivacyPolicy = () => {
     "Aven Health respects the rights of users regarding their Personal Data and Sensitive Health Data. Users may exercise their rights in accordance with the Kenya Data Protection Act, 2019, and where applicable, international privacy regulations such as GDPR.",
 
     "10.1 Right to Access",
-    "Users have the right to request access to any Personal Data and Health Data Aven holds about them.",
-    "Upon request, Aven will provide a copy of the data in a readable format within 30 days, unless additional time is legally required.",
+    "Users have the right to request access to any Personal Data and Health Data Aven Health holds about them.",
+    "Upon request, Aven Health will provide a copy of the data in a readable format within 30 days, unless additional time is legally required.",
     "Access requests may include:",
     "1. Account information",
     "2. Health and medical records",
@@ -980,7 +980,7 @@ const UserPrivacyPolicy = () => {
     "10.3 Right to Deletion (“Right to be Forgotten”)",
     "Users may request deletion of Personal Data and Health Data that is not legally required to be retained.",
     "Upon deletion request:",
-    "• Health Data and other sensitive data are permanently removed from Aven systems.",
+    "• Health Data and other sensitive data are permanently removed from Aven Health systems.",
     "• Backup copies are securely destroyed according to retention schedules (Section 9).",
     "Limitations:",
     "Certain Health Data or transaction records may be retained to comply with legal, regulatory, or professional obligations.",
@@ -994,7 +994,7 @@ const UserPrivacyPolicy = () => {
     "10.5 Right to Data Portability",
     "Users have the right to receive their Personal Data in a structured, commonly used, machine-readable format.",
     "Users may request that their data be transferred to another service provider where technically feasible.",
-    "Data portability applies to Personal Data that users have provided to the Platform and does not extend to information derived or anonymized by Aven.",
+    "Data portability applies to Personal Data that users have provided to the Platform and does not extend to information derived or anonymized by Aven Health.",
 
     "10.6 Right to Restrict Processing",
     "Users may request the restriction of processing of their Personal Data in certain circumstances, including:",
@@ -1005,7 +1005,7 @@ const UserPrivacyPolicy = () => {
 
     "10.7 Right to Object",
     "Users may object to the processing of their Personal Data based on legitimate interests, including profiling or automated recommendations.",
-    "Objection requests will be evaluated promptly, and Aven will cease processing unless there are compelling legal or contractual grounds to continue.",
+    "Objection requests will be evaluated promptly, and Aven Health will cease processing unless there are compelling legal or contractual grounds to continue.",
 
     "10.8 Right to Lodge a Complaint with the Regulator",
     "Users have the right to lodge a complaint with the Office of the Data Protection Commissioner (ODPC) in Kenya or other applicable regulatory authorities in their jurisdiction if they believe their rights have been violated.",
@@ -1017,7 +1017,7 @@ const UserPrivacyPolicy = () => {
     "10.9 Exercise of Rights",
     "Users can exercise their rights by:",
     "• Using Platform features (e.g., account settings, privacy controls)",
-    "• Contacting Aven support directly via email or the in-app support system",
+    "• Contacting Aven Health support directly via email or the in-app support system",
     "Requests will be processed without undue delay and within 30 days, unless an extension is required under law.",
 
     "10.10 Additional Notes",
@@ -1033,9 +1033,9 @@ const UserPrivacyPolicy = () => {
     "Aven Health provides users full control over their accounts and the associated data. Users may request deletion of their account at any time.",
 
     "11.1 User-Initiated Account Deletion",
-    "Users can delete their account through the Platform settings or by contacting Aven support.",
+    "Users can delete their account through the Platform settings or by contacting Aven Health support.",
     "Upon account deletion:",
-    "1. All Personal Data, Health Data, account preferences, messages, journals, goals, managed conditions, and community content linked to the account are permanently deleted from Aven systems.",
+    "1. All Personal Data, Health Data, account preferences, messages, journals, goals, managed conditions, and community content linked to the account are permanently deleted from Aven Health systems.",
     "2. Encrypted Health Data, messages, and appointments are removed from active storage.",
     "3. Users’ posts in anonymous mode are retained anonymously if still relevant for community integrity, with no link to the deleted account.",
 
@@ -1086,7 +1086,7 @@ const UserPrivacyPolicy = () => {
     "Continuous monitoring for suspicious activity and unauthorized access attempts helps maintain account security.",
 
     "12.5 Risk Acknowledgment",
-    "While Aven implements rigorous security measures, no system can guarantee 100% security.",
+    "While Aven Health implements rigorous security measures, no system can guarantee 100% security.",
     "Users are encouraged to protect their account credentials, avoid sharing sensitive information outside the Platform, and report any suspicious activity immediately."
   ]
 },
@@ -1107,7 +1107,7 @@ const UserPrivacyPolicy = () => {
 {
   subheading: "14. Community Content & Public Information",
   content: [
-    "Aven Health includes a social layer that allows users to share content, join communities, and interact with other users. Users should be aware that content shared publicly may be visible to others, and Aven cannot control all interactions.",
+    "Aven Health includes a social layer that allows users to share content, join communities, and interact with other users. Users should be aware that content shared publicly may be visible to others, and Aven Health cannot control all interactions.",
 
     "14.1 Thoughts (Posts)",
     "Users can create posts in the Thoughts section, including:",
@@ -1129,7 +1129,7 @@ const UserPrivacyPolicy = () => {
     "To join a community:",
     "1. Users submit a request to join.",
     "2. Community administrators approve membership.",
-    "Users may be removed from a community by administrators based on community rules or other factors beyond Aven’s control.",
+    "Users may be removed from a community by administrators based on community rules or other factors beyond Aven Health’s control.",
     "Users are responsible for adhering to community guidelines and maintaining respectful engagement.",
 
     "14.3 Medical Stores and Products",
