@@ -9,6 +9,8 @@ const PharmacyAgreement = () => {
       content: [
         "This Health Store Agreement (“Agreement”) sets forth the terms and conditions governing the use of the Aven Health platform (“Platform”) by licensed pharmacies, health stores, and allied healthcare retailers (collectively, “Health Stores”). By registering on or accessing the Platform, Health Stores agree to comply with these terms, which establish the legal, operational, and ethical framework for offering products, fulfilling orders, and interacting with Platform users.",
       ],
+    },
+    {
       subheading: "1.1 Purpose of the Agreement",
       content: [
         "This Agreement defines:",
@@ -26,7 +28,7 @@ const PharmacyAgreement = () => {
         "Health Stores acknowledge and agree that:",
         [
           "They are independent business operators, not employees, agents, partners, or representatives of Aven Health.",
-          "All operational decisions—including product selection, pricing, inventory management, and fulfillment processes—are the sole responsibility of the Health Store.",
+          "All operational decisions including product selection, pricing, inventory management, and fulfillment processes are the sole responsibility of the Health Store.",
           "Health Stores are solely responsible for regulatory compliance, professional licensing, business permits, and applicable tax obligations.",
         ],
       ],
@@ -71,7 +73,8 @@ const PharmacyAgreement = () => {
       heading: "2. Eligibility & Licensing Requirements",
       content: [
         "This section establishes comprehensive legal, professional, and operational requirements that Health Stores must satisfy to register and operate on the Aven Health Platform. Compliance is mandatory to ensure lawful participation, protect patients and customers, and maintain adherence to Kenyan healthcare, pharmaceutical, and business regulations. Non-compliance may result in immediate suspension, termination, or other enforcement actions.",
-      ],
+      ],},
+      {
       subheading: "2.1 Valid Pharmacy or Health Store License",
       content: [
         {
@@ -590,7 +593,8 @@ const PharmacyAgreement = () => {
         ],
         "Acceptance or rejection cannot occur without reasonable verification.",
         "All communication must occur through the Platform messaging system to maintain audit trails and comply with privacy regulations.",
-      ],
+      ],},
+      {
       minorSubheading: "Category Note",
       content: [
         "For sensitive categories like controlled substances, communication may require additional documentation or approval before order fulfillment.",
@@ -623,7 +627,8 @@ const PharmacyAgreement = () => {
         "Dispensing without proper validation or failing to communicate for clarifications is a material breach of this Agreement.",
         "Health Stores assume full legal and professional liability for all prescription fulfillment, including errors, misdispensing, or regulatory violations.",
         "Aven Health is not liable for professional judgment, accuracy, or authenticity of prescriptions; liability rests with the Health Store and prescriber.",
-      ],
+      ],},
+      {
       minorSubheading: "Category Note",
       content: [
         "The risk profile varies by product category; high-risk categories carry stricter compliance expectations, and Health Stores must adhere to these requirements fully.",
@@ -1499,7 +1504,8 @@ integrity, while ensuring clear communication and operational continuity.`,
       heading: "15. Governing Law & Dispute Resolution",
       content: [
         "This section establishes the legal framework for resolving disputes between Health Stores and Aven Health. It defines applicable law, preferred resolution mechanisms, and fallback procedures to protect the rights of all parties while ensuring operational continuity and compliance with Kenyan regulations.",
-      ],
+      ],},
+      {
       subheading: "15.1 Governing Law",
       content: [
         "This Agreement and all activities, transactions, and interactions on the Aven Health Platform shall be governed by the laws of the Republic of Kenya.",
@@ -1693,7 +1699,7 @@ integrity, while ensuring clear communication and operational continuity.`,
           "Data Protection Policy",
           "Any Platform-specific rules communicated to Health Stores",
         ],
-        "This Agreement supersedes all prior communications, agreements, or understandings—whether written, verbal, or implied.",
+        "This Agreement supersedes all prior communications, agreements, or understandings whether written, verbal, or implied.",
       ],
       example:
         "Any prior verbal arrangements regarding commissions, product promotions, or delivery timelines are null and void unless expressly incorporated into this Agreement.",
@@ -1708,7 +1714,7 @@ integrity, while ensuring clear communication and operational continuity.`,
   ];
 
   return (
-    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center">
+    <div>
       <LegalCard
         title="HEALTH STORES TERMS AND CONDITIONS"
         icon={<FaShieldAlt className="text-yellow-500" />}
