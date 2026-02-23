@@ -1,3 +1,4 @@
+import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
 
 import pharmFeature1 from "../assets/pharmacy01.png";
