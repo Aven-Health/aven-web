@@ -50,7 +50,7 @@ export default function ContactUs() {
           Contact Us
         </h1>
         <p className="mt-4 text-gray-300 text-lg" tabIndex={0}>
-          We’re here to listen, support, and improve AVEN together.
+          We’re here to listen, support, and improve Aven Health together.
         </p>
       </div>
 

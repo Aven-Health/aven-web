@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-cardDark text-white py-6 mt-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col sm:flex-row justify-between items-center">
         <p className="mb-4 sm:mb-0 text-sm">
-          &copy; {new Date().getFullYear()} AVEN Health Platform. All rights reserved.
+          &copy; {new Date().getFullYear()} Aven Health Platform. All rights reserved.
         </p>
         <div className="space-x-4 text-sm">
           <Link to="/privacy-policy" className="hover:text-accent">

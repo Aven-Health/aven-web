@@ -16,7 +16,7 @@ import sectionImage5 from "../assets/06.jpg";
 export default function Home() {
   const slides = [
     {
-      text: `AVEN is a leading digital healthcare platform that simplifies how individuals and communities access, understand, and engage with healthcare services, putting people at the center of their health journey.`,
+      text: `Aven Health is a leading digital healthcare platform that simplifies how individuals and communities access, understand, and engage with healthcare services, putting people at the center of their health journey.`,
     },
     {
       text: `Experience a fully integrated digital health ecosystem, connect seamlessly with trusted healthcare providers, pharmacies, and wellness tools, all in one secure and user-friendly platform.`,
@@ -79,7 +79,7 @@ export default function Home() {
           >
             <motion.button
               {...scaleHover}
-              className="px-6 py-3 bg-accent text-primary font-semibold rounded-lg shadow-lg"
+              className="px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow-lg"
             >
               Get the App
             </motion.button>
@@ -98,7 +98,6 @@ export default function Home() {
   transition={{ duration: 1.2, ease: "easeOut" }}
   className="relative w-full overflow-hidden bg-cardDark"
 >
-  {/* Full border blending overlay */}
   <div
     className="absolute inset-0 pointer-events-none"
     style={{
@@ -107,7 +106,6 @@ export default function Home() {
       backgroundPosition: "center",
       filter: "blur(150px) brightness(0.7)",
       zIndex: 0,
-      // fade out top, bottom, left, right
       maskImage: `
         linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
         linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
@@ -116,6 +114,8 @@ export default function Home() {
         linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
         linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
       `,
+      WebkitMaskComposite: "source-in",
+      maskComposite: "intersect",
       maskRepeat: "no-repeat",
       WebkitMaskRepeat: "no-repeat",
       maskSize: "cover",
@@ -129,15 +129,12 @@ export default function Home() {
       alt="Digital healthcare experience"
       className="w-full h-auto object-cover relative z-10"
       style={{
-        // same mask for the image itself
         WebkitMaskImage: `
           linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
           linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
         `,
-        maskImage: `
-          linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
-          linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)
-        `,
+        WebkitMaskComposite: "source-in",
+        maskComposite: "intersect",
         WebkitMaskRepeat: "no-repeat",
         maskRepeat: "no-repeat",
         WebkitMaskSize: "cover",
@@ -148,34 +145,76 @@ export default function Home() {
 </motion.div>
       </section>
 
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={stagger}
-        className="bg-cardDark rounded-3xl p-8 sm:p-12"
+  <motion.section
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={stagger}
+  className="overflow-hidden py-8"   
+>
+  <motion.div
+    className="flex gap-8 items-center"
+    animate={{ x: ["0%", "-50%"] }}
+    transition={{
+      repeat: Infinity,
+      duration: 20,
+      ease: "linear",
+    }}
+  >
+    {[
+      { letter: "A", title: "Access" },
+      { letter: "V", title: "Vitality" },
+      { letter: "E", title: "Empowerment" },
+      { letter: "N", title: "Network" },
+      { dot: true },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className={`flex-shrink-0 min-w-[200px] flex flex-col items-center justify-center shadow-lg rounded-2xl p-6 ${
+          item.dot ? "" : "bg-backgroundDark"
+        }`}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-          {[
-            { letter: "A", title: "Access" },
-            { letter: "V", title: "Vitality" },
-            { letter: "E", title: "Empowerment" },
-            { letter: "N", title: "Network" },
-          ].map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeUp}
-              className="space-y-3"
-            >
-              <div className="text-accent text-4xl sm:text-5xl font-bold">
-                {item.letter}
-              </div>
-              <p className="font-medium">{item.title}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+        {item.dot ? (
+          <div className="text-accent text-5xl font-bold">&middot;</div>
+        ) : (
+          <>
+            <div className="text-accent text-5xl font-bold mb-2">
+              {item.letter}
+            </div>
+            <p className="font-medium">{item.title}</p>
+          </>
+        )}
+      </div>
+    ))}
 
+ 
+    {[
+      { letter: "A", title: "Access" },
+      { letter: "V", title: "Vitality" },
+      { letter: "E", title: "Empowerment" },
+      { letter: "N", title: "Network" },
+      { dot: true },
+    ].map((item, index) => (
+      <div
+        key={`dup-${index}`}
+        className={`flex-shrink-0 min-w-[200px] flex flex-col items-center justify-center shadow-lg rounded-2xl p-6 ${
+          item.dot ? "" : "bg-backgroundDark"
+        }`}
+      >
+        {item.dot ? (
+          <div className="text-accent text-5xl font-bold">&middot;</div>
+        ) : (
+          <>
+            <div className="text-accent text-5xl font-bold mb-2">
+              {item.letter}
+            </div>
+            <p className="font-medium">{item.title}</p>
+          </>
+        )}
+      </div>
+    ))}
+  </motion.div>
+</motion.section>
       <section className="grid lg:grid-cols-2 gap-16 items-center">
         <motion.div
           variants={stagger}
@@ -184,22 +223,19 @@ export default function Home() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <motion.div variants={fadeUp}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Mission</h2>
-            <p className="text-gray-300">
-              Our mission is to empower individuals and communities with
-              accessible, preventative, and connected healthcare tools that
-              enable healthier everyday living.
-            </p>
-          </motion.div>
+         <motion.div variants={fadeUp}>
+  <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Mission</h2>
+  <p className="text-gray-300">
+       Our mission is to empower individuals and communities by improving social health, serving each person’s needs, building strong communities, and advancing integrated health technology for connected, healthier living.
+</p>
+</motion.div>
 
-          <motion.div variants={fadeUp}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Vision</h2>
-            <p className="text-gray-300">
-              To create healthier, more informed communities by becoming the
-              everyday health companion that bridges people, care, and data.
-            </p>
-          </motion.div>
+<motion.div variants={fadeUp}>
+  <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Vision</h2>
+  <p className="text-gray-300">
+    To create a healthier, integrated future by connecting people, care, and data as the everyday health companion for informed and thriving communities.
+  </p>
+</motion.div>
         </motion.div>
 
         <motion.img
@@ -212,7 +248,6 @@ export default function Home() {
         />
       </section>
 
-      {/* ================= COMMUNITY FIRST ================= */}
       <section className="grid lg:grid-cols-2 gap-16 items-center">
         <motion.img
           src={sectionImage3}
@@ -223,92 +258,114 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         />
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="space-y-6"
-        >
-          <h2 className="text-2xl sm:text-3xl font-bold">
-            A Community-First Health Platform
-          </h2>
-          <p className="text-gray-300 text-base sm:text-lg">
-            AVEN is not hospital-first. It is community-first technology-enabled
-            but human-centered. Discover care providers, pharmacies, insights,
-            and conversations that support better decisions every day.
-          </p>
-        </motion.div>
+      <motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="space-y-6"
+>
+  <h2 className="text-2xl sm:text-3xl font-bold">
+    A Community-First Health Platform
+  </h2>
+  <p className="text-gray-300 text-base sm:text-lg">
+    Aven Health puts communities first, combining human-centered care with smart, technology-enabled solutions. Connect with care providers, pharmacies, insights, and conversations that empower better health decisions every day at your comfort.
+  </p>
+</motion.div>
       </section>
 
-      {/* ================= WHY AVEN ================= */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={stagger}
-        className="bg-cardDark rounded-3xl p-8 sm:p-12"
+<motion.section className=" p-8 sm:p-12 overflow-hidden">
+  <motion.div
+    className="flex gap-10"
+    style={{ display: "flex" }}
+    animate={{ x: ["0%", "-50%"] }} 
+    transition={{
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 15,
+        ease: "linear",
+      },
+    }}
+  >
+    {[
+      { title: "Trusted Care", image: sectionImage2 },
+      { title: "Connected Ecosystem", image: sectionImage4 },
+      { title: "Everyday Wellness", image: sectionImage5 },
+      { title: "Trusted Care", image: sectionImage2 },
+      { title: "Connected Ecosystem", image: sectionImage4 },
+      { title: "Everyday Wellness", image: sectionImage5 },
+    ].map((item, index) => (
+      <div
+        key={`${item.title}-${index}`}
+        className="space-y-4 min-w-[200px] text-center flex-shrink-0"
       >
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
-          {[
-            { title: "Trusted Care", image: sectionImage2 },
-            { title: "Connected Ecosystem", image: sectionImage4 },
-            { title: "Everyday Wellness", image: sectionImage5 },
-          ].map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeUp}
-              className="space-y-4"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="rounded-xl mx-auto h-40 object-cover"
-              />
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-            </motion.div>
-          ))}
+        <img
+          src={item.image}
+          alt={item.title}
+          className="rounded-xl mx-auto h-40 object-cover"
+        />
+        <h3 className="text-lg font-semibold">{item.title}</h3>
+      </div>
+    ))}
+  </motion.div>
+</motion.section>
+     
+
+<section className="space-y-10">
+  <h2 className="text-2xl sm:text-3xl font-bold text-left">
+    Trusted by Users and Communities
+  </h2>
+
+  <Swiper
+    spaceBetween={30}
+    slidesPerView={1.2}
+    breakpoints={{
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }}
+  >
+    {[
+      {
+        quote:
+          "Aven Health makes healthcare simple and accessible for me. And its very simple to use",
+        name: "Deborah Ayuma",
+        role: "User",
+      },
+      {
+        quote:
+          "I can easily connect with pharmacies and providers in one place.",
+        name: "Sharon Potishoi",
+        role: "User",
+      },
+      {
+        quote:
+          "The platform feels modern, trustworthy, and built for real people.",
+        name: "Dr. Amina",
+        role: "Healthcare Professional",
+      },
+    ].map((review, index) => (
+      <SwiperSlide key={index}>
+        <div className="bg-cardDark p-6 rounded-xl h-full flex flex-col justify-between">
+          <p className="text-gray-300 italic">“{review.quote}”</p>
+          <div className="mt-4">
+            <p className="text-accent font-semibold">{review.name}</p>
+            <p className="text-sm text-gray-400">{review.role}</p>
+          </div>
         </div>
-      </motion.section>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
 
-      {/* ================= COMMUNITY TESTIMONIALS ================= */}
-      <section className="space-y-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center">
-          Trusted by Communities
-        </h2>
-
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {[1, 2, 3].map((i) => (
-            <SwiperSlide key={i}>
-              <div className="bg-cardDark p-6 rounded-xl h-full">
-                <p className="text-gray-300">
-                  “AVEN makes healthcare simple and accessible.”
-                </p>
-                <p className="mt-4 text-accent font-semibold">
-                  Community Member
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-
-      {/* ================= CTA ================= */}
       <motion.section
         initial="hidden"
         whileInView="visible"
         variants={fadeUp}
         className="text-center space-y-6"
       >
-        <h2 className="text-2xl sm:text-3xl font-bold">
-          Start Your Health Journey with AVEN
+        <h2 className="text-2xl sm:text-3xl font-bold ">
+          Start Your Health Journey with Aven Health
         </h2>
 
         <p className="text-gray-300 max-w-xl mx-auto">
@@ -317,7 +374,7 @@ export default function Home() {
 
         <motion.button
           {...scaleHover}
-          className="px-8 py-3 bg-accent text-primary font-semibold rounded-lg shadow-lg"
+          className="px-8 py-3 bg-accent text-white font-semibold rounded-lg shadow-lg"
         >
           Get Started
         </motion.button>

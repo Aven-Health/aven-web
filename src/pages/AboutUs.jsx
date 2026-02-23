@@ -10,7 +10,7 @@ export default function AboutUs({}) {
   const slides = [
     {
       heading: "Healthcare, Simplified. Connected. Built Around You.",
-      text: "Aven is creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience, empowering individuals to take control of their health with clarity and confidence.",
+      text: "Aven Health is creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience, empowering individuals to take control of their health with clarity and confidence.",
     },
     {
       heading: "Find Trusted Care When You Need It Most",
@@ -143,13 +143,13 @@ export default function AboutUs({}) {
           className=" p-10 rounded-2xl shadow-lg space-y-5"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold text-accent">
-            Why AVEN Was Created
+            Why Aven Health Was Created
           </h2>
 
           <p className="text-gray-300 leading-relaxed">
             Modern healthcare is fragmented, reactive, and often overwhelming to
             navigate. Patients struggle to find trusted providers, compare
-            services, or access reliable medical information in one place. Aven
+            services, or access reliable medical information in one place. Aven Health
             Health was created to solve this problem by building a connected
             digital healthcare platform that simplifies access, improves
             transparency, and supports proactive health decisions.

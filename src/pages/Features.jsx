@@ -8,7 +8,7 @@ export default function Features() {
           Platform Features
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-300">
-          AVEN is designed to support everyday health decisions by connecting
+          Aven Health is designed to support everyday health decisions by connecting
           people, care providers, and trusted health resources into one
           ecosystem.
         </p>
@@ -68,7 +68,7 @@ export default function Features() {
           Designed for Simplicity & Trust
         </h2>
         <p className="mt-6 text-gray-300 text-lg">
-          Every feature in AVEN is intentionally designed to reduce complexity,
+          Every feature in Aven Health is intentionally designed to reduce complexity,
           build trust, and encourage proactive health choices — without
           overwhelming the user.
         </p>

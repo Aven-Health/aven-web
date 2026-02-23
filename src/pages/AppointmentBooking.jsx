@@ -58,7 +58,7 @@ export default function AppointmentBooking() {
         <header className="space-y-4">
           <h1 className="font-bold text-3xl text-left">Book Appointments</h1>
           <p className="text-gray-300 max-w-2xl text-left">
-            Browse verified healthcare professionals and book appointments easily via the Aven app. Web booking coming soon!
+            Browse verified healthcare professionals and book appointments easily via the Aven Health app. Web booking coming soon!
           </p>
         </header>
       </div>
@@ -114,7 +114,7 @@ export default function AppointmentBooking() {
       </div>
 
       <p className="text-sm text-gray-400 max-w-2xl mt-8">
-        Book appointments now via the Aven app. Web booking will be available in an upcoming update.
+        Book appointments now via the Aven Health app. Web booking will be available in an upcoming update.
       </p>
     </section>
   );
