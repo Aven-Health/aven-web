@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
 
