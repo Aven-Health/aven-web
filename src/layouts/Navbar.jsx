@@ -48,6 +48,7 @@ useEffect(() => {
   ];
 
   return (
+      <>
     <nav className="bg-primary text-white fixed w-full z-30 top-0 left-0 shadow-md">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 flex justify-between items-center h-16">
         {/* Logo */}
@@ -100,7 +101,7 @@ useEffect(() => {
             </button>
 
             {dropdownOpen && (
-           <div className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-primary shadow-2xl px-6 pt-20 pb-10 space-y-4 overflow-y-auto">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-cardDark rounded-md shadow-lg py-2 z-40">
                 {servicesLinks.map(({ to, label }) => (
                   <NavLink
                     key={to}
@@ -162,19 +163,19 @@ useEffect(() => {
           </svg>
         </button>
       </div>
+
+    </nav>
+
 {/* Mobile Menu Overlay */}
 {isOpen && (
   <div className="fixed inset-0 z-40 md:hidden">
     
-    {/* Backdrop */}
-    <div
-      className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-      onClick={() => setIsOpen(false)}
-    />
-
+<div
+  className="fixed inset-0 bg-primary"
+  onClick={() => setIsOpen(false)}
+/>
     {/* Menu Panel */}
-    <div className="absolute top-0 right-0 h-full w-4/5 max-w-sm bg-primary shadow-2xl px-6 pt-20 pb-10 space-y-4 overflow-y-auto">
-      
+   <div className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-primary shadow-2xl px-6 pt-20 pb-10 space-y-4 overflow-y-auto">
       {/* Main Links */}
       {mainLinks.map(({ to, label }) => (
         <NavLink
@@ -259,6 +260,6 @@ useEffect(() => {
     </div>
   </div>
 )}
-    </nav>
+    </>
   );
 }

@@ -84,8 +84,7 @@ export default function MeetTheTeam() {
   return (
     <section className="max-w-6xl mx-auto space-y-16">
 
-      {/* Header */}
-      <header className="text-center space-y-4">
+      <header className="text-left space-y-4">
         <h1 className="text-4xl font-bold text-white">
           Meet the Team
         </h1>
@@ -95,60 +94,78 @@ export default function MeetTheTeam() {
           connected, and centered around everyday life.
         </p>
       </header>
+<div className="space-y-8">
 
-      {/* Team Grid */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-4 justify-center">
+    <TeamCard
+      member={team[0]}
+      index={0}
+      openIndex={openIndex}
+      toggleDropdown={toggleDropdown}
+    />
 
-        {team.map((member, index) => (
-          <div
-            key={index}
-            className="bg-cardDark p-6 rounded-xl text-center space-y-5 transition hover:shadow-lg"
-          >
-
-            {/* Profile Image */}
-            <div className="w-36 h-36 mx-auto rounded-full overflow-hidden bg-cardLight flex items-center justify-center ring-2 ring-accent/40">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            {/* Name */}
-            <h3 className="text-xl font-semibold text-white">
-              {member.name}
-            </h3>
-
-            {/* Role */}
-            <p className="text-accent text-sm font-medium">
-              {member.role}
-            </p>
-
-            {/* Short Description */}
-            <p className="text-gray-300 text-sm leading-relaxed">
-              {member.shortDescription}
-            </p>
-
-            {/* Dropdown Button */}
-            <button
-              onClick={() => toggleDropdown(index)}
-              className="text-accent text-sm font-medium hover:underline transition"
-            >
-              {openIndex === index ? "Show Less" : "Learn More"}
-            </button>
-
-            {/* Dropdown Content */}
-            {openIndex === index && (
-              <div className="text-gray-300 text-sm leading-relaxed pt-2 border-t border-white/10 animate-fadeIn">
-                {member.fullDescription}
-              </div>
-            )}
-
-          </div>
-        ))}
-
+    {team.slice(1, 4).map((member, index) => (
+      <div key={index + 1} className="hidden lg:block">
+        <TeamCard
+          member={member}
+          index={index + 1}
+          openIndex={openIndex}
+          toggleDropdown={toggleDropdown}
+        />
       </div>
+    ))}
+  </div>
 
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
+    {team.slice(4, 7).map((member, index) => (
+      <div key={index + 4} className="hidden lg:block">
+        <TeamCard
+          member={member}
+          index={index + 4}
+          openIndex={openIndex}
+          toggleDropdown={toggleDropdown}
+        />
+      </div>
+    ))}
+
+    {team.slice(1, 7).map((member, index) => (
+      <div key={"sm-" + index} className="block lg:hidden">
+        <TeamCard
+          member={member}
+          index={index + 1}
+          openIndex={openIndex}
+          toggleDropdown={toggleDropdown}
+        />
+      </div>
+    ))}
+  </div>
+
+</div>
     </section>
+  );
+}
+
+
+function TeamCard({ member, index, openIndex, toggleDropdown }) {
+  return (
+    <div className="bg-cardDark p-6 rounded-xl text-center space-y-5 transition hover:shadow-lg">
+      <div className="w-36 h-36 mx-auto rounded-full overflow-hidden bg-cardLight flex items-center justify-center ring-2 ring-accent/40">
+        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-center" />
+      </div>
+      <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+      <p className="text-accent text-sm font-medium">{member.role}</p>
+      <p className="text-gray-300 text-sm leading-relaxed">{member.shortDescription}</p>
+      <button
+        onClick={() => toggleDropdown(index)}
+        className="text-accent text-sm font-medium hover:underline transition"
+      >
+        {openIndex === index ? "Show Less" : "Learn More"}
+      </button>
+      {openIndex === index && (
+        <div className="text-gray-300 text-sm leading-relaxed pt-2 border-t border-white/10 animate-fadeIn">
+          {member.fullDescription}
+        </div>
+      )}
+    </div>
   );
 }
