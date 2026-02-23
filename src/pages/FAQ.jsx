@@ -4,43 +4,43 @@ import { useState } from "react";
 export default function FAQ() {
   const faqSections = [
 {
-  title: "About Aven",
+  title: "About Aven Health",
   faqs: [
     {
-      q: "What is AVEN?",
+      q: "What is Aven Health?",
       a: "Aven Health is a community-first digital health platform designed to connect individuals with healthcare providers, services, and trusted health resources.",
     },
     {
-      q: "Is AVEN a hospital or clinic?",
+      q: "Is Aven Health a hospital or clinic?",
       a: "No. Aven Health is not a healthcare provider. It serves as an access point that helps users discover, plan, and engage with healthcare services.",
     },
     {
-      q: "Does AVEN replace my doctor?",
-      a: "No. AVEN complements traditional care by helping users stay informed and connected — it does not replace medical professionals.",
+      q: "Does Aven Health replace my doctor?",
+      a: "No. Aven Health complements traditional care by helping users stay informed and connected — it does not replace medical professionals.",
     },
     {
-      q: "Is AVEN free to use?",
+      q: "Is Aven Health free to use?",
       a: "Core discovery and access features are designed to be widely accessible. Additional services may be introduced later.",
     },
     {
-      q: "Who can use Aven?",
-      a: "Aven is available to anyone seeking access to verified healthcare providers, products, and health information, subject to age and local regulations.",
+      q: "Who can use Aven Health?",
+      a: "Aven Health is available to anyone seeking access to verified healthcare providers, products, and health information, subject to age and local regulations.",
     },
     {
-      q: "Where is Aven available?",
-      a: "Currently, Aven operates in regions where local healthcare providers and pharmacies are registered on the platform. Coverage will expand over time.",
+      q: "Where is Aven Health available?",
+      a: "Currently, Aven Health operates in regions where local healthcare providers and pharmacies are registered on the platform. Coverage will expand over time.",
     },
     {
-      q: "What devices can I use Aven on?",
-      a: "Aven is primarily available via the mobile app on iOS and Android. Web access is planned for future releases.",
+      q: "What devices can I use Aven Health on?",
+      a: "Aven Health is primarily available via the mobile app on iOS and Android. Web access is planned for future releases.",
     },
     {
-      q: "How does Aven ensure quality of service?",
-      a: "All doctors, medical professionals, and health stores are verified, and Aven continuously monitors reviews, ratings, and compliance with platform standards.",
+      q: "How does Aven Health ensure quality of service?",
+      a: "All doctors, medical professionals, and health stores are verified, and Aven Health continuously monitors reviews, ratings, and compliance with platform standards.",
     },
     {
-      q: "Can I trust the health information on Aven?",
-      a: "Yes. Aven curates trusted health content from verified professionals and sources. Users should always follow professional medical advice when making health decisions.",
+      q: "Can I trust the health information on Aven Health?",
+      a: "Yes. Aven Health curates trusted health content from verified professionals and sources. Users should always follow professional medical advice when making health decisions.",
     },
   ],
 },
@@ -50,7 +50,7 @@ export default function FAQ() {
   faqs: [
     {
       q: "How do I create an account?",
-      a: "You can create an account via the Aven app using your phone number or email. You must provide accurate personal information as required in our User Agreement.",
+      a: "You can create an account via the Aven Health app using your phone number or email. You must provide accurate personal information as required in our User Agreement.",
     },
     {
       q: "Can I update my personal information later?",
@@ -82,7 +82,7 @@ export default function FAQ() {
     },
     {
       q: "What happens if someone else uses my account?",
-      a: "You should immediately report unauthorized access via the app or support email. Aven will help secure your account and prevent misuse.",
+      a: "You should immediately report unauthorized access via the app or support email. Aven Health will help secure your account and prevent misuse.",
     },
   ],
 },
@@ -92,7 +92,7 @@ export default function FAQ() {
   faqs: [
     {
       q: "How do I book an appointment?",
-      a: "Booking is currently available in the Aven app. Simply select a doctor, choose a time, and confirm. Web booking will be available in a future update.",
+      a: "Booking is currently available in the Aven Health app. Simply select a doctor, choose a time, and confirm. Web booking will be available in a future update.",
     },
     {
       q: "Can I book both online and in-person appointments?",
@@ -135,15 +135,15 @@ export default function FAQ() {
   faqs: [
     {
       q: "How are doctors verified?",
-      a: "All doctors and healthcare professionals on Aven are verified for credentials, licensure, and certifications before they can accept appointments.",
+      a: "All doctors and healthcare professionals on Aven Health are verified for credentials, licensure, and certifications before they can accept appointments.",
     },
     {
       q: "Can I choose any type of doctor?",
-      a: "Yes. Aven hosts general practitioners, specialists, mental health professionals, chronic care experts, and other certified medical professionals.",
+      a: "Yes. Aven Health hosts general practitioners, specialists, mental health professionals, chronic care experts, and other certified medical professionals.",
     },
     {
       q: "How do I know if a health store or pharmacy is legitimate?",
-      a: "Only verified and registered health stores and pharmacies are allowed to list their products on Aven. Verification ensures compliance with local regulations and platform standards.",
+      a: "Only verified and registered health stores and pharmacies are allowed to list their products on Aven Health. Verification ensures compliance with local regulations and platform standards.",
     },
     {
       q: "Can I see a doctor's profile before booking?",
@@ -151,7 +151,7 @@ export default function FAQ() {
     },
     {
       q: "Are all health stores’ products verified?",
-      a: "Yes. Aven ensures that all listed products are from legitimate health stores, verified for authenticity and compliance with applicable regulations.",
+      a: "Yes. Aven Health ensures that all listed products are from legitimate health stores, verified for authenticity and compliance with applicable regulations.",
     },
     {
       q: "Can I filter doctors by specialty ?",
@@ -166,8 +166,8 @@ export default function FAQ() {
       a: "Any concerns or disputes can be reported through the app. Aven Health will review and mediate according to the User Agreement and Health Store Agreement.",
     },
     {
-      q: "Are there telehealth doctors available on Aven?",
-      a: "Yes. Many doctors on Aven offer secure online consultations via in app video call appointments, in addition to physical appointments.",
+      q: "Are there telehealth doctors available on Aven Health?",
+      a: "Yes. Many doctors on Aven Health offer secure online consultations via in app video call appointments, in addition to physical appointments.",
     },
   ],
 },
@@ -180,7 +180,7 @@ export default function FAQ() {
       a: "Payments are made via the app using secure payment options such as M-pesa and credit/debit cards, mobile money, or other supported payment gateways. Pricing is displayed before you confirm your booking.",
     },
     {
-      q: "Does Aven charge commission?",
+      q: "Does Aven Health charge commission?",
       a: "Yes. Doctors and health stores pay a platform commission for appointments and product sales. This does not affect your listed appointment fee as a user.",
     },
     {
@@ -193,7 +193,7 @@ export default function FAQ() {
     },
     {
       q: "Are there any hidden fees?",
-      a: "No. All fees are clearly displayed during booking. Aven does not charge hidden fees for using the platform.",
+      a: "No. All fees are clearly displayed during booking. Aven Health does not charge hidden fees for using the platform.",
     },
     {
       q: "Can I use multiple payment methods for one appointment?",
@@ -201,7 +201,7 @@ export default function FAQ() {
     },
     {
       q: "How are commissions calculated for doctors and health stores?",
-      a: "Commission rates are a percentage of the appointment or product sale value and are clearly communicated to service providers in their agreements with Aven.",
+      a: "Commission rates are a percentage of the appointment or product sale value and are clearly communicated to service providers in their agreements with Aven Health.",
     },
   ],
 },
@@ -210,11 +210,11 @@ export default function FAQ() {
   faqs: [
     {
       q: "Is my consultation private?",
-      a: "Yes. All one-on-one appointments and communications on Aven are fully encrypted end-to-end (E2EE). This ensures that only you and your doctor can access the content of your consultation.",
+      a: "Yes. All one-on-one appointments and communications on Aven Health are fully encrypted end-to-end (E2EE). This ensures that only you and your doctor can access the content of your consultation.",
     },
     {
-      q: "How does Aven protect my personal and health data?",
-      a: "Aven uses advanced encryption protocols, secure servers, and strict access controls to protect all personal and health-related data. Data is stored in compliance with industry standards and local regulations.",
+      q: "How does Aven Health protect my personal and health data?",
+      a: "Aven Health uses advanced encryption protocols, secure servers, and strict access controls to protect all personal and health-related data. Data is stored in compliance with industry standards and local regulations.",
     },
     {
       q: "Will my data be shared with third parties?",
@@ -226,23 +226,23 @@ export default function FAQ() {
     },
     {
       q: "How secure is messaging with doctors?",
-      a: "All in-app messages and calls are encrypted end-to-end. No unauthorized party, including Aven staff, can access your private messages or consultation content.",
+      a: "All in-app messages and calls are encrypted end-to-end. No unauthorized party, including Aven Health staff, can access your private messages or consultation content.",
     },
     {
-      q: "How does Aven prevent unauthorized access?",
-      a: "Aven enforces strong authentication, password protection to prevent unauthorized access to user accounts.",
+      q: "How does Aven Health prevent unauthorized access?",
+      a: "Aven Health enforces strong authentication, password protection to prevent unauthorized access to user accounts.",
     },
     {
       q: "What happens if there is a security breach?",
-      a: "Aven has a security incident response plan. In the unlikely event of a breach, affected users will be notified immediately, and corrective measures will be taken to secure data and prevent recurrence.",
+      a: "Aven Health has a security incident response plan. In the unlikely event of a breach, affected users will be notified immediately, and corrective measures will be taken to secure data and prevent recurrence.",
     },
     {
-      q: "Does Aven store my health records?",
+      q: "Does Aven Health store my health records?",
       a: "Yes, health records related to consultations and appointments are securely stored. Access is strictly controlled, encrypted, and used only to facilitate care or as legally required.",
     },
     {
       q: "Are my payment details secure?",
-      a: "Yes. Payment information is processed using secure, PCI-compliant payment gateways. Sensitive payment data is never stored on Aven servers.",
+      a: "Yes. Payment information is processed using secure, PCI-compliant payment gateways. Sensitive payment data is never stored on Aven Health servers.",
     },
     {
       q: "Can I control who sees my health information?",
@@ -255,35 +255,35 @@ export default function FAQ() {
   title: "Platform Features",
   faqs: [
     {
-      q: "What features does Aven offer?",
-      a: "Aven combines healthcare and social engagement. Features include easy 2-step booking, secure one-on-one appointments, online and physical consultations, access to verified doctors across specialties, quick appointments with real-time availability, in-app messaging, health record management, verified health store product purchases, health communities, and posting and sharing trusted health resources with peers.",
+      q: "What features does Aven Health offer?",
+      a: "Aven Health combines healthcare and social engagement. Features include easy 2-step booking, secure one-on-one appointments, online and physical consultations, access to verified doctors across specialties, quick appointments with real-time availability, in-app messaging, health record management, verified health store product purchases, health communities, and posting and sharing trusted health resources with peers.",
     },
     {
-      q: "Can I use Aven without the app?",
+      q: "Can I use Aven Health without the app?",
       a: "Currently, all features are available via the mobile app. Web access and browser-based booking and social features will be available in future updates.",
     },
     {
-      q: "Are all types of medical professionals available on Aven?",
-      a: "Yes. Aven provides access to general practitioners, specialists, mental health professionals, chronic care experts, and other verified healthcare providers.",
+      q: "Are all types of medical professionals available on Aven Health?",
+      a: "Yes. Aven Health provides access to general practitioners, specialists, mental health professionals, chronic care experts, and other verified healthcare providers.",
     },
     {
       q: "How fast can I get an appointment?",
-      a: "Appointment availability depends on the doctor’s schedule, but Aven is designed for quick booking with real-time updates, minimizing wait times wherever possible.",
+      a: "Appointment availability depends on the doctor’s schedule, but Aven Health is designed for quick booking with real-time updates, minimizing wait times wherever possible.",
     },
     {
-      q: "Can I access my medical records through Aven?",
+      q: "Can I access my medical records through Aven Health?",
       a: "Yes. You can securely view and manage your consultation history, prescriptions, and lab results directly in the app.",
     },
     {
       q: "Can I chat with my doctor before an appointment?",
-      a: "Yes. Aven supports secure in-app messaging to communicate with doctors before, during, or after appointments.",
+      a: "Yes. Aven Health supports secure in-app messaging to communicate with doctors before, during, or after appointments.",
     },
     {
       q: "Can I purchase verified products from health stores?",
-      a: "Yes. Aven allows you to buy verified health and wellness products directly from registered health stores within the app.",
+      a: "Yes. Aven Health allows you to buy verified health and wellness products directly from registered health stores within the app.",
     },
     {
-      q: "Does Aven support reminders and notifications?",
+      q: "Does Aven Health support reminders and notifications?",
       a: "Yes. The app sends notifications for upcoming appointments, prescription refills, messages from doctors, and updates in your health communities.",
     },
     {
@@ -291,12 +291,12 @@ export default function FAQ() {
       a: "Yes. For ongoing care, you can schedule recurring or follow-up appointments with your doctor through the app.",
     },
     {
-      q: "Is Aven suitable for both individuals and families?",
+      q: "Is Aven Health suitable for both individuals and families?",
       a: "Yes. You can manage accounts for yourself and family members, allowing appointments, social engagement, and health tracking for multiple people under one account.",
     },
     {
-      q: "What social features does Aven provide?",
-      a: "Aven includes communities where users can interact with peers, share experiences, post trusted health resources, ask questions, and participate in discussions moderated for safety and accuracy.",
+      q: "What social features does Aven Health provide?",
+      a: "Aven Health includes communities where users can interact with peers, share experiences, post trusted health resources, ask questions, and participate in discussions moderated for safety and accuracy.",
     },
     {
       q: "Can I follow specific health topics or communities?",

@@ -5,10 +5,10 @@ export default function OurApp() {
       {/* HEADER */}
       <div className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-white">
-          What AVEN Does
+          What Aven Health Does
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-300">
-          AVEN brings healthcare access, guidance, and connection into one
+          Aven Health brings healthcare access, guidance, and connection into one
           simple, everyday experience.
         </p>
       </div>
@@ -16,7 +16,7 @@ export default function OurApp() {
       {/* OVERVIEW */}
       <div className="bg-cardDark p-10 rounded-xl text-center max-w-4xl mx-auto">
         <p className="text-lg text-gray-300 leading-relaxed">
-          AVEN is a digital health platform designed to help individuals discover
+          Aven Health is a digital health platform designed to help individuals discover
           care providers, manage everyday health needs, and engage with a
           supportive health community — all in one place.
         </p>
@@ -70,7 +70,7 @@ export default function OurApp() {
           Built for Everyday Health
         </h2>
         <p className="mt-6 text-gray-300 text-lg">
-          AVEN is not a replacement for healthcare providers. It is the bridge
+          Aven Health is not a replacement for healthcare providers. It is the bridge
           that connects people to the right care, at the right time, with the
           right information, empowering healthier daily decisions.
         </p>

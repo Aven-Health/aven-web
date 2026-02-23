@@ -20,9 +20,9 @@ export default function MeetTheTeam() {
       name: "Chaluo Ian",
       role: "Chief Executive Officer (CEO)",
       shortDescription:
-        "Leads AVEN’s vision and strategy, focused on building community-first digital health solutions.",
+        "Leads Aven Health’s vision and strategy, focused on building community-first digital health solutions.",
       fullDescription:
-        "Chaluo provides long-term strategic leadership, oversees stakeholder engagement, and ensures AVEN remains mission-driven while scaling sustainably across communities.",
+        "Chaluo provides long-term strategic leadership, oversees stakeholder engagement, and ensures Aven Health remains mission-driven while scaling sustainably across communities.",
       image: ianChaluo,
     },
     {
@@ -31,7 +31,7 @@ export default function MeetTheTeam() {
       shortDescription:
         "Oversees product strategy and technology architecture.",
       fullDescription:
-        "Bruce Lukwa is a product and data professional with hands-on experience designing data-driven solutions to real-world problems across health, finance, and emerging markets. In his career he has contributed to large-scale data reconciliation and automation initiatives that improved financial accuracy and prevented significant losses. As Chief Product Officer at Aven, he leads product strategy and the development of ethical, user-centered, AI-enabled platforms.",
+        "Bruce Lukwa is a product and data professional with hands-on experience designing data-driven solutions to real-world problems across health, finance, and emerging markets. In his career he has contributed to large-scale data reconciliation and automation initiatives that improved financial accuracy and prevented significant losses. As Chief Product Officer at Aven Health, he leads product strategy and the development of ethical, user-centered, AI-enabled platforms.",
       image: bruceLukwa,
     },
     {
@@ -58,7 +58,7 @@ export default function MeetTheTeam() {
       shortDescription:
         "Manages governance and strategic partnerships.",
       fullDescription:
-        "Nila ensures regulatory integrity, builds institutional partnerships, and strengthens accountability frameworks across AVEN’s ecosystem.",
+        "Nila ensures regulatory integrity, builds institutional partnerships, and strengthens accountability frameworks across Aven Health’s ecosystem.",
       image: nilaKhadioli,
     },
     {
@@ -76,7 +76,7 @@ export default function MeetTheTeam() {
       shortDescription:
         "Focuses on user insights and evidence-driven growth.",
       fullDescription:
-        "Safia is a dedicated and passionate leader, Safia is a champion for positive change in her community. As the first-born daughter, she has developed strong leadership skills, which have earned her recognition as a Barney Servant Leadership Award winner at Africa Nazarene University. Her advocacy focuses on combating retrogressive cultures, including FGM and early marriages, to empower young girls. With experience as a Field Officer at Innovative for Poverty Action, and internships at the Public Service Commission and KANCO, Safia has honed her skills in community development and public service. Currently pursuing a Master's in Monitoring and Evaluation at Kenyatta University, she aspires to drive positive social and economic change, impacting lives and inspiring others. As a wife, and Chief Community Officer at AVEN, Safia leads initiatives that foster community engagement and inclusivity in healthcare. She embodies a commitment to servant leadership, seeking to make a lasting difference in her community.",
+        "Safia is a dedicated and passionate leader, Safia is a champion for positive change in her community. As the first-born daughter, she has developed strong leadership skills, which have earned her recognition as a Barney Servant Leadership Award winner at Africa Nazarene University. Her advocacy focuses on combating retrogressive cultures, including FGM and early marriages, to empower young girls. With experience as a Field Officer at Innovative for Poverty Action, and internships at the Public Service Commission and KANCO, Safia has honed her skills in community development and public service. Currently pursuing a Master's in Monitoring and Evaluation at Kenyatta University, she aspires to drive positive social and economic change, impacting lives and inspiring others. As a wife, and Chief Community Officer at Aven Health, Safia leads initiatives that foster community engagement and inclusivity in healthcare. She embodies a commitment to servant leadership, seeking to make a lasting difference in her community.",
       image: safiaMohammed,
     },
   ];
@@ -91,7 +91,7 @@ export default function MeetTheTeam() {
         </h1>
 
         <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-          AVEN is built by people who believe healthcare should be accessible,
+          Aven Health is built by people who believe healthcare should be accessible,
           connected, and centered around everyday life.
         </p>
       </header>

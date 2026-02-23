@@ -9,7 +9,7 @@ const pharmacies = [
   { id: 2, name: "CarePlus Pharmacy", location: "Westlands" },
 ];
 const posts = [
-  { id: 1, author: "Alice M.", content: "Great experience with AVEN" },
+  { id: 1, author: "Alice M.", content: "Great experience with Aven Health" },
   { id: 2, author: "John K.", content: "Looking for a pediatrician" },
 ];
 
@@ -32,7 +32,7 @@ export default function CentralSearch() {
 
   return (
     <section className="max-w-6xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold text-white">Search AVEN</h1>
+      <h1 className="text-3xl font-bold text-white">Search Aven Health</h1>
 
       <input
         type="text"

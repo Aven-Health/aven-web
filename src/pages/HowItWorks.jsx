@@ -16,7 +16,7 @@ export default function HowItWorks() {
         className="text-center space-y-6"
       >
         <h1 className="text-left md:text-5xl font-bold text-white">
-          How AVEN Works: Your Digital Health Companion
+          How Aven Health Works: Your Digital Health Companion
         </h1>
 
         <div className=" mx-auto px-">
@@ -101,7 +101,7 @@ export default function HowItWorks() {
             Built Around Everyday Life
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed">
-            AVEN fits naturally into your daily routine keeping you informed,
+            Aven Health fits naturally into your daily routine keeping you informed,
             prepared, and connected to care without navigating complex
             healthcare systems. Access resources, community support, and
             professional guidance anytime, anywhere, all in one app.
