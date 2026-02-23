@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo2.jpeg";
+import logo from "../assets/favicon.png";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll glass effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -31,7 +30,6 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
 
-        {/* LOGO */}
         <Link to="/" className="flex items-center">
           <img
             src={logo}
@@ -40,14 +38,12 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* DESKTOP NAV */}
         <div className="hidden md:flex items-center gap-10">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/community-feed" className={navLinkClass}>Communities</NavLink>
           <NavLink to="/doctors" className={navLinkClass}>Book Appointments</NavLink>
           <NavLink to="/pharmacies" className={navLinkClass}>Pharmacies</NavLink>
 
-          {/* HOW IT WORKS */}
           <Dropdown label="How It Works">
             <NavLink to="/how-it-works" className="dropdown-link">
               How It Works
