@@ -66,7 +66,7 @@ const features = [
 
 
   return (
-      <section className="w-full px-4 sm:px-1 lg:px-2 py-1">
+      <section className="w-full px-4 sm:px-1 lg:px-2 py-1 ">
 
  <Banner
   backgroundImage={doctor1}
@@ -128,7 +128,7 @@ const features = [
         </div>
 
         <div className={`${isReversed ? "lg:order-1" : "lg:order-2"}`}>
-          <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl group">
             <img
               src={feature.image}
               alt={feature.title}
@@ -141,10 +141,18 @@ const features = [
   })}
 </div>
    
-      <p className="text-sm text-gray-400 max-w-2xl mt-8">
-        Book appointments now via the Aven Health app. Web booking will be available in an upcoming update.
+     <section className="p-8 text-center max-w-4xl mx-auto mt-16 space-y-6">
+  <h2 className="text-2xl font-semibold text-white">Verified Professionals & Secure Booking</h2>
+  <p className="text-gray-300 text-lg leading-relaxed">
+    Aven only lists verified doctors, specialists, and medical professionals to ensure safe, reliable, and trusted care.
+  </p>
+  <p className="text-gray-300 text-lg leading-relaxed">
+    Schedule your appointments confidently knowing you’re connecting with qualified healthcare providers.
+  </p>
+  <p className="text-gray-300 text-lg leading-relaxed">
+    Web booking is coming soon for now, appointments are fully available via the Aven Health app for a seamless experience.
       </p>
-
+</section>
     </section>
   );
 }

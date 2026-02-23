@@ -62,13 +62,13 @@ export default function CommunityFeed() {
           {
             title: "Think of It as a Social App for Health",
             description:
-              "Post updates, join communities, discuss what matters, and stay motivated on your wellness journey. Web communities coming soon — explore in the app today.",
+              "Post updates, join communities, discuss what matters, and stay motivated on your wellness journey. Web communities coming soon, explore in the app today.",
           },
         ]}
       />
 
+
       <section className="space-y-12">
-        <h2 className="text-2xl font-semibold text-center">Aven Community Features</h2>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <div
@@ -90,26 +90,20 @@ export default function CommunityFeed() {
         </div>
       </section>
 
+
       <section className="space-y-6 text-center max-w-3xl mx-auto px-4">
-        <h2 className="text-2xl font-semibold">What Aven Communities Mean</h2>
+        <h2 className="text-2xl font-semibold">Aven Communities</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
           Aven Communities are safe, moderated spaces designed to bring people together around health topics that matter.
           Share your experiences, get support, discuss challenges, and learn from others who understand your journey.
         </p>
         <p className="text-gray-300 text-lg leading-relaxed">
-          You can join existing communities on mental wellness, fitness, nutrition, chronic care, and more — or create your own to bring like-minded people together.
+          You can join existing communities on mental wellness, fitness, nutrition, chronic care, and more, or create your own to bring like-minded people together.
         </p>
         <p className="text-gray-400 text-base mt-4">
-          Web Communities coming soon — for now, explore and interact in the app!
+          Web Communities coming soon, for now, explore and interact in the app!
         </p>
       </section>
-
-      <ComingSoonModal
-        open={showNotice}
-        onClose={() => setShowNotice(false)}
-        title="Web Communities Coming Soon"
-        message="Joining and interacting in communities will soon be available on the web. For now, explore the app!"
-      />
     </div>
   );
 }

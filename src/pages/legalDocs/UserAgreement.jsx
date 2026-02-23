@@ -10,8 +10,7 @@ const userTermsSection1 = {
       content: [
         "Welcome to Aven Health. These Terms and Conditions (“Terms”) govern your use of the Aven Health platform, including our website, mobile applications, services, and related features (collectively, the “Platform”).",
         "By creating an account, accessing, or using the Platform, you agree to be legally bound by these Terms. If you do not agree with any part of these Terms, you must not use the Platform."
-      ],
-      structuredContent: [
+      ,
         {
           minorSubheading: "1.1 Scope of the Terms",
           content: ["These Terms apply to all users of the Platform, including but not limited to:"],
@@ -49,7 +48,7 @@ const userTermsSection1 = {
     },
     {
   heading: "2. Eligibility",
-  structuredContent: [
+  content: [
     {
       minorSubheading: "2.1 Age Requirement",
       content: [
@@ -76,21 +75,20 @@ const userTermsSection1 = {
         "Aven Health shall not be liable for any loss, damage, or unauthorized activity arising from your failure to safeguard your account credentials or from unauthorized access resulting from your negligence."
       ]
     },
+    
     {
-      minorSubheading: "2.4 Right to Refuse or Terminate Access",
-      content: [
-        "Aven Health reserves the right, at its sole discretion and without obligation to provide prior notice, to refuse registration, suspend access, restrict certain features, or terminate accounts where it reasonably believes that:"
-      ],
-      example: [
-        "A user has violated these Terms;",
-        "A user has misrepresented their identity, age, or eligibility;",
-        "A user has engaged in fraudulent, abusive, unlawful, or harmful conduct; or",
-        "Continued access poses a risk to the integrity, security, or lawful operation of the Platform."
-      ],
-      content: [
-        "Termination or suspension under this section may result in the loss of access to account data, content, and services. Aven Health shall not be liable for any consequences arising from such suspension or termination where action is taken in accordance with these Terms."
-      ]
-    }
+  minorSubheading: "2.4 Right to Refuse or Terminate Access",
+  content: [
+    "Aven Health reserves the right, at its sole discretion and without obligation to provide prior notice, to refuse registration, suspend access, restrict certain features, or terminate accounts where it reasonably believes that:",
+    "Termination or suspension under this section may result in the loss of access to account data, content, and services. Aven Health shall not be liable for any consequences arising from such suspension or termination where action is taken in accordance with these Terms."
+  ],
+  example: [
+    "A user has violated these Terms;",
+    "A user has misrepresented their identity, age, or eligibility;",
+    "A user has engaged in fraudulent, abusive, unlawful, or harmful conduct; or",
+    "Continued access poses a risk to the integrity, security, or lawful operation of the Platform."
+  ]
+}
   ]
 },
 {
@@ -387,16 +385,14 @@ const userTermsSection1 = {
   minorSubheading: "6.1 Payment Processing",
   content: [
     "Payments made through the Platform, including consultation fees and pharmacy purchases, are processed through a third-party payment provider (currently Paystack or any successor payment processor).",
-    "By making a payment through the Platform, you:"
+    "All payments are processed electronically. Aven Health is not responsible for delays or errors caused by payment processors, banks, or financial institutions.",
+    "By making a payment through the Platform, you:",
   ],
-  example: [
+   example: [
     "Authorize Aven Health and its payment processor to charge your selected payment method;",
     "Agree to comply with the payment processor’s terms and conditions;",
     "Acknowledge that Aven Health does not store full payment card details."
   ],
-  content: [
-    "All payments are processed electronically. Aven Health is not responsible for delays or errors caused by payment processors, banks, or financial institutions."
-  ]
 },
 {
   minorSubheading: "6.2 Appointments, Consultation Fees, and Cancellation Policy",
@@ -424,15 +420,13 @@ const userTermsSection1 = {
 {
   minorMinorSubheading: "6.2.2.2 Cancellation Before Appointment (Advance Notice)",
   content: [
+     "Refund eligibility and amounts are clearly displayed during booking. Professionals are not penalized if the user cancels within this timeframe.",
     "If the user cancels more than 6 hours before the appointment:"
   ],
   example: [
     "Eligible for a full refund, or",
     "Eligible for a partial refund after deduction of applicable processing or platform fees."
   ],
-  content: [
-    "Refund eligibility and amounts are clearly displayed during booking. Professionals are not penalized if the user cancels within this timeframe."
-  ]
 },
 {
   minorMinorSubheading: "6.2.2.3 Late Cancellation (Within 6 Hours of Appointment)",
@@ -478,29 +472,34 @@ const userTermsSection1 = {
     "Patient G requests a reschedule from 3 PM to 5 PM, 8 hours before the appointment. Approved reschedule is allowed without fee adjustment."
   ]
 },
-{
+  {
   minorMinorSubheading: "6.2.6 Refunds",
   content: [
-    "Refunds may be issued under the following conditions:"
-  ],
-  example: [
-    "Valid user cancellation within the 6-hour cut-off period.",
-    "Technical failures preventing the consultation.",
-    "Professional unavailability or failure to attend.",
-    "Duplicate payments or billing errors."
-  ],
-  content: [
-    "Refunds are processed via the original payment method, which may take several business days. Aven Health may request documentation to verify eligibility before issuing refunds. Refunds will not be issued if:"
-  ],
-  example: [
-    "The user attended the consultation.",
-    "The user was a no-show (except for partial refund policy above).",
-    "The user is dissatisfied with advice provided in good faith by a licensed professional."
-  ],
-  content: [
+    {
+      content: [
+        "Refunds may be issued under the following conditions:"
+      ],
+      example: [
+        "Valid user cancellation within the 6-hour cut-off period.",
+        "Technical failures preventing the consultation.",
+        "Professional unavailability or failure to attend.",
+        "Duplicate payments or billing errors."
+      ]
+    },
+    {
+      content: [
+        "Refunds are processed via the original payment method, which may take several business days. Aven Health may request documentation to verify eligibility before issuing refunds. Refunds will not be issued if:"
+      ],
+      example: [
+        "The user attended the consultation.",
+        "The user was a no-show (except for partial refund policy above).",
+        "The user is dissatisfied with advice provided in good faith by a licensed professional."
+      ]
+    },
     "Users are encouraged to provide timely notice of cancellations or rescheduling. Professionals and users are protected by clear rules regarding payments, refunds, and missed appointments. The 6-hour cancellation cut-off aligns with professional obligations, ensuring fairness and protection of clinical time."
   ]
 },
+
 {
   minorSubheading: "6.3 Pharmacy Orders and Product Transactions",
   content: [
@@ -528,14 +527,16 @@ const userTermsSection1 = {
 {
   minorSubheading: "6.4 Chargebacks and Payment Disputes",
   content: [
-    "If a user initiates a chargeback or payment dispute without first attempting to resolve the matter through the Platform:"
-  ],
-  example: [
-    "Aven Health reserves the right to suspend the account;",
-    "The user may be required to repay disputed amounts;",
-    "Future access to paid services may be restricted."
-  ],
-  content: [
+    {
+      content: [
+        "If a user initiates a chargeback or payment dispute without first attempting to resolve the matter through the Platform:"
+      ],
+      example: [
+        "Aven Health reserves the right to suspend the account;",
+        "The user may be required to repay disputed amounts;",
+        "Future access to paid services may be restricted."
+      ]
+    },
     "Fraudulent payment disputes may result in permanent account termination and potential legal action."
   ]
 },
@@ -548,43 +549,41 @@ const userTermsSection1 = {
 {
   minorSubheading: "6.6 Cancellation by Healthcare Professional",
   content: [
-    "If a healthcare professional cancels a scheduled appointment:"
+  
+    "If the cancellation occurs at short notice or without reasonable justification, Aven Health may take appropriate action against the professional in accordance with professional standards and platform policies.",
+    "Aven Health shall not retain platform fees in cases where the cancellation is initiated by the healthcare professional and the service was not delivered.",
+    "If a healthcare professional cancels a scheduled appointment:",
   ],
-  example: [
+    example: [
     "The user shall be entitled to a full refund of the consultation fee; or",
     "The option to reschedule the appointment at no additional cost, subject to availability."
   ],
-  content: [
-    "If the cancellation occurs at short notice or without reasonable justification, Aven Health may take appropriate action against the professional in accordance with professional standards and platform policies.",
-    "Aven Health shall not retain platform fees in cases where the cancellation is initiated by the healthcare professional and the service was not delivered."
-  ]
 },
 {
   minorSubheading: "6.11 Failure of Professional to Attend",
   content: [
-    "If a healthcare professional fails to attend a scheduled appointment without prior notice:"
+    "If a healthcare professional fails to attend a scheduled appointment without prior notice:",
+    "Repeated failure by a professional to attend appointments may result in suspension or removal from the Platform.",
+
   ],
-  example: [
+    example: [
     "The user shall be entitled to a full refund; and",
     "May be offered priority rescheduling or alternative professional options."
   ],
-  content: [
-    "Repeated failure by a professional to attend appointments may result in suspension or removal from the Platform."
-  ]
+
 },
 {
   minorSubheading: "6.12 Pharmacy Order Cancellation by Pharmacy",
   content: [
-    "If a pharmacy cancels an order before dispatch:"
-  ],
-  example: [
-    "The user shall receive a full refund of the purchase amount, including any applicable service fees;",
-    "The refund shall be processed through the original payment method."
-  ],
-  content: [
+  
+ 
     "If a pharmacy is unable to fulfill part of an order:",
     "The unavailable portion shall be refunded;",
-    "The user shall be informed before substitution of any product."
+    "The user shall be informed before substitution of any product.",
+      "If a pharmacy cancels an order before dispatch:",
+    "The user shall receive a full refund of the purchase amount, including any applicable service fees;",
+    "The refund shall be processed through the original payment method."
+
   ]
 },
 {
@@ -594,12 +593,13 @@ const userTermsSection1 = {
     "The wrong product,",
     "A defective product,",
     "A damaged product, or",
-    "A product inconsistent with the order confirmation, the user may report the issue within the timeframe specified on the Platform."
-  ],
-  content: [
+    "A product inconsistent with the order confirmation, the user may report the issue within the timeframe specified on the Platform.",
+
+
     "Upon verification:",
-    "The user shall be entitled to a replacement or full refund of the affected item;",
-    "Return logistics may be coordinated where required."
+    [
+      "The user shall be entitled to a replacement or full refund of the affected item;",
+    "Return logistics may be coordinated where required."]
   ]
 },
 {
@@ -624,48 +624,44 @@ const userTermsSection1 = {
 
 {
   heading: "7. Intellectual Property",
-  structuredContent: [
-    {
-      minorSubheading: "7.1 Ownership of the Platform",
-      content: [
-        "All rights, title, and interest in and to the Aven Health Platform, including but not limited to:"
-      ],
-      example: [
-        "The software, source code, and application architecture;",
-        "Design, layout, user interface, and visual elements;",
-        "Logos, trademarks, service marks, and branding;",
-        "Recommendation systems and underlying algorithms;",
-        "Databases, compilations, and proprietary technology;",
-        "Text, graphics, and platform-created content;"
-      ],
-      content: [
-        "are owned by or licensed to Aven Health and are protected by applicable intellectual property laws, including copyright, trademark, and other proprietary rights.",
-        "Nothing in these Terms grants you ownership of the Platform or any intellectual property belonging to Aven Health. You are granted a limited, non-exclusive, non-transferable, revocable license to use the Platform solely for its intended purpose and in accordance with these Terms.",
-        "You may not:"
-      ],
-      example: [
-        "Copy, reproduce, distribute, modify, or create derivative works from the Platform;",
-        "Reverse engineer or attempt to extract source code;",
-        "Use Aven Health’s trademarks or branding without prior written consent;",
-        "Use the Platform for commercial exploitation outside its intended functionality."
-      ]
-    },
-    {
-      minorSubheading: "7.2 User-Generated Content",
-      content: [
-        "The Platform allows users to create and share content, including text, images, videos, documents, messages, and other materials (“User Content”) through features such as Thoughts and Communities.",
-        "You retain ownership of the intellectual property rights in content that you create and post.",
-        "However, by posting content on the Platform, you grant Aven Health a worldwide, non-exclusive, royalty-free, transferable license to:"
-      ],
-      example: [
-        "Host, store, reproduce, display, and distribute your content within the Platform;",
-        "Adapt and format your content for technical compatibility;",
-        "Use your content for purposes of operating, maintaining, improving, and promoting the Platform."
-      ],
-      content: [
-        "This license continues for as long as your content remains on the Platform and may survive deletion to the extent necessary for legal compliance, backups, or dispute resolution."
-      ]
-    },
+  content: [
+ {
+  minorSubheading: "7.1 Ownership of the Platform",
+  content: [
+    "All rights, title, and interest in and to the Aven Health Platform, including but not limited to:",
+    [
+      "The software, source code, and application architecture;",
+      "Design, layout, user interface, and visual elements;",
+      "Logos, trademarks, service marks, and branding;",
+      "Recommendation systems and underlying algorithms;",
+      "Databases, compilations, and proprietary technology;",
+      "Text, graphics, and platform-created content;"
+    ],
+    "are owned by or licensed to Aven Health and are protected by applicable intellectual property laws, including copyright, trademark, and other proprietary rights.",
+    "Nothing in these Terms grants you ownership of the Platform or any intellectual property belonging to Aven Health. You are granted a limited, non-exclusive, non-transferable, revocable license to use the Platform solely for its intended purpose and in accordance with these Terms.",
+    "You may not:",
+    [
+      "Copy, reproduce, distribute, modify, or create derivative works from the Platform;",
+      "Reverse engineer or attempt to extract source code;",
+      "Use Aven Health’s trademarks or branding without prior written consent;",
+      "Use the Platform for commercial exploitation outside its intended functionality."
+    ]
+  ]
+},
+   {
+  minorSubheading: "7.2 User-Generated Content",
+  content: [
+    "The Platform allows users to create and share content, including text, images, videos, documents, messages, and other materials (“User Content”) through features such as Thoughts and Communities.",
+    "You retain ownership of the intellectual property rights in content that you create and post.",
+    "However, by posting content on the Platform, you grant Aven Health a worldwide, non-exclusive, royalty-free, transferable license to:",
+    [
+      "Host, store, reproduce, display, and distribute your content within the Platform;",
+      "Adapt and format your content for technical compatibility;",
+      "Use your content for purposes of operating, maintaining, improving, and promoting the Platform."
+    ],
+    "This license continues for as long as your content remains on the Platform and may survive deletion to the extent necessary for legal compliance, backups, or dispute resolution."
+  ]
+},
     {
       minorSubheading: "7.3 Public Nature of Content",
       content: [
@@ -674,21 +670,19 @@ const userTermsSection1 = {
         "Anonymous posting does not transfer ownership of content and does not eliminate your responsibility for what you publish."
       ]
     },
-    {
-      minorSubheading: "7.4 Content Standards and Infringement",
-      content: [
-        "You represent and warrant that:"
-      ],
-      example: [
-        "You own the content you post or have the necessary rights and permissions to share it;",
-        "Your content does not infringe any third-party intellectual property rights;",
-        "Your content does not violate privacy or confidentiality obligations."
-      ],
-      content: [
-        "Aven Health reserves the right to remove content that allegedly infringes intellectual property rights or violates these Terms.",
-        "If you believe your intellectual property rights have been infringed through content posted on the Platform, you may submit a formal notice to Aven Health for review."
-      ]
-    },
+   {
+  minorSubheading: "7.4 Content Standards and Infringement",
+  content: [
+    "You represent and warrant that:",
+    [
+      "You own the content you post or have the necessary rights and permissions to share it;",
+      "Your content does not infringe any third-party intellectual property rights;",
+      "Your content does not violate privacy or confidentiality obligations."
+    ],
+    "Aven Health reserves the right to remove content that allegedly infringes intellectual property rights or violates these Terms.",
+    "If you believe your intellectual property rights have been infringed through content posted on the Platform, you may submit a formal notice to Aven Health for review."
+  ]
+},
     {
       minorSubheading: "7.5 Feedback",
       content: [
@@ -699,14 +693,13 @@ const userTermsSection1 = {
 },
 {
   heading: "8. Limitation of Liability",
-  structuredContent: [
+  content: [
     {
       minorSubheading: "8.1 Disclaimer of Warranties",
       content: [
         "The Aven Health Platform is provided on an “as is” and “as available” basis, without any warranties, representations, or guarantees of any kind, whether express, implied, statutory, or otherwise.",
-        "To the maximum extent permitted by applicable law, Aven Health expressly disclaims all warranties, including, without limitation:"
-      ],
-      example: [
+        "To the maximum extent permitted by applicable law, Aven Health expressly disclaims all warranties, including, without limitation:",
+      [
         "The uninterrupted, error-free, or fully secure operation of the Platform or any associated services;",
         "The accuracy, reliability, completeness, or timeliness of any information, content, or recommendations provided on the Platform;",
         "The availability, suitability, or performance of healthcare professionals, pharmacies, products, or services listed on the Platform;",
@@ -714,7 +707,7 @@ const userTermsSection1 = {
         "The prevention of unauthorized access, viruses, malware, or other harmful components introduced via the Platform or its integrations;",
         "The compatibility of the Platform with any specific devices, operating systems, or browsers."
       ],
-      content: [
+    
         "All services, features, and content are provided without warranty of merchantability, fitness for a particular purpose, or non-infringement."
       ]
     },
@@ -722,16 +715,15 @@ const userTermsSection1 = {
       minorSubheading: "8.2 Independent Professionals and Pharmacies",
       content: [
         "Healthcare professionals and pharmacies available on the Platform operate as independent entities, and Aven Health does not act as a healthcare provider, pharmacist, or intermediary in a clinical capacity.",
-        "Aven Health shall not be responsible for:"
-      ],
-      example: [
+        "Aven Health shall not be responsible for:",
+        [
         "Any medical advice, diagnosis, or treatment provided by healthcare professionals;",
         "Professional negligence, malpractice, errors, or omissions by practitioners;",
         "Accuracy, legality, safety, or quality of any products, prescriptions, or medications dispensed by pharmacies;",
         "Errors, delays, or omissions in prescription fulfillment, product preparation, dispatch, or delivery;",
         "Any loss, injury, or damage arising from reliance on professional or pharmacy services."
       ],
-      content: [
+    
         "All decisions regarding your health, treatment, and product use are solely between you and the relevant licensed professional or pharmacy. Aven Health does not guarantee outcomes or suitability of services or products."
       ]
     },
@@ -739,15 +731,14 @@ const userTermsSection1 = {
       minorSubheading: "8.3 User-Generated Content",
       content: [
         "The Platform allows users to create, post, and share content, including posts, comments, media, and other materials (“User Content”).",
-        "Aven Health does not pre-screen or verify all user-generated content and is not responsible for:"
-      ],
-      example: [
+        "Aven Health does not pre-screen or verify all user-generated content and is not responsible for:",
+        [
         "Statements, opinions, or advice posted by other users;",
         "Offensive, misleading, fraudulent, or unlawful content submitted by users;",
         "Interactions, disputes, or conflicts that may arise between users;",
         "The accuracy or applicability of health-related information shared in communities, public posts, or anonymous submissions."
       ],
-      content: [
+
         "Users engage with the Platform at their own risk. While Aven Health may moderate or remove content, there is no obligation to monitor all activity or detect violations."
       ]
     },
@@ -755,14 +746,14 @@ const userTermsSection1 = {
       minorSubheading: "8.4 No Liability for Indirect, Incidental, or Consequential Loss",
       content: [
         "To the maximum extent permitted by law, Aven Health shall not be liable for any indirect, incidental, consequential, punitive, or special damages, including but not limited to:"
-      ],
-      example: [
+      ,
+     [
         "Loss of profits, revenue, business opportunities, or goodwill;",
         "Loss, corruption, or unauthorized access to data;",
         "Emotional distress, reputational harm, or personal injury;",
         "Losses caused by technical failures, platform downtime, security breaches, or cyberattacks beyond reasonable control."
       ],
-      content: [
+   
         "This limitation applies regardless of whether the claim arises under contract, tort, negligence, strict liability, or other legal theories."
       ]
     },
@@ -770,12 +761,12 @@ const userTermsSection1 = {
       minorSubheading: "8.5 Financial Liability Cap",
       content: [
         "To the fullest extent permitted by law, the maximum aggregate liability of Aven Health, its affiliates, employees, officers, or agents arising from or related to your use of the Platform shall not exceed:"
-      ],
-      example: [
+      ,
+      [
         "The total amount paid by you to Aven Health in the twelve (48) months immediately preceding the event giving rise to the claim; or",
         "Where no payments have been made, a reasonable statutory minimum amount as allowed under applicable law."
       ],
-      content: [
+    
         "This cap applies to all claims, whether direct or indirect, arising from technical, operational, or service-related issues."
       ]
     },
@@ -794,15 +785,15 @@ const userTermsSection1 = {
       minorSubheading: "8.7 User Assumption of Risk",
       content: [
         "By accessing and using the Platform, you acknowledge and accept that:"
-      ],
-      example: [
+      ,
+   [
         "Telehealth services are inherently limited by the absence of in-person evaluation;",
         "Interactions with other users, professionals, or pharmacies carry inherent risks;",
         "Publicly shared content and anonymous postings may be viewed and engaged with by other users;",
         "Technical failures, delays, or breaches may occur despite reasonable safeguards;",
         "Health-related decisions and actions taken based on information obtained through the Platform are solely your responsibility."
       ],
-      content: [
+  
         "You voluntarily assume all risks associated with your use of the Platform and its services, acknowledging that no reliance on the Platform should replace appropriate professional judgment or in-person care where required."
       ]
     }
@@ -810,17 +801,16 @@ const userTermsSection1 = {
 },
 {
   heading: "9. Termination",
-  structuredContent: [
+  content: [
     {
       minorSubheading: "9.1 Voluntary Termination by User",
       content: [
-        "You have the right to voluntarily terminate or delete your account at any time. This can be done by:"
-      ],
-      example: [
+        "You have the right to voluntarily terminate or delete your account at any time. This can be done by:",
+      [
         "Using the account deletion feature provided within the Platform;",
         "Contacting Aven Health’s support team via the provided communication channels to request account closure."
       ],
-      content: [
+    
         "Upon voluntary termination:",
         "Your access to all Platform features, including appointment booking, telehealth consultations, community participation, content creation, and pharmacy services, will be immediately revoked.",
         "Any remaining credits, balances, subscriptions, or pre-paid services may be forfeited unless otherwise explicitly stated in the applicable Payment & Transactions or subscription policy.",
@@ -831,9 +821,8 @@ const userTermsSection1 = {
     {
       minorSubheading: "9.2 Termination or Suspension by Aven Health",
       content: [
-        "Aven Health reserves the right, at its sole discretion, to suspend, restrict, or permanently terminate a user’s account, without prior notice, for any reason including but not limited to:"
-      ],
-      structuredContent: [
+        "Aven Health reserves the right, at its sole discretion, to suspend, restrict, or permanently terminate a user’s account, without prior notice, for any reason including but not limited to:",
+
         {
           minorMinorSubheading: "1. Violation of Terms or Law",
           content: ["Breach of any provision of these Terms or any applicable laws, regulations, or professional guidelines."]
@@ -857,9 +846,8 @@ const userTermsSection1 = {
         {
           minorMinorSubheading: "6. Regulatory or Legal Requirements",
           content: ["Actions required to comply with Kenyan telehealth regulations, global privacy laws (e.g., GDPR), or professional and pharmacy compliance obligations."]
-        }
-      ],
-      content: [
+        },
+
         "Suspension or termination decisions are final and may be applied at Aven Health’s discretion, including for preliminary investigations or suspected violations."
       ]
     },
@@ -887,14 +875,14 @@ const userTermsSection1 = {
       minorSubheading: "9.5 Consequences of Rule Violations",
       content: [
         "Users whose accounts are suspended or terminated for violating Platform rules or applicable laws may face:"
-      ],
-      example: [
+      ,
+     [
         "Permanent exclusion from creating new accounts or accessing services;",
         "Reporting to relevant authorities in cases of illegal, fraudulent, or harmful activity;",
         "Forfeiture of pre-paid services, credits, or appointments, particularly where violation caused disruption;",
         "Removal of interactions, posts, or content deemed harmful, illegal, abusive, or in violation of Platform policies."
       ],
-      content: [
+     
         "These measures are intended to protect the integrity, safety, and trust of the Aven Health community."
       ]
     },
@@ -902,14 +890,14 @@ const userTermsSection1 = {
       minorSubheading: "9.6 Regulatory and Legal Compliance",
       content: [
         "Termination or suspension may also occur to comply with applicable regulatory requirements, including but not limited to:"
-      ],
-      example: [
+      ,
+     [
         "Kenyan regulations governing telemedicine, digital health records, pharmacy transactions, and professional conduct;",
         "Global privacy laws applicable to users accessing the Platform internationally (e.g., GDPR, HIPAA-equivalent standards);",
         "Professional and pharmacy compliance obligations, including anti-advertisement laws, medical licensing regulations, and professional standards;",
         "Legal obligations to retain or disclose data in cases of audits, legal proceedings, or public health investigations."
       ],
-      content: [
+     
         "Users acknowledge and accept that regulatory compliance may necessitate retention or disclosure of certain account information even after account termination."
       ]
     }
@@ -917,14 +905,13 @@ const userTermsSection1 = {
 },
 {
   heading: "10. Governing Law & Dispute Resolution",
-  structuredContent: [
+  content: [
     {
       minorSubheading: "10.1 Governing Law",
       content: [
         "These Terms and your use of the Aven Health Platform, including all services, features, content, transactions, and interactions, are governed by and interpreted in accordance with the laws of the Republic of Kenya, without regard to conflicts of law principles.",
-        "By using the Platform, you expressly acknowledge and agree that:"
-      ],
-      structuredContent: [
+        "By using the Platform, you expressly acknowledge and agree that:",
+      
         {
           minorMinorSubheading: "1. Primary Jurisdiction",
           content: [
@@ -954,9 +941,8 @@ const userTermsSection1 = {
     {
       minorSubheading: "10.2 Dispute Resolution Procedure",
       content: [
-        "Aven Health emphasizes early, good faith resolution of disputes to minimize cost, delay, and operational disruption. Users agree to the following steps before initiating formal proceedings:"
-      ],
-      structuredContent: [
+        "Aven Health emphasizes early, good faith resolution of disputes to minimize cost, delay, and operational disruption. Users agree to the following steps before initiating formal proceedings:",
+
         {
           minorMinorSubheading: "10.2.1 Contact Aven Health Support",
           content: [
@@ -979,8 +965,8 @@ const userTermsSection1 = {
       minorSubheading: "10.3 Arbitration",
       content: [
         "If disputes remain unresolved, users agree to submit them to binding arbitration in accordance with Kenyan law:"
-      ],
-      structuredContent: [
+      ,
+     
         {
           minorMinorSubheading: "1. Scope",
           content: [
@@ -1063,20 +1049,20 @@ const userTermsSection1 = {
 },
 {
   heading: "11. Changes to Terms",
-  structuredContent: [
+  content: [
     {
       minorSubheading: "11.1 Right to Update Terms",
       content: [
         "Aven Health reserves the right, at its sole discretion, to modify, amend, or update these Terms and Conditions at any time. Updates may be necessary to:"
-      ],
-      example: [
+      ,
+       [
         "Reflect changes in legal or regulatory requirements, including telehealth, data protection, or e-commerce laws;",
         "Address new features, services, or functionalities added to the Platform;",
         "Improve clarity, enforceability, or operational effectiveness of the Terms;",
         "Respond to security, privacy, or safety concerns;",
         "Incorporate global compliance obligations for users accessing the Platform from other jurisdictions."
       ],
-      content: [
+   
         "These updates may include modifications to user rights, obligations, fees, payment terms, platform usage rules, and dispute resolution procedures."
       ]
     },
@@ -1084,8 +1070,7 @@ const userTermsSection1 = {
       minorSubheading: "11.2 User Notification",
       content: [
         "When Terms are updated, Aven Health will provide notice to users through one or more of the following methods:"
-      ],
-      structuredContent: [
+      ,
         {
           minorMinorSubheading: "1. In-App Notification",
           content: [
@@ -1103,9 +1088,8 @@ const userTermsSection1 = {
           content: [
             "Updated Terms will clearly indicate the “Effective Date” at the top of the document, reflecting when the new terms come into force."
           ]
-        }
-      ],
-      content: [
+        },
+
         "Users are strongly encouraged to review the updated Terms each time they are notified, as continued use of the Platform after the Effective Date constitutes acceptance of the updated Terms."
       ]
     },
@@ -1123,15 +1107,14 @@ const userTermsSection1 = {
     {
       minorSubheading: "11.4 Material Changes",
       content: [
-        "For material changes, including changes to:"
-      ],
-      example: [
+        "For material changes, including changes to:",
+        [
         "Payment obligations, fees, or refund policies;",
         "User privacy rights or data usage;",
         "Health service delivery or professional responsibilities;",
         "Legal disclaimers, limitation of liability, or dispute resolution procedures;"
       ],
-      content: [
+    
         "Aven Health may provide enhanced notice, including:",
         [
           "Prominent in-app banners or notifications requiring explicit acknowledgment;",
