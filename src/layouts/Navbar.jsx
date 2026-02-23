@@ -16,7 +16,12 @@ export default function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
+useEffect(() => {
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [isOpen]);
   const mainLinks = [
     { to: "/", label: "Home" },
     { to: "/about-us", label: "About Us" },
@@ -95,7 +100,7 @@ export default function Navbar() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-cardDark rounded-md shadow-lg py-2 z-40">
+           <div className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-primary shadow-2xl px-6 pt-20 pb-10 space-y-4 overflow-y-auto">
                 {servicesLinks.map(({ to, label }) => (
                   <NavLink
                     key={to}
@@ -157,86 +162,103 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
+{/* Mobile Menu Overlay */}
+{isOpen && (
+  <div className="fixed inset-0 z-40 md:hidden">
+    
+    {/* Backdrop */}
+    <div
+      className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+      onClick={() => setIsOpen(false)}
+    />
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-primary px-6 pt-2 pb-6 space-y-2 shadow-inner">
-          {/* Main Links */}
-          {mainLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                `block py-2 text-lg hover:text-accent ${
-                  isActive ? "text-accent font-semibold" : "text-white"
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              {label}
-            </NavLink>
-          ))}
+    {/* Menu Panel */}
+    <div className="absolute top-0 right-0 h-full w-4/5 max-w-sm bg-primary shadow-2xl px-6 pt-20 pb-10 space-y-4 overflow-y-auto">
+      
+      {/* Main Links */}
+      {mainLinks.map(({ to, label }) => (
+        <NavLink
+          key={to}
+          to={to}
+          className={({ isActive }) =>
+            `block py-3 text-lg border-b border-white/10 transition-colors ${
+              isActive
+                ? "text-accent font-semibold"
+                : "text-white hover:text-accent"
+            }`
+          }
+          onClick={() => setIsOpen(false)}
+        >
+          {label}
+        </NavLink>
+      ))}
 
-          {/* Services dropdown as collapsible */}
-          <div className="pt-2">
-            <button
-              onClick={() => setDropdownOpen((prev) => !prev)}
-              className="flex items-center justify-between w-full text-white text-lg font-semibold hover:text-accent focus:outline-none"
-              aria-haspopup="true"
-              aria-expanded={dropdownOpen}
-            >
-              Services
-              <svg
-                className={`w-5 h-5 text-accent transition-transform duration-200 ${
-                  dropdownOpen ? "rotate-180" : "rotate-0"
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+      {/* Services Collapsible */}
+      <div className="pt-4">
+        <button
+          onClick={() => setDropdownOpen((prev) => !prev)}
+          className="flex items-center justify-between w-full text-lg font-semibold text-white hover:text-accent"
+        >
+          Services
+          <svg
+            className={`w-5 h-5 text-accent transition-transform duration-200 ${
+              dropdownOpen ? "rotate-180" : ""
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {dropdownOpen && (
+          <div className="mt-2 pl-4 space-y-2">
+            {servicesLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `block py-2 text-base ${
+                    isActive
+                      ? "text-accent font-semibold"
+                      : "text-white hover:text-accent"
+                  }`
+                }
+                onClick={() => {
+                  setIsOpen(false);
+                  setDropdownOpen(false);
+                }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {dropdownOpen && (
-              <div className="mt-1 pl-4 space-y-1">
-                {servicesLinks.map(({ to, label }) => (
-                  <NavLink
-                    key={to}
-                    to={to}
-                    className={({ isActive }) =>
-                      `block py-2 hover:text-accent ${
-                        isActive ? "text-accent font-semibold" : "text-white"
-                      }`
-                    }
-                    onClick={() => {
-                      setIsOpen(false);
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    {label}
-                  </NavLink>
-                ))}
-              </div>
-            )}
+                {label}
+              </NavLink>
+            ))}
           </div>
+        )}
+      </div>
 
-          {/* Auth Links */}
-          {authLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                `block py-2 text-lg hover:text-accent ${
-                  isActive ? "text-accent font-semibold" : "text-white"
-                }`
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              {label}
-            </NavLink>
-          ))}
-        </div>
-      )}
+      {/* Auth Links */}
+      <div className="pt-6 border-t border-white/10 space-y-3">
+        {authLinks.map(({ to, label }) => (
+          <NavLink
+            key={to}
+            to={to}
+            className={({ isActive }) =>
+              `block py-2 text-lg ${
+                isActive
+                  ? "text-accent font-semibold"
+                  : "text-white hover:text-accent"
+              }`
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            {label}
+          </NavLink>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
     </nav>
   );
 }

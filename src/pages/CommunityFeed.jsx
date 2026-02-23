@@ -67,9 +67,8 @@ export default function CommunityFeed() {
         ]}
       />
 
-      {/* Community Features Section */}
+
       <section className="space-y-12">
-        <h2 className="text-2xl font-semibold text-center">Aven Community Features</h2>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <div
@@ -93,7 +92,7 @@ export default function CommunityFeed() {
 
     
       <section className="space-y-6 text-center max-w-3xl mx-auto px-4">
-        <h2 className="text-2xl font-semibold">What Aven Communities Mean</h2>
+        <h2 className="text-2xl font-semibold">Aven Communities</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
           Aven Communities are safe, moderated spaces designed to bring people together around health topics that matter.
           Share your experiences, get support, discuss challenges, and learn from others who understand your journey.
@@ -105,13 +104,6 @@ export default function CommunityFeed() {
           Web Communities coming soon, for now, explore and interact in the app!
         </p>
       </section>
-
-      <ComingSoonModal
-        open={showNotice}
-        onClose={() => setShowNotice(false)}
-        title="Web Communities Coming Soon"
-        message="Joining and interacting in communities will soon be available on the web. For now, explore the app!"
-      />
     </div>
   );
 }
