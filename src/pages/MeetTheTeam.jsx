@@ -42,7 +42,7 @@ export default function MeetTheTeam() {
       shortDescription:
         "Drives platform innovation and technical execution.",
       fullDescription:
-        "Antony oversees engineering execution, infrastructure design, and digital transformation initiatives, translating complex health needs into intuitive digital experiences.",
+        "Antony has majored in the field of Computer Science and is a leader not only in the tech spaces but other spaces as well. He has served as a leader in 4 different key spaces, one of which is the tech space. His leadership skills and knowledge in tech when combined brings a unique blend for his role in the tech space.",
       image: antonyOchieng,
     },
     {
