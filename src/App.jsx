@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
 
@@ -65,42 +64,35 @@ function App() {
         <ErrorBoundary>
           <Suspense fallback={<div className="p-1 text-center">Loading...</div>}>
             <Routes>
-              {/* Main pages */}
               <Route path="/" element={<Home />} />
-              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/about" element={<AboutUs />} />
               <Route path="/our-app" element={<OurApp />} />
               <Route path="/features" element={<Features />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/contact" element={<ContactUs />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
-              <Route path="/meet-the-team" element={<MeetTheTeam />} />
+              <Route path="team" element={<MeetTheTeam />} />
 
-              {/* Services pages */}
-              <Route path="/doctors" element={<DoctorDirectory />} />
-              <Route path="/doctors/:id" element={<DoctorProfile />} />
+              <Route path="/appointments" element={<DoctorDirectory />} />
+              <Route path="/appointments/:id" element={<DoctorProfile />} />
               <Route path="/appointment-booking" element={<AppointmentBooking />} />
               <Route path="/pharmacies" element={<PharmacyDirectory />} />
-              <Route path="/community-feed" element={<CommunityFeed />} />
+              <Route path="/communities" element={<CommunityFeed />} />
               <Route path="/search" element={<CentralSearch />} />
               <Route path="/community/:slug" element={<CommunityDetail />} />
 
-              {/* ================= LEGAL ================= */}
               <Route path="/legal" element={<LegalLandingPage />} />
 
-              {/* Users */}
               <Route path="/privacy-policy-users" element={<UserPrivacyPolicy />} />
               <Route path="/user-agreement" element={<UserAgreement />} />
 
-              {/* Medical */}
               <Route path="/privacy-policy-medical" element={<MedicalPrivacyPolicy />} />
               <Route path="/medical-professional-agreement" element={<MedicalAgreement />} />
 
-              {/* Pharmacy */}
               <Route path="/privacy-policy-pharmacy" element={<PharmacyPrivacyPolicy />} />
               <Route path="/pharmacy-agreement" element={<PharmacyAgreement />} />
 
-              {/* Authentication */}
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
             </Routes>

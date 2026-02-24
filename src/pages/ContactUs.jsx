@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Banner from "../components/banner"; 
+import contactBg from "../assets/pharmacy01.png"; 
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -22,18 +24,42 @@ export default function ContactUs() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const validationErrors = validate();
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+
+  setErrors({});
+
+  try {
+    const response = await fetch("https://formspree.io/f/xaqdlrkl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,       
+        message: form.message,
+
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
 
-    setErrors({});
     setSubmitted(true);
-  };
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  }
+};
+
 
   const handleReset = () => {
     setForm({ name: "", email: "", message: "" });
@@ -41,20 +67,30 @@ export default function ContactUs() {
     setSubmitted(false);
   };
 
+    const slides = [
+    {
+      title: "Reach Out to Aven Health",
+      description:
+        "Have questions, feedback, or ideas? We’re here to listen and support your healthcare journey.",
+    },
+    {
+      title: "We Value Your Input",
+      description:
+        "Your insights help us improve Aven Health and make healthcare more connected and personal.",
+    },
+    {
+      title: "Connect With Us Anytime",
+      description:
+        "Whether it’s a quick question or detailed feedback, our team is ready to respond promptly.",
+    },
+  ];
+
   return (
+    <section className=" mx-auto space-y-12">
+  <Banner backgroundImage={contactBg} slides={slides} interval={6000} />
+
     <section className="max-w-3xl mx-auto space-y-12">
 
-      {/* HEADER */}
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white" tabIndex={0}>
-          Contact Us
-        </h1>
-        <p className="mt-4 text-gray-300 text-lg" tabIndex={0}>
-          We’re here to listen, support, and improve Aven Health together.
-        </p>
-      </div>
-
-      {/* FORM */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -77,7 +113,7 @@ export default function ContactUs() {
             </p>
             <button
               onClick={handleReset}
-              className="mt-4 bg-accent text-primary font-semibold py-2 px-6 rounded hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+              className="mt-4 bg-accent text-white font-semibold py-2 px-6 rounded hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             >
               Send Another Message
             </button>
@@ -85,7 +121,6 @@ export default function ContactUs() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6" noValidate>
 
-            {/* NAME */}
             <div>
               <label htmlFor="name" className="block text-white mb-2">
                 Full Name
@@ -114,7 +149,6 @@ export default function ContactUs() {
               )}
             </div>
 
-            {/* EMAIL */}
             <div>
               <label htmlFor="email" className="block text-white mb-2">
                 Email Address
@@ -143,7 +177,6 @@ export default function ContactUs() {
               )}
             </div>
 
-            {/* MESSAGE */}
             <div>
               <label htmlFor="message" className="block text-white mb-2">
                 Message
@@ -172,16 +205,16 @@ export default function ContactUs() {
               )}
             </div>
 
-            {/* SUBMIT */}
             <button
               type="submit"
-              className="w-full bg-accent text-primary font-semibold py-3 rounded hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+              className="w-full bg-accent text-white font-semibold py-3 rounded hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             >
               Send Message
             </button>
           </form>
         )}
       </motion.div>
+      </section>
     </section>
   );
 }

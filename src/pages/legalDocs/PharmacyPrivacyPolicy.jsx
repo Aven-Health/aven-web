@@ -146,178 +146,178 @@ const PharmacyPrivacyPolicy = () => {
       heading: "2. Definitions",
       content: [
         "For purposes of this Health Stores Privacy Policy, the following terms shall have the meanings set out below:",
+      ]
+    },
+    {
+      subheading: "2.1 Personal Data",
+      content: [
+        `"Personal Data" means any information relating to an identified or identifiable natural person ("Data Subject").`,
+        "An identifiable person is one who can be identified, directly or indirectly, by reference to:",
+        [
+          "Name",
+          "Identification number",
+          "Contact information (email, phone number)",
+          "Location data",
+          "Online identifiers",
+          "Order history",
+          "Any other information specific to the physical, physiological, mental, economic, cultural, or social identity of that person",
+        ],
+        "In the context of health stores, Personal Data includes customer details associated with orders, communications, and transactions conducted through the Platform.",
+      ],
+    },
 
+    {
+      subheading: "2.2 Sensitive Personal Data",
+      content: [
+        `"Sensitive Personal Data" refers to Personal Data that requires enhanced protection due to its nature and potential impact on the individual if disclosed.`,
+        "This includes, but is not limited to:",
+        [
+          "Health-related information",
+          "Medical conditions",
+          "Prescription records",
+          "Biometric data",
+          "Government-issued identification numbers",
+          "Financial account information",
+          "Any other category designated as sensitive under applicable data protection laws, including the Kenya Data Protection Act, 2019",
+        ],
+        "Sensitive Personal Data is subject to stricter handling, storage, and security requirements.",
+      ],
+    },
+    {
+      subheading: "2.3 Health Data",
+      content: [
+        `"Health Data" means any Personal Data relating to the physical or mental health condition of a customer, including:`,
         {
-          subheading: "2.1 Personal Data",
+          minorSubheading: "Examples of Health Data",
           content: [
-            `"Personal Data" means any information relating to an identified or identifiable natural person ("Data Subject").`,
-            "An identifiable person is one who can be identified, directly or indirectly, by reference to:",
-            [
-              "Name",
-              "Identification number",
-              "Contact information (email, phone number)",
-              "Location data",
-              "Online identifiers",
-              "Order history",
-              "Any other information specific to the physical, physiological, mental, economic, cultural, or social identity of that person",
-            ],
-            "In the context of health stores, Personal Data includes customer details associated with orders, communications, and transactions conducted through the Platform.",
+            "Diagnoses",
+            "Symptoms",
+            "Treatment plans",
+            "Medications",
+            "Clinical notes (where applicable)",
+            "Health-related communications",
+            "Prescription information",
           ],
         },
+        "Health Data is considered a form of Sensitive Personal Data and must be processed strictly for lawful and legitimate healthcare purposes.",
+      ],
+    },
 
+    {
+      subheading: "2.4 Prescription Data",
+      content: [
+        `"Prescription Data" refers to any digital or physical prescription information transmitted, uploaded, stored, or processed through the Platform.`,
         {
-          subheading: "2.2 Sensitive Personal Data",
+          minorSubheading: "Categories of Prescriptions",
           content: [
-            `"Sensitive Personal Data" refers to Personal Data that requires enhanced protection due to its nature and potential impact on the individual if disclosed.`,
-            "This includes, but is not limited to:",
-            [
-              "Health-related information",
-              "Medical conditions",
-              "Prescription records",
-              "Biometric data",
-              "Government-issued identification numbers",
-              "Financial account information",
-              "Any other category designated as sensitive under applicable data protection laws, including the Kenya Data Protection Act, 2019",
-            ],
-            "Sensitive Personal Data is subject to stricter handling, storage, and security requirements.",
-          ],
-        },
-        {
-          subheading: "2.3 Health Data",
-          content: [
-            `"Health Data" means any Personal Data relating to the physical or mental health condition of a customer, including:`,
             {
-              minorSubheading: "Examples of Health Data",
+              minorMinorSubheading:
+                "User-Created Prescription (Invalid for Dispensing)",
               content: [
-                "Diagnoses",
-                "Symptoms",
-                "Treatment plans",
-                "Medications",
-                "Clinical notes (where applicable)",
-                "Health-related communications",
-                "Prescription information",
+                `A “User-Created Prescription” is any prescription document, note, or medication request uploaded or created directly by a customer without issuance by a licensed medical professional.`,
+                "User-Created Prescriptions:",
+                [
+                  "Are not valid for dispensing regulated medications",
+                  "May serve only as informational input for the ordering process",
+                  "Must not be relied upon by health stores for the lawful dispensing of prescription-only medications",
+                  "Do not constitute legally recognized prescriptions under applicable pharmaceutical regulations",
+                ],
+                "Health stores are strictly prohibited from dispensing prescription-only medication based solely on a User-Created Prescription.",
               ],
             },
-            "Health Data is considered a form of Sensitive Personal Data and must be processed strictly for lawful and legitimate healthcare purposes.",
-          ],
-        },
-
-        {
-          subheading: "2.4 Prescription Data",
-          content: [
-            `"Prescription Data" refers to any digital or physical prescription information transmitted, uploaded, stored, or processed through the Platform.`,
             {
-              minorSubheading: "Categories of Prescriptions",
+              minorMinorSubheading:
+                "Medical Professional-Created Prescription (Valid for Dispensing)",
               content: [
-                {
-                  minorMinorSubheading:
-                    "User-Created Prescription (Invalid for Dispensing)",
-                  content: [
-                    `A “User-Created Prescription” is any prescription document, note, or medication request uploaded or created directly by a customer without issuance by a licensed medical professional.`,
-                    "User-Created Prescriptions:",
-                    [
-                      "Are not valid for dispensing regulated medications",
-                      "May serve only as informational input for the ordering process",
-                      "Must not be relied upon by health stores for the lawful dispensing of prescription-only medications",
-                      "Do not constitute legally recognized prescriptions under applicable pharmaceutical regulations",
-                    ],
-                    "Health stores are strictly prohibited from dispensing prescription-only medication based solely on a User-Created Prescription.",
-                  ],
-                },
-                {
-                  minorMinorSubheading:
-                    "Medical Professional-Created Prescription (Valid for Dispensing)",
-                  content: [
-                    `A “Medical Professional-Created Prescription” is a prescription issued by a duly licensed and authorized healthcare professional through:`,
-                    [
-                      "The Aven Health Platform",
-                      "A verifiable external medical provider, where documentation is provided",
-                    ],
-                    "Only Medical Professional-Created Prescriptions:",
-                    [
-                      "May be relied upon for lawful dispensing of prescription-only medications",
-                      "Must be validated by the health store in accordance with regulatory requirements",
-                      "Must comply with applicable pharmaceutical and medical laws",
-                    ],
-                    "Health stores are solely responsible for verifying the authenticity, completeness, and legal validity of prescriptions prior to dispensing.",
-                  ],
-                },
+                `A “Medical Professional-Created Prescription” is a prescription issued by a duly licensed and authorized healthcare professional through:`,
+                [
+                  "The Aven Health Platform",
+                  "A verifiable external medical provider, where documentation is provided",
+                ],
+                "Only Medical Professional-Created Prescriptions:",
+                [
+                  "May be relied upon for lawful dispensing of prescription-only medications",
+                  "Must be validated by the health store in accordance with regulatory requirements",
+                  "Must comply with applicable pharmaceutical and medical laws",
+                ],
+                "Health stores are solely responsible for verifying the authenticity, completeness, and legal validity of prescriptions prior to dispensing.",
               ],
             },
-          ],
-        },
-
-        {
-          subheading: "2.5 Order Data",
-          content: [
-            `"Order Data" refers to all information associated with a customer’s purchase transaction through the Platform, including:`,
-            {
-              minorSubheading: "Examples of Order Data",
-              content: [
-                "Product selection",
-                "Quantity",
-                "Pricing",
-                "Delivery address",
-                "Order timestamp",
-                "Fulfillment status",
-                "Payment confirmation",
-                "Refund or cancellation records",
-              ],
-            },
-            "Order Data may include both Personal Data and Sensitive Personal Data depending on the nature of the product ordered.",
-          ],
-        },
-        {
-          subheading: "2.6 Data Controller",
-          content: [
-            `"Data Controller" means the entity that determines the purposes and means of processing Personal Data.`,
-            {
-              minorSubheading: "Roles within the Platform",
-              content: [
-                "Aven Health acts as a Data Controller for account management, platform operations, analytics, fraud prevention, and compliance monitoring.",
-                "Health stores act as independent Data Controllers for patient and prescription data processed for dispensing, regulatory compliance, and recordkeeping obligations.",
-                "Each Data Controller is independently responsible for compliance with applicable data protection laws.",
-              ],
-            },
-          ],
-        },
-
-        {
-          subheading: "2.7 Data Processor",
-          content: [
-            `"Data Processor" means an entity that processes Personal Data on behalf of a Data Controller and under its instructions.`,
-            {
-              minorSubheading: "Operational Contexts",
-              content: [
-                "Aven Health may act as a Data Processor when facilitating order transmission, prescription forwarding, or communication strictly on behalf of a health store.",
-                "Third-party infrastructure providers may act as Data Processors under contractual safeguards.",
-                "Data Processors may not use Personal Data for independent purposes outside authorized instructions.",
-              ],
-            },
-          ],
-        },
-
-        {
-          subheading: "2.8 Third-Party Service Providers",
-          content: [
-            `"Third-Party Service Providers" refers to external entities engaged by Aven Health or a health store to support operational functions, including but not limited to:`,
-            {
-              minorSubheading: "Examples of Third-Party Service Providers",
-              content: [
-                "Payment processors (e.g., Paystack)",
-                "Cloud hosting providers",
-                "Delivery or logistics partners",
-                "Analytics and security monitoring providers",
-                "Identity verification services",
-              ],
-            },
-            "All Third-Party Service Providers are required to implement appropriate technical and organizational safeguards to protect Personal Data and must process such data in accordance with applicable data protection laws and contractual agreements.",
           ],
         },
       ],
     },
+
     {
-      subheading: "3. Information We Collect from Health Stores",
+      subheading: "2.5 Order Data",
+      content: [
+        `"Order Data" refers to all information associated with a customer’s purchase transaction through the Platform, including:`,
+        {
+          minorSubheading: "Examples of Order Data",
+          content: [
+            "Product selection",
+            "Quantity",
+            "Pricing",
+            "Delivery address",
+            "Order timestamp",
+            "Fulfillment status",
+            "Payment confirmation",
+            "Refund or cancellation records",
+          ],
+        },
+        "Order Data may include both Personal Data and Sensitive Personal Data depending on the nature of the product ordered.",
+      ],
+    },
+    {
+      subheading: "2.6 Data Controller",
+      content: [
+        `"Data Controller" means the entity that determines the purposes and means of processing Personal Data.`,
+        {
+          minorSubheading: "Roles within the Platform",
+          content: [
+            "Aven Health acts as a Data Controller for account management, platform operations, analytics, fraud prevention, and compliance monitoring.",
+            "Health stores act as independent Data Controllers for patient and prescription data processed for dispensing, regulatory compliance, and recordkeeping obligations.",
+            "Each Data Controller is independently responsible for compliance with applicable data protection laws.",
+          ],
+        },
+      ],
+    },
+
+    {
+      subheading: "2.7 Data Processor",
+      content: [
+        `"Data Processor" means an entity that processes Personal Data on behalf of a Data Controller and under its instructions.`,
+        {
+          minorSubheading: "Operational Contexts",
+          content: [
+            "Aven Health may act as a Data Processor when facilitating order transmission, prescription forwarding, or communication strictly on behalf of a health store.",
+            "Third-party infrastructure providers may act as Data Processors under contractual safeguards.",
+            "Data Processors may not use Personal Data for independent purposes outside authorized instructions.",
+          ],
+        },
+      ],
+    },
+
+    {
+      subheading: "2.8 Third-Party Service Providers",
+      content: [
+        `"Third-Party Service Providers" refers to external entities engaged by Aven Health or a health store to support operational functions, including but not limited to:`,
+        {
+          minorSubheading: "Examples of Third-Party Service Providers",
+          content: [
+            "Payment processors (e.g., Paystack)",
+            "Cloud hosting providers",
+            "Delivery or logistics partners",
+            "Analytics and security monitoring providers",
+            "Identity verification services",
+          ],
+        },
+        "All Third-Party Service Providers are required to implement appropriate technical and organizational safeguards to protect Personal Data and must process such data in accordance with applicable data protection laws and contractual agreements.",
+      ],
+
+    },
+    {
+      heading: "3. Information We Collect from Health Stores",
       content: [
         "This section explains in detail the categories of information that Aven Health collects, verifies, generates, and processes in relation to licensed health stores operating on the platform.",
         "For purposes of this policy, “Health Stores” include, but are not limited to:",
@@ -331,384 +331,384 @@ const PharmacyPrivacyPolicy = () => {
         ],
         "All stores must be lawfully registered and authorized under applicable laws to dispense medication or distribute regulated health products.",
         "Information collected is proportionate, necessary, and directly related to platform integrity, regulatory compliance, payment processing, prescription validation, fraud prevention, and operational transparency.",
+      ],
+    },
+    {
+      subheading: "3.1 Business Information",
+      content: [
+        "We collect comprehensive business identity and compliance information before approving any health store for operation on the platform.",
+        "This ensures:",
+        [
+          "Regulatory legitimacy",
+          "Consumer safety",
+          "Anti-fraud screening",
+          "Accountability in pharmaceutical dispensing",
+        ],
 
         {
-          minorSubheading: "3.1 Business Information",
+          minorSubheading: "A. Identification & Registration Data",
           content: [
-            "We collect comprehensive business identity and compliance information before approving any health store for operation on the platform.",
-            "This ensures:",
+            "We collect the following legal and structural information:",
             [
-              "Regulatory legitimacy",
-              "Consumer safety",
-              "Anti-fraud screening",
-              "Accountability in pharmaceutical dispensing",
+              "Legal business name (as registered)",
+              "Trading name (if different from registered name)",
+              "Owner’s full legal name",
+              "Directors or authorized representatives (where applicable)",
+              "Business registration number",
+              "Certificate of incorporation or registration documents",
+              "Tax Identification Number (TIN)",
+              "KRA compliance certificate (where applicable)",
+              "Business classification (pharmacy, clinic, hospital, supplier, etc.)",
+              "Proof of authority of the person creating the account",
             ],
-
-            {
-              minorMinorSubheading: "A. Identification & Registration Data",
-              content: [
-                "We collect the following legal and structural information:",
-                [
-                  "Legal business name (as registered)",
-                  "Trading name (if different from registered name)",
-                  "Owner’s full legal name",
-                  "Directors or authorized representatives (where applicable)",
-                  "Business registration number",
-                  "Certificate of incorporation or registration documents",
-                  "Tax Identification Number (TIN)",
-                  "KRA compliance certificate (where applicable)",
-                  "Business classification (pharmacy, clinic, hospital, supplier, etc.)",
-                  "Proof of authority of the person creating the account",
-                ],
-                "Purpose of Collection:",
-                [
-                  "Verify the existence of a lawful business entity",
-                  "Confirm tax compliance",
-                  "Prevent impersonation or fraudulent storefronts",
-                  "Enable contractual enforcement",
-                  "Ensure only licensed health operators are onboarded",
-                  "Maintain audit trails for regulatory review",
-                ],
-                "No store may operate on the platform without successful verification.",
-              ],
-            },
-
-            {
-              minorMinorSubheading:
-                "B. Licensing & Regulatory Compliance Documentation",
-              content: [
-                "Where applicable, we collect:",
-                [
-                  "Pharmacy license number",
-                  "Pharmacy operating license",
-                  "Premises license",
-                  "Regulatory board certifications",
-                  "Professional regulatory approvals",
-                  "Controlled substance authorization (if applicable)",
-                  "Government-issued identification of owner or license holder",
-                  "Proof of physical premises",
-                  "Premises photographs",
-                  "Supporting documentation required by regulatory authorities",
-                ],
-                "Verification & Monitoring:",
-                [
-                  "Licensing documentation may be manually reviewed by Aven Health compliance officers",
-                  "Cross-verified with regulatory databases",
-                  "Re-validated periodically",
-                  "Suspended upon expiry",
-                ],
-                "Purpose:",
-                [
-                  "Controlled medicine distribution compliance",
-                  "Legal defensibility of platform operations",
-                  "Prevention of unlawful pharmaceutical trade",
-                  "Public safety protection",
-                  "Trust and credibility within the marketplace",
-                ],
-                "Aven Health reserves the right to suspend or terminate stores with expired, falsified, or unverifiable licenses.",
-              ],
-            },
-
-            {
-              minorMinorSubheading:
-                "C. Location & Operational Contact Information",
-              content: [
-                "We collect precise operational data including:",
-                [
-                  "Physical address",
-                  "Geographic coordinates (latitude and longitude)",
-                  "Contact phone number",
-                  "Business email",
-                  "Customer support contact",
-                  "Operating hours",
-                  "Availability days",
-                  "Delivery coverage zones",
-                  "Delivery methods offered (pickup, courier, in-house delivery)",
-                ],
-                "Why Geographic Coordinates Are Collected:",
-                [
-                  "Accurate mapping within the app",
-                  "Delivery routing optimization",
-                  "Fraud detection (location mismatches)",
-                  "Regulatory traceability",
-                  "Proximity-based search results",
-                ],
-                "Why Contact Details Are Necessary:",
-                [
-                  "Order coordination",
-                  "Regulatory communication",
-                  "Dispute resolution",
-                  "Emergency escalations",
-                  "Compliance notifications",
-                ],
-              ],
-            },
-
-            {
-              minorMinorSubheading: "D. Financial & Settlement Information",
-              content: [
-                "To facilitate secure payments, settlements, commissions, and refunds, we collect:",
-                [
-                  "Till number (if applicable)",
-                  "M-Pesa business number",
-                  "Bank account number",
-                  "Bank code",
-                  "Bank name",
-                  "Recipient name",
-                  "Paystack recipient code",
-                  "Wallet configuration settings",
-                  "Preferred payout schedule",
-                  "Currency (default: KES)",
-                ],
-                "How Financial Data Is Used:",
-                [
-                  "Automated order settlement",
-                  "Commission deductions",
-                  "Refund reversals",
-                  "Payout scheduling",
-                  "Financial ledger reconciliation",
-                  "Fraud detection and chargeback handling",
-                  "Tax reporting compliance",
-                ],
-                "Sensitive payment details are stored securely and used strictly for authorized payout processing.",
-              ],
-            },
+            "Purpose of Collection:",
+            [
+              "Verify the existence of a lawful business entity",
+              "Confirm tax compliance",
+              "Prevent impersonation or fraudulent storefronts",
+              "Enable contractual enforcement",
+              "Ensure only licensed health operators are onboarded",
+              "Maintain audit trails for regulatory review",
+            ],
+            "No store may operate on the platform without successful verification.",
           ],
         },
+
         {
-          subheading: "3.2 Account & Operational Data",
+          minorSubheading:
+            "B. Licensing & Regulatory Compliance Documentation",
           content: [
-            "This category includes data generated through the store’s ongoing use of the platform.",
-
-            {
-              minorSubheading: "A. Account Credentials & Governance Records",
-              content: [
-                "We collect and maintain:",
-                [
-                  "Login credentials (secured and encrypted where applicable)",
-                  "Multi-factor authentication records (if enabled)",
-                  "Terms and Conditions acceptance status",
-                  "Privacy Policy acceptance status",
-                  "Signed agreements",
-                  "Account approval status",
-                  "Suspension or restriction history",
-                  "Administrative review notes",
-                  "Approval records (including approving administrator)",
-                  "Update logs (including timestamps and notes)",
-                ],
-                "Purpose:",
-                [
-                  "Account accountability",
-                  "Auditability",
-                  "Traceability of modifications",
-                  "Contract enforceability",
-                  "Governance oversight",
-                  "Dispute defensibility",
-                ],
-              ],
-            },
-
-            {
-              minorSubheading: "B. Store Profile & Marketplace Data",
-              content: [
-                "Health stores create publicly visible marketplace profiles. We collect:",
-                [
-                  "Store biography",
-                  "Store logo",
-                  "Profile images",
-                  "Business description",
-                  "Product listings",
-                  "Inventory levels",
-                  "Pricing details",
-                  "Prescription requirement flags",
-                  "Product images",
-                  "Regulatory notices attached to products",
-                  "Service availability indicators",
-                ],
-                "Purpose:",
-                [
-                  "Marketplace transparency",
-                  "Informed consumer decision-making",
-                  "Regulatory disclosure",
-                  "Accurate listing presentation",
-                  "Search and discovery optimization",
-                ],
-              ],
-            },
-
-            {
-              minorSubheading: "C. Transactional & Performance Data",
-              content: [
-                "We collect data generated through commerce activity, including:",
-                [
-                  "Orders received",
-                  "Order timestamps",
-                  "Fulfillment timelines",
-                  "Delivery confirmations",
-                  "Dispatch details",
-                  "Cancellations (user-initiated or store-initiated)",
-                  "Refund requests",
-                  "Refund approvals and denials",
-                  "Refund justifications",
-                  "Prescription validation logs",
-                  "Product substitution records",
-                  "Ratings and reviews",
-                  "Customer feedback",
-                  "Dispute records",
-                  "Chargeback records",
-                ],
-                "Purpose:",
-                [
-                  "Operational transparency",
-                  "Fraud monitoring",
-                  "Performance analytics",
-                  "Customer dispute resolution",
-                  "Quality assurance monitoring",
-                  "Platform safety enforcement",
-                ],
-              ],
-            },
-
-            {
-              minorSubheading: "D. Financial Wallet & Ledger Data",
-              content: [
-                "Each store may be assigned a digital wallet managed within Aven Health. We collect and maintain detailed financial records including:",
-                [
-                  "Pending balance",
-                  "Available balance",
-                  "Lifetime earnings",
-                  "Currency designation",
-                  "Payout schedule (weekly, bi-weekly, monthly, or per order)",
-                  "Payout history",
-                  "Payout references",
-                  "Settlement dates",
-                  "Ledger entries (credit, debit, refund, release)",
-                  "Balance after each transaction",
-                  "Commission deductions",
-                  "Platform service fees",
-                  "Adjustment entries",
-                ],
-                "Why This Is Necessary:",
-                [
-                  "Transparent accounting",
-                  "Fair commission calculation",
-                  "Refund reconciliation",
-                  "Fraud detection",
-                  "Financial auditing capability",
-                  "Legal defensibility in payment disputes",
-                ],
-                "All ledger entries create immutable transaction records for compliance review.",
-              ],
-            },
+            "Where applicable, we collect:",
+            [
+              "Pharmacy license number",
+              "Pharmacy operating license",
+              "Premises license",
+              "Regulatory board certifications",
+              "Professional regulatory approvals",
+              "Controlled substance authorization (if applicable)",
+              "Government-issued identification of owner or license holder",
+              "Proof of physical premises",
+              "Premises photographs",
+              "Supporting documentation required by regulatory authorities",
+            ],
+            "Verification & Monitoring:",
+            [
+              "Licensing documentation may be manually reviewed by Aven Health compliance officers",
+              "Cross-verified with regulatory databases",
+              "Re-validated periodically",
+              "Suspended upon expiry",
+            ],
+            "Purpose:",
+            [
+              "Controlled medicine distribution compliance",
+              "Legal defensibility of platform operations",
+              "Prevention of unlawful pharmaceutical trade",
+              "Public safety protection",
+              "Trust and credibility within the marketplace",
+            ],
+            "Aven Health reserves the right to suspend or terminate stores with expired, falsified, or unverifiable licenses.",
           ],
         },
+
         {
-          subheading: "3.3 Patient-Related Data (Processed by Stores)",
+          minorSubheading:
+            "C. Location & Operational Contact Information",
           content: [
-            "When fulfilling orders, health stores process certain patient-related information. In this context:",
+            "We collect precise operational data including:",
             [
-              "The Health Store acts as a Data Controller regarding dispensing decisions.",
-              "Aven Health acts as a Platform Operator and Data Processor for transmission and system management.",
+              "Physical address",
+              "Geographic coordinates (latitude and longitude)",
+              "Contact phone number",
+              "Business email",
+              "Customer support contact",
+              "Operating hours",
+              "Availability days",
+              "Delivery coverage zones",
+              "Delivery methods offered (pickup, courier, in-house delivery)",
             ],
-
-            {
-              minorSubheading: "A. Prescription Data",
-              content: [
-                "The platform recognizes two prescription types:",
-
-                {
-                  minorMinorSubheading:
-                    "1. User-Created Prescriptions (Invalid for Dispensing)",
-                  content: [
-                    "These are documents uploaded directly by users.",
-                    "Characteristics:",
-                    [
-                      "Not medically verified",
-                      "Not issued by a licensed professional",
-                      "Not legally valid for dispensing regulated medicine",
-                      "May serve as informational reference only",
-                    ],
-                    "Health stores are strictly prohibited from dispensing prescription-only medication based on user-created prescriptions.",
-                  ],
-                },
-
-                {
-                  minorMinorSubheading:
-                    "2. Medical Professional-Created Prescriptions (Valid)",
-                  content: [
-                    "These prescriptions:",
-                    [
-                      "Are issued by verified licensed professionals",
-                      "Are digitally linked to a professional account",
-                      "May contain provider identifiers",
-                      "Are intended for lawful dispensing",
-                    ],
-                    "Health stores are responsible for:",
-                    [
-                      "Reviewing authenticity",
-                      "Confirming regulatory compliance",
-                      "Ensuring medication appropriateness",
-                      "Rejecting invalid or suspicious prescriptions",
-                    ],
-                    "Aven Health does not override professional dispensing obligations.",
-                  ],
-                },
-              ],
-            },
-
-            {
-              minorSubheading: "B. Order & Customer Data",
-              content: [
-                "Stores may access limited patient/customer data including:",
-                [
-                  "Customer full name",
-                  "Contact phone number",
-                  "Delivery address",
-                  "Order notes",
-                  "Prescription attachments",
-                  "Prescription validation logs",
-                  "Order tracking information",
-                ],
-
-                "Strict Purpose Limitation:",
-                [
-                  "This data may only be used for:",
-                  [
-                    "Order fulfillment",
-                    "Medication dispensing",
-                    "Delivery execution",
-                    "Regulatory compliance",
-                    "Prescription validation",
-                    "Direct order-related communication",
-                  ],
-                  "It may not be used for:",
-                  [
-                    "Marketing outside the platform",
-                    "Data resale",
-                    "Unauthorized profiling",
-                    "Secondary commercial exploitation",
-                  ],
-                ],
-              ],
-            },
+            "Why Geographic Coordinates Are Collected:",
+            [
+              "Accurate mapping within the app",
+              "Delivery routing optimization",
+              "Fraud detection (location mismatches)",
+              "Regulatory traceability",
+              "Proximity-based search results",
+            ],
+            "Why Contact Details Are Necessary:",
+            [
+              "Order coordination",
+              "Regulatory communication",
+              "Dispute resolution",
+              "Emergency escalations",
+              "Compliance notifications",
+            ],
           ],
         },
+
         {
-          subheading: "3.4 Data Minimization & Purpose Limitation",
+          minorSubheading: "D. Financial & Settlement Information",
           content: [
-            "Aven Health adheres to strict data minimization principles. We collect only data that is:",
+            "To facilitate secure payments, settlements, commissions, and refunds, we collect:",
             [
-              "Necessary for regulatory compliance",
-              "Required for safe pharmaceutical commerce",
-              "Essential for payment processing",
-              "Relevant to dispute resolution",
-              "Proportionate to platform functionality",
+              "Till number (if applicable)",
+              "M-Pesa business number",
+              "Bank account number",
+              "Bank code",
+              "Bank name",
+              "Recipient name",
+              "Paystack recipient code",
+              "Wallet configuration settings",
+              "Preferred payout schedule",
+              "Currency (default: KES)",
             ],
-            "We do not collect excessive or unrelated data.",
-            "All processing is conducted for clearly defined, legitimate, and lawful purposes consistent with healthcare marketplace operations.",
+            "How Financial Data Is Used:",
+            [
+              "Automated order settlement",
+              "Commission deductions",
+              "Refund reversals",
+              "Payout scheduling",
+              "Financial ledger reconciliation",
+              "Fraud detection and chargeback handling",
+              "Tax reporting compliance",
+            ],
+            "Sensitive payment details are stored securely and used strictly for authorized payout processing.",
           ],
         },
       ],
+    },
+    {
+      subheading: "3.2 Account & Operational Data",
+      content: [
+        "This category includes data generated through the store’s ongoing use of the platform.",
+
+        {
+          minorSubheading: "A. Account Credentials & Governance Records",
+          content: [
+            "We collect and maintain:",
+            [
+              "Login credentials (secured and encrypted where applicable)",
+              "Multi-factor authentication records (if enabled)",
+              "Terms and Conditions acceptance status",
+              "Privacy Policy acceptance status",
+              "Signed agreements",
+              "Account approval status",
+              "Suspension or restriction history",
+              "Administrative review notes",
+              "Approval records (including approving administrator)",
+              "Update logs (including timestamps and notes)",
+            ],
+            "Purpose:",
+            [
+              "Account accountability",
+              "Auditability",
+              "Traceability of modifications",
+              "Contract enforceability",
+              "Governance oversight",
+              "Dispute defensibility",
+            ],
+          ],
+        },
+
+        {
+          minorSubheading: "B. Store Profile & Marketplace Data",
+          content: [
+            "Health stores create publicly visible marketplace profiles. We collect:",
+            [
+              "Store biography",
+              "Store logo",
+              "Profile images",
+              "Business description",
+              "Product listings",
+              "Inventory levels",
+              "Pricing details",
+              "Prescription requirement flags",
+              "Product images",
+              "Regulatory notices attached to products",
+              "Service availability indicators",
+            ],
+            "Purpose:",
+            [
+              "Marketplace transparency",
+              "Informed consumer decision-making",
+              "Regulatory disclosure",
+              "Accurate listing presentation",
+              "Search and discovery optimization",
+            ],
+          ],
+        },
+
+        {
+          minorSubheading: "C. Transactional & Performance Data",
+          content: [
+            "We collect data generated through commerce activity, including:",
+            [
+              "Orders received",
+              "Order timestamps",
+              "Fulfillment timelines",
+              "Delivery confirmations",
+              "Dispatch details",
+              "Cancellations (user-initiated or store-initiated)",
+              "Refund requests",
+              "Refund approvals and denials",
+              "Refund justifications",
+              "Prescription validation logs",
+              "Product substitution records",
+              "Ratings and reviews",
+              "Customer feedback",
+              "Dispute records",
+              "Chargeback records",
+            ],
+            "Purpose:",
+            [
+              "Operational transparency",
+              "Fraud monitoring",
+              "Performance analytics",
+              "Customer dispute resolution",
+              "Quality assurance monitoring",
+              "Platform safety enforcement",
+            ],
+          ],
+        },
+
+        {
+          minorSubheading: "D. Financial Wallet & Ledger Data",
+          content: [
+            "Each store may be assigned a digital wallet managed within Aven Health. We collect and maintain detailed financial records including:",
+            [
+              "Pending balance",
+              "Available balance",
+              "Lifetime earnings",
+              "Currency designation",
+              "Payout schedule (weekly, bi-weekly, monthly, or per order)",
+              "Payout history",
+              "Payout references",
+              "Settlement dates",
+              "Ledger entries (credit, debit, refund, release)",
+              "Balance after each transaction",
+              "Commission deductions",
+              "Platform service fees",
+              "Adjustment entries",
+            ],
+            "Why This Is Necessary:",
+            [
+              "Transparent accounting",
+              "Fair commission calculation",
+              "Refund reconciliation",
+              "Fraud detection",
+              "Financial auditing capability",
+              "Legal defensibility in payment disputes",
+            ],
+            "All ledger entries create immutable transaction records for compliance review.",
+          ],
+        },
+      ],
+    },
+    {
+      subheading: "3.3 Patient-Related Data (Processed by Stores)",
+      content: [
+        "When fulfilling orders, health stores process certain patient-related information. In this context:",
+        [
+          "The Health Store acts as a Data Controller regarding dispensing decisions.",
+          "Aven Health acts as a Platform Operator and Data Processor for transmission and system management.",
+        ],
+
+        {
+          minorSubheading: "A. Prescription Data",
+          content: [
+            "The platform recognizes two prescription types:",
+
+            {
+              minorMinorSubheading:
+                "1. User-Created Prescriptions (Invalid for Dispensing)",
+              content: [
+                "These are documents uploaded directly by users.",
+                "Characteristics:",
+                [
+                  "Not medically verified",
+                  "Not issued by a licensed professional",
+                  "Not legally valid for dispensing regulated medicine",
+                  "May serve as informational reference only",
+                ],
+                "Health stores are strictly prohibited from dispensing prescription-only medication based on user-created prescriptions.",
+              ],
+            },
+
+            {
+              minorMinorSubheading:
+                "2. Medical Professional-Created Prescriptions (Valid)",
+              content: [
+                "These prescriptions:",
+                [
+                  "Are issued by verified licensed professionals",
+                  "Are digitally linked to a professional account",
+                  "May contain provider identifiers",
+                  "Are intended for lawful dispensing",
+                ],
+                "Health stores are responsible for:",
+                [
+                  "Reviewing authenticity",
+                  "Confirming regulatory compliance",
+                  "Ensuring medication appropriateness",
+                  "Rejecting invalid or suspicious prescriptions",
+                ],
+                "Aven Health does not override professional dispensing obligations.",
+              ],
+            },
+          ],
+        },
+
+        {
+          minorSubheading: "B. Order & Customer Data",
+          content: [
+            "Stores may access limited patient/customer data including:",
+            [
+              "Customer full name",
+              "Contact phone number",
+              "Delivery address",
+              "Order notes",
+              "Prescription attachments",
+              "Prescription validation logs",
+              "Order tracking information",
+            ],
+
+            "Strict Purpose Limitation:",
+            [
+              "This data may only be used for:",
+              [
+                "Order fulfillment",
+                "Medication dispensing",
+                "Delivery execution",
+                "Regulatory compliance",
+                "Prescription validation",
+                "Direct order-related communication",
+              ],
+              "It may not be used for:",
+              [
+                "Marketing outside the platform",
+                "Data resale",
+                "Unauthorized profiling",
+                "Secondary commercial exploitation",
+              ],
+            ],
+          ],
+        },
+      ],
+    },
+    {
+      subheading: "3.4 Data Minimization & Purpose Limitation",
+      content: [
+        "Aven Health adheres to strict data minimization principles. We collect only data that is:",
+        [
+          "Necessary for regulatory compliance",
+          "Required for safe pharmaceutical commerce",
+          "Essential for payment processing",
+          "Relevant to dispute resolution",
+          "Proportionate to platform functionality",
+        ],
+        "We do not collect excessive or unrelated data.",
+        "All processing is conducted for clearly defined, legitimate, and lawful purposes consistent with healthcare marketplace operations.",
+      ],
+
     },
     {
       heading: "4. How We Use Health Store Data",
@@ -1052,17 +1052,19 @@ const PharmacyPrivacyPolicy = () => {
       content: [
         "Aven Health processes Health Store data only when there is a clear and lawful basis under applicable data protection and regulatory frameworks, including the Kenya Data Protection Act 2019 and other relevant international standards. Each processing activity is linked to one or more of the following legal bases:",
       ],
+    },
+    {
       subheading: "5.1 Contractual Necessity",
       content: [
         "Certain data processing is required to fulfill the contractual relationship between Aven Health and Health Stores.",
-        {
-          example: [
-            "Verification of business and regulatory licenses to activate an account",
-            "Routing and fulfillment of orders to customers",
-            "Calculation of commissions, payouts, and refunds",
-            "Delivery coordination and communication with customers",
-          ],
-        },
+
+        [
+          "Verification of business and regulatory licenses to activate an account",
+          "Routing and fulfillment of orders to customers",
+          "Calculation of commissions, payouts, and refunds",
+          "Delivery coordination and communication with customers",
+        ],
+
         {
           minorSubheading: "Purpose",
           content: [
@@ -1075,14 +1077,14 @@ const PharmacyPrivacyPolicy = () => {
       subheading: "5.2 Legal Obligations",
       content: [
         "Some Health Store data is processed to comply with statutory or regulatory requirements.",
-        {
-          example: [
-            "Verification and maintenance of pharmacy licenses and certifications",
-            "Retention of order and prescription records for auditing purposes",
-            "Reporting for tax obligations and regulatory oversight",
-            "Cooperation with lawful requests from authorities regarding controlled substances or safety incidents",
-          ],
-        },
+
+        [
+          "Verification and maintenance of pharmacy licenses and certifications",
+          "Retention of order and prescription records for auditing purposes",
+          "Reporting for tax obligations and regulatory oversight",
+          "Cooperation with lawful requests from authorities regarding controlled substances or safety incidents",
+        ],
+
         {
           minorSubheading: "Purpose",
           content: [
@@ -1095,15 +1097,14 @@ const PharmacyPrivacyPolicy = () => {
       subheading: "5.3 Legitimate Interests",
       content: [
         "Aven Health processes certain Health Store data based on the platform’s legitimate interests, provided these do not override the fundamental rights of the store or its users.",
-        {
-          example: [
-            "Fraud prevention and risk monitoring",
-            "Detecting suspicious or abnormal order patterns",
-            "Protecting platform integrity, reliability, and user trust",
-            "Operational analytics to improve marketplace efficiency",
-            "Monitoring compliance with platform rules",
-          ],
-        },
+        [
+          "Fraud prevention and risk monitoring",
+          "Detecting suspicious or abnormal order patterns",
+          "Protecting platform integrity, reliability, and user trust",
+          "Operational analytics to improve marketplace efficiency",
+          "Monitoring compliance with platform rules",
+        ],
+
         {
           minorSubheading: "Purpose",
           content: [
@@ -1115,13 +1116,12 @@ const PharmacyPrivacyPolicy = () => {
     {
       subheading: "5.4 Consent (Where Applicable)",
       content: [
-        "In some cases, Health Store data may be processed based on explicit consent.",
-        {
-          example: [
-            "Participation in optional marketing or promotional programs",
-            "Voluntary sharing of additional operational or business insights for analytics beyond core marketplace operations",
-          ],
-        },
+        "In some cases, Health Store data may be processed based on explicit consent. That is:",
+        [
+          "Participation in optional marketing or promotional programs",
+          "Voluntary sharing of additional operational or business insights for analytics beyond core marketplace operations",
+        ],
+
         {
           minorSubheading: "Purpose",
           content: [
@@ -2063,7 +2063,7 @@ const PharmacyPrivacyPolicy = () => {
   ];
 
   return (
-    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center">
+    <div>
       <LegalCard
         title="HEALTH STORES PRIVACY POLICY"
         icon={<FaShieldAlt className="text-yellow-500" />}

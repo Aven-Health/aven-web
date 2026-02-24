@@ -12,9 +12,9 @@ export default function Footer() {
             Access. Vitality. Empowerment. Network.
           </p>
           <p className="text-gray-400 text-sm">
-          The Future of Integrated Health
+            The Future of Integrated Health
           </p>
-       
+
         </div>
 
         <div>
@@ -22,7 +22,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
               <Link
-                to="/about-us"
+                to="/about"
                 className="hover:text-accent transition-colors"
               >
                 About Us
@@ -43,7 +43,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                to="/community-feed"
+                to="/communities"
                 className="hover:text-accent transition-colors"
               >
                 Communities
@@ -57,7 +57,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
               <Link
-                to="/doctors"
+                to="/appointments"
                 className="hover:text-accent transition-colors"
               >
                 Book Appointments
@@ -71,11 +71,18 @@ export default function Footer() {
                 Health Stores
               </Link>
             </li>
-          
+            <li>
+              <Link
+                to="/contact"
+                className="hover:text-accent transition-colors"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
-               <div className="md:col-span-3 grid gap-12 md:grid-cols-3 text-sm text-gray-300">
+        <div className="md:col-span-3 grid gap-12 md:grid-cols-3 text-sm text-gray-300">
           <div className="md:pr-6">
             <h4 className="text-accent font-semibold mb-3">Users</h4>
             <ul className="space-y-2">
@@ -86,7 +93,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/user-agreement" className="hover:text-accent transition-colors block">
-                  User Agreement
+                  Terms and Conditions
                 </Link>
               </li>
             </ul>
@@ -102,7 +109,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/pharmacy-agreement" className="hover:text-accent transition-colors block whitespace-nowrap">
-                  Pharmacy Agreement
+                  Terms and Conditions
                 </Link>
               </li>
             </ul>
@@ -118,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/medical-professional-agreement" className="hover:text-accent transition-colors block whitespace-nowrap">
-                  Professional Agreement
+                  Terms and Conditions
                 </Link>
               </li>
             </ul>
@@ -131,7 +138,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <div className="space-y-1 text-center md:text-left">
             <div>Email: avenhealthke@gmail.com</div>
-            <div>Phone: +254 740 501 452</div>
+            <div>Phone: +254-740-501-452</div>
           </div>
 
           <div className="mt-4 md:mt-0">

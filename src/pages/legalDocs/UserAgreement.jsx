@@ -908,78 +908,78 @@ const userTermsSection1 = {
       heading: "11. Changes to Terms",
       content: []
     },
-        {
-          subheading: "11.1 Right to Update Terms",
-          content: [
-            "Aven Health reserves the right, at its sole discretion, to modify, amend, or update these Terms and Conditions at any time.",
-            "Updates may be necessary to:",
-            [
-              "Reflect changes in legal or regulatory requirements, including telehealth, data protection, or e-commerce laws",
-              "Address new features, services, or functionalities added to the Platform",
-              "Improve clarity, enforceability, or operational effectiveness of the Terms",
-              "Respond to security, privacy, or safety concerns",
-              "Incorporate global compliance obligations for users accessing the Platform from other jurisdictions"
-            ],
-            "Such updates may include modifications to user rights, obligations, fees, payment terms, platform usage rules, and dispute resolution procedures."
-          ]
-        },
-        {
-          subheading: "11.2 User Notification",
-          content: [
-            "When the Terms are updated, Aven Health will provide notice to users through one or more of the following methods:",
-            {
-              minorSubheading: "1. In-App Notification",
-              content: [
-                "Users will receive a notification or prompt upon login requiring acknowledgment of the updated Terms before continuing to use the Platform."
-              ]
-            },
-            "Users are strongly encouraged to review the updated Terms each time they receive a notification.",
-            "Continued use of the Platform after the Effective Date constitutes acceptance of the updated Terms."
-          ]
-        },
-        {
-          subheading: "11.3 User Obligations",
-          content: [
-            "By continuing to access or use the Platform after notification of changes:",
-            [
-              "You acknowledge that you have read, understood, and agreed to the updated Terms;",
-              "You accept that your continued use binds you to any new rights, responsibilities, and limitations imposed by the updated Terms;",
-              "If you do not agree with the changes, you must stop using the Platform and may delete your account in accordance with the Account Deletion provisions (Section 9)."
-            ]
-          ]
-        },
-        {
-          subheading: "11.4 Material Changes",
-          content: [
-            "For material changes, including amendments to:",
-            [
-              "Payment obligations, fees, or refund policies;",
-              "User privacy rights or data usage;",
-              "Health service delivery or professional responsibilities;",
-              "Legal disclaimers, limitation of liability, or dispute resolution procedures;"
-            ],
-            "Aven Health may provide enhanced notice, including:",
-            [
-              "Prominent in-app banners or notifications requiring explicit acknowledgment;",
-              "Direct emails summarizing key changes;",
-              "Additional guidance or FAQs to clarify the impact of updates on users."
-            ],
-
-            "Material changes will only take effect after the notice period, allowing users a reasonable opportunity to review and, if necessary, discontinue use."
-          ]
-        },
-        {
-          subheading: "11.5 Binding Effect",
-          content: [
-            "All updates made in accordance with this section are binding on users from the Effective Date.",
-            "Users who continue to use the Platform after updates are deemed to have consented to and accepted the updated Terms in their entirety."
-          ]
-        }
+    {
+      subheading: "11.1 Right to Update Terms",
+      content: [
+        "Aven Health reserves the right, at its sole discretion, to modify, amend, or update these Terms and Conditions at any time.",
+        "Updates may be necessary to:",
+        [
+          "Reflect changes in legal or regulatory requirements, including telehealth, data protection, or e-commerce laws",
+          "Address new features, services, or functionalities added to the Platform",
+          "Improve clarity, enforceability, or operational effectiveness of the Terms",
+          "Respond to security, privacy, or safety concerns",
+          "Incorporate global compliance obligations for users accessing the Platform from other jurisdictions"
+        ],
+        "Such updates may include modifications to user rights, obligations, fees, payment terms, platform usage rules, and dispute resolution procedures."
       ]
-    
+    },
+    {
+      subheading: "11.2 User Notification",
+      content: [
+        "When the Terms are updated, Aven Health will provide notice to users through one or more of the following methods:",
+        {
+          minorSubheading: "1. In-App Notification",
+          content: [
+            "Users will receive a notification or prompt upon login requiring acknowledgment of the updated Terms before continuing to use the Platform."
+          ]
+        },
+        "Users are strongly encouraged to review the updated Terms each time they receive a notification.",
+        "Continued use of the Platform after the Effective Date constitutes acceptance of the updated Terms."
+      ]
+    },
+    {
+      subheading: "11.3 User Obligations",
+      content: [
+        "By continuing to access or use the Platform after notification of changes:",
+        [
+          "You acknowledge that you have read, understood, and agreed to the updated Terms;",
+          "You accept that your continued use binds you to any new rights, responsibilities, and limitations imposed by the updated Terms;",
+          "If you do not agree with the changes, you must stop using the Platform and may delete your account in accordance with the Account Deletion provisions (Section 9)."
+        ]
+      ]
+    },
+    {
+      subheading: "11.4 Material Changes",
+      content: [
+        "For material changes, including amendments to:",
+        [
+          "Payment obligations, fees, or refund policies;",
+          "User privacy rights or data usage;",
+          "Health service delivery or professional responsibilities;",
+          "Legal disclaimers, limitation of liability, or dispute resolution procedures;"
+        ],
+        "Aven Health may provide enhanced notice, including:",
+        [
+          "Prominent in-app banners or notifications requiring explicit acknowledgment;",
+          "Direct emails summarizing key changes;",
+          "Additional guidance or FAQs to clarify the impact of updates on users."
+        ],
+
+        "Material changes will only take effect after the notice period, allowing users a reasonable opportunity to review and, if necessary, discontinue use."
+      ]
+    },
+    {
+      subheading: "11.5 Binding Effect",
+      content: [
+        "All updates made in accordance with this section are binding on users from the Effective Date.",
+        "Users who continue to use the Platform after updates are deemed to have consented to and accepted the updated Terms in their entirety."
+      ]
+    }
+  ]
+
 };
 const UserTermsCard = () =>
-  
+
   <LegalCard {...userTermsSection1} />;
 
 export default UserTermsCard;

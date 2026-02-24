@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/favicon.png";
+import logo from "../assets/avenaa.png";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,117 +16,116 @@ export default function Navbar() {
   }, []);
 
   const navLinkClass = ({ isActive }) =>
-    `text-base font-medium transition ${
-      isActive ? "text-accent" : "text-white hover:text-accent"
+    `text-base font-medium transition ${isActive ? "text-accent" : "text-white hover:text-accent"
     }`;
 
   return (
 
     <>
-    <header
-className={`fixed top-0 left-0 w-full z-50 
+      <header
+        className={`fixed top-0 left-0 w-full z-50 
   backdrop-blur-lg bg-primary/90 will-change-transform
   transition-shadow duration-300
   ${scrolled ? "shadow-lg" : ""} 
   border-b border-white/10`}
-    >
-      <nav className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      >
+        <nav className="max-w-7xl mx-auto px- py-4 flex items-center justify-between">
 
-        <Link to="/" className="flex items-center">
-          <img
-            src={logo}
-            alt="Aven Health Logo"
-            className="h-12 w-auto object-contain"
-          />
-        </Link>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Aven Health Logo"
+              className="h-12 w-auto object-contain"
+            />
+          </Link>
 
-        <div className="hidden md:flex items-center gap-10">
-          <NavLink to="/" className={navLinkClass}>Home</NavLink>
-          <NavLink to="/community-feed" className={navLinkClass}>Communities</NavLink>
-          <NavLink to="/doctors" className={navLinkClass}>Book Appointment</NavLink>
-          <NavLink to="/pharmacies" className={navLinkClass}>Health Stores</NavLink>
+          <div className="hidden md:flex items-center gap-10">
+            <NavLink to="/" className={navLinkClass}>Home</NavLink>
+            <NavLink to="/communities" className={navLinkClass}>Communities</NavLink>
+            <NavLink to="/appointments" className={navLinkClass}>Book Appointment</NavLink>
+            <NavLink to="/pharmacies" className={navLinkClass}>Health Stores</NavLink>
 
-          <Dropdown label="How It Works">
-            <NavLink to="/how-it-works" className="dropdown-link">
-              How It Works
+            <Dropdown label="How It Works">
+              <NavLink to="/how-it-works" className="dropdown-link">
+                How It Works
+              </NavLink>
+              <NavLink to="/faq" className="dropdown-link">
+                FAQs
+              </NavLink>
+            </Dropdown>
+
+            <Dropdown label="About Us">
+              <NavLink to="/about" className="dropdown-link">
+                About Us
+              </NavLink>
+              <NavLink to="team" className="dropdown-link">
+                Team
+              </NavLink>
+            </Dropdown>
+
+            <NavLink to="/contact" className={navLinkClass}>
+              Contact Us
             </NavLink>
-            <NavLink to="/faq" className="dropdown-link">
-              FAQs
-            </NavLink>
-          </Dropdown>
+          </div>
 
-          <Dropdown label="About Us">
-            <NavLink to="/about-us" className="dropdown-link">
-              About Us
-            </NavLink>
-            <NavLink to="/meet-the-team" className="dropdown-link">
-              Team
-            </NavLink>
-          </Dropdown>
+          <button
+            className="md:hidden text-accent text-3xl"
+            onClick={() => setMobileOpen(true)}
+          >
+            ☰
+          </button>
+        </nav>
 
-          <NavLink to="/contact-us" className={navLinkClass}>
-            Contact Us
-          </NavLink>
-        </div>
 
-        <button
-          className="md:hidden text-accent text-3xl"
-          onClick={() => setMobileOpen(true)}
-        >
-          ☰
-        </button>
-      </nav>
+      </header>
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-primary backdrop-blur-md z-40"
+              onClick={() => setMobileOpen(false)}
+            />
 
-   
-    </header>
-<AnimatePresence>
-  {mobileOpen && (
-    <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="fixed inset-0 bg-primary backdrop-blur-md z-40"
-        onClick={() => setMobileOpen(false)}
-      />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="fixed top-0 right-0 h-full w-80 bg-primary shadow-2xl p-8 z-50"
+            >
+              <button
+                className="text-accent text-3xl mb-10"
+                onClick={() => setMobileOpen(false)}
+              >
+                ✕
+              </button>
 
-<motion.div
-  initial={{ x: "100%" }}
-  animate={{ x: 0 }}
-  exit={{ x: "100%" }}
-  transition={{ duration: 0.4, ease: "easeOut" }}
-  className="fixed top-0 right-0 h-full w-80 bg-primary shadow-2xl p-8 z-50"
->
-  <button
-    className="text-accent text-3xl mb-10"
-    onClick={() => setMobileOpen(false)}
-  >
-    ✕
-  </button>
+              <div className="flex flex-col gap-5 text-lg">
+                <NavLink to="/" onClick={() => setMobileOpen(false)}>Home</NavLink>
+                <NavLink to="/communities" onClick={() => setMobileOpen(false)}>Communities</NavLink>
+                <NavLink to="/appointments" onClick={() => setMobileOpen(false)}>Book Appointments</NavLink>
+                <NavLink to="/pharmacies" onClick={() => setMobileOpen(false)}>Health Stores</NavLink>
 
-  <div className="flex flex-col gap-5 text-lg">
-    <NavLink to="/" onClick={() => setMobileOpen(false)}>Home</NavLink>
-    <NavLink to="/community-feed" onClick={() => setMobileOpen(false)}>Communities</NavLink>
-    <NavLink to="/doctors" onClick={() => setMobileOpen(false)}>Book Appointments</NavLink>
-    <NavLink to="/pharmacies" onClick={() => setMobileOpen(false)}>Health Stores</NavLink>
+                <MobileDropdown label="How It Works">
+                  <NavLink to="/how-it-works" onClick={() => setMobileOpen(false)}>How It Works</NavLink>
+                  <NavLink to="/faq" onClick={() => setMobileOpen(false)}>FAQs</NavLink>
+                </MobileDropdown>
 
-    <MobileDropdown label="How It Works">
-      <NavLink to="/how-it-works" onClick={() => setMobileOpen(false)}>How It Works</NavLink>
-      <NavLink to="/faq" onClick={() => setMobileOpen(false)}>FAQs</NavLink>
-    </MobileDropdown>
+                <MobileDropdown label="About Us">
+                  <NavLink to="/about" onClick={() => setMobileOpen(false)}>About Us</NavLink>
+                  <NavLink to="team" onClick={() => setMobileOpen(false)}>Team</NavLink>
+                </MobileDropdown>
 
-    <MobileDropdown label="About Us">
-      <NavLink to="/about-us" onClick={() => setMobileOpen(false)}>About Us</NavLink>
-      <NavLink to="/meet-the-team" onClick={() => setMobileOpen(false)}>Team</NavLink>
-    </MobileDropdown>
-
-    <NavLink to="/contact-us" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>
-  </div>
-</motion.div>
-    </>
-  )}
-</AnimatePresence>
+                <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }
