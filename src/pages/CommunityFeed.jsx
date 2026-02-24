@@ -90,7 +90,7 @@ export default function CommunityFeed() {
         </div>
       </section>
 
-
+    
       <section className="space-y-6 text-center max-w-3xl mx-auto px-4">
         <h2 className="text-2xl font-semibold">Aven Communities</h2>
         <p className="text-gray-300 text-lg leading-relaxed">

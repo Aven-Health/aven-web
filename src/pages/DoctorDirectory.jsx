@@ -151,7 +151,7 @@ const features = [
   </p>
   <p className="text-gray-300 text-lg leading-relaxed">
     Web booking is coming soon for now, appointments are fully available via the Aven Health app for a seamless experience.
-      </p>
+  </p>
 </section>
     </section>
   );
