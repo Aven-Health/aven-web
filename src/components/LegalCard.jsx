@@ -83,7 +83,6 @@ const renderContent = (content) => {
 const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
   return (
     <div className="flex flex-col lg:flex-row scroll-smooth">
-      {/* Sidebar */}
       <nav className="hidden lg:block w-64 bg-cardDark border-r border-gray-700 p-6 sticky top-0 h-screen overflow-y-auto">
         <h2 className="text-xl font-bold mb-4 text-white">{title}</h2>
         <ul className="space-y-2">
@@ -110,7 +109,6 @@ const LegalCard = React.memo(({ title, sections = [], icon, links = [] }) => {
         </ul>
       </nav>
 
-      {/* Main Content */}
       <div className="flex-1 p-6 space-y-6">
         <div className="flex items-center mb-6">
           {icon && <span className="text-3xl mr-4">{icon}</span>}

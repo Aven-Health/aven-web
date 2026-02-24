@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { doctors } from "../mock/doctors";
+import { doctors } from "../mock/appointments";
 import { pharmacies } from "../mock/pharmacies";
 
 export default function Search() {

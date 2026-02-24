@@ -24,21 +24,21 @@ useEffect(() => {
 }, [isOpen]);
   const mainLinks = [
     { to: "/", label: "Home" },
-    { to: "/about-us", label: "About Us" },
+    { to: "/about", label: "About Us" },
     { to: "/our-app", label: "Our App" },
     { to: "/features", label: "Features" },
     { to: "/how-it-works", label: "How It Works" },
     { to: "/contact-us", label: "Contact" },
     { to: "/faq", label: "FAQ" },
-    { to: "/meet-the-team", label: "Meet the Team" },
+    { to: "team", label: "Meet the Team" },
   ];
 
   const servicesLinks = [
-    { to: "/doctors", label: "Doctor Directory" },
-    { to: "/doctors/1", label: "Doctor Profile" }, // example id=1
+    { to: "/appointments", label: "Doctor Directory" },
+    { to: "/appointments/1", label: "Doctor Profile" }, // example id=1
     { to: "/appointment-booking", label: "Appointment Booking" },
     { to: "/pharmacies", label: "Pharmacy Directory" },
-    { to: "/community-feed", label: "Community Feed" },
+    { to: "/communities", label: "Community Feed" },
     { to: "/search", label: "Central Search" },
   ];
 
