@@ -947,7 +947,7 @@ const userTermsSection1 = {
 }
 
   ]
-};
+
 
 const UserTermsCard = () => <LegalCard {...userTermsSection1} />;
 
