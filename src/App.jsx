@@ -74,7 +74,7 @@ function App() {
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />
-              <Route path="team" element={<MeetTheTeam />} />
+              <Route path="/team" element={<MeetTheTeam />} />
 
               <Route path="/appointments" element={<DoctorDirectory />} />
               <Route path="/appointments/:id" element={<DoctorProfile />} />

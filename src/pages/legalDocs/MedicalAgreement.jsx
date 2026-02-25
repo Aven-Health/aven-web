@@ -1,6 +1,8 @@
 import React from "react";
 import { FaShieldAlt } from "react-icons/fa";
 import LegalCard from "../../components/LegalCard";
+import PageHelmet from "../../components/pagehelmet";
+
 
 
 const MedicalAgreement = () => {
@@ -2413,20 +2415,18 @@ delivering healthcare services.`
     }
   ]
 
-  const links = [
-    {
-      name: "View Medical Professional Privacy Policy",
-      route: "/medical-privacy-policy",
-    },
-  ];
-
   return (
     <div>
+    <PageHelmet
+  title="Medical Professionals Terms and conditions"
+  description="Aven Health's medical professionals terms and conditions"
+  url="https://www.avenhealth.co.ke/medical-professional-agreement"
+
+/>
       <LegalCard
         title="MEDICAL PROFESSIONALS TERMS AND CONDITIONS"
         icon={<FaShieldAlt className="text-yellow-500" />}
         sections={sections}
-        links={links}
       />
     </div>
   );

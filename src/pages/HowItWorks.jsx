@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import howImage2 from "../assets/doc.jpg";
 import howImage1 from "../assets/circle.jpg";
+import PageHelmet from "../components/pagehelmet";
 
 import Banner from "../components/banner";
  
@@ -44,6 +45,12 @@ export default function HowItWorks() {
 
   return (
     <section className="space-y-20">
+            <PageHelmet
+  title="Aven Health. Healthcare, Simplified. Connected. Built Around You."
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke/how-it-works"
+/>
+
      <Banner backgroundImage={howImage2} slides={slides} interval={6000} />
    
 

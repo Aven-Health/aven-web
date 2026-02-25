@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
+import PageHelmet from "../components/pagehelmet";
+
 import { fadeUp } from "../utils/motion";
 
 import doctor1 from "../assets/secure.png";
@@ -16,7 +18,7 @@ import feature7 from "../assets/03.png";
 
 import Banner from "../components/banner";
 
-
+ 
 export default function DoctorDirectory() {
 
 
@@ -83,9 +85,15 @@ const features = [
   },
 ];
 
-  return (
-    <section className="w-full px-4 sm:px-1 lg:px-2 py-1 ">
 
+
+  return (
+    <section className=" space-y-20">
+<PageHelmet
+  title="Book Appointments – Aven Health"
+  description="Access verified doctors, book appointments easily, and stay connected with trusted healthcare professionals on Aven Health."
+  url="https://www.avenhealth.co.ke/appointments"
+/>
       <Banner
         backgroundImage={doctor1}
         interval={6500}

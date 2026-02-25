@@ -1,6 +1,7 @@
 import React from "react";
 import { FaShieldAlt } from "react-icons/fa";
 import LegalCard from "../../components/LegalCard";
+import PageHelmet from "../../components/pagehelmet";
 
 const MedicalProfessionalPrivacyPolicy = () => {
   const sections = [
@@ -9,7 +10,7 @@ const MedicalProfessionalPrivacyPolicy = () => {
       content: [
         "This Professional Privacy Policy explains how Aven Health collects, processes, stores, and protects the personal and professional information of licensed healthcare professionals, allied medical personnel, and affiliated healthcare institutions that use the Aven Health Platform.",
         "It ensures transparency regarding the handling of professional data and demonstrates Aven Health’s commitment to safeguarding sensitive and confidential information.",
-        "Professional data collected may include—but is not limited to—professional credentials, licenses, educational qualifications, specialization areas, clinical experience, consultation history, communication with patients, performance data, and professional recommendations.",
+        "Professional data collected may include but is not limited to professional credentials, licenses, educational qualifications, specialization areas, clinical experience, consultation history, communication with patients, performance data, and professional recommendations.",
         "This data enables Aven Health to provide secure and personalized telehealth services, maintain accurate professional profiles, support patient–professional interactions, and comply with applicable privacy, health, and ethical standards.",
       ],
     },
@@ -879,7 +880,7 @@ const MedicalProfessionalPrivacyPolicy = () => {
     {
       minorSubheading: "Purpose and Use",
       content: [
-        "Professionals’ publicly relevant profile information—such as name, title, qualifications, specialties, offered services, consultation modes, availability, and professional summary—is shared with patients to facilitate informed selection and secure engagement.",
+        "Professionals’ publicly relevant profile information such as name, title, qualifications, specialties, offered services, consultation modes, availability, and professional summary is shared with patients to facilitate informed selection and secure engagement.",
         "Any sensitive data, such as license numbers or identity verification documents, is never shared directly with patients unless explicitly authorized or required for transparency in patient-professional interactions."
       ]
     },
@@ -1787,17 +1788,19 @@ const MedicalProfessionalPrivacyPolicy = () => {
 
   ];
 
-  const links = [
-    { name: "View Terms & Conditions", route: "/terms-conditions" },
-  ];
-
   return (
-    <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center">
+    <div className="">
+        <PageHelmet
+  title="Medical Professionals Privacy Policy"
+  description="Aven Health's medical professionals terms and conditions"
+  url="https://www.avenhealth.co.ke/medical-professional-agreement"
+
+/>
       <LegalCard
-        subheading="Medical Professional Privacy Policy"
-        icon={<FaShieldAlt className="text-blue-500" />}
+        title="MEDICAL PROFESSIONALS PRIVACY POLICY"
+     icon={<FaShieldAlt className="text-yellow-500" />}
         sections={sections}
-        links={links}
+      
       />
     </div>
   );

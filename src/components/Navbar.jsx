@@ -58,8 +58,8 @@ export default function Navbar() {
               <NavLink to="/about" className="dropdown-link">
                 About Us
               </NavLink>
-              <NavLink to="team" className="dropdown-link">
-                Team
+              <NavLink to="/team" className="dropdown-link">
+               Our Team
               </NavLink>
             </Dropdown>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
 
                 <MobileDropdown label="About Us">
                   <NavLink to="/about" onClick={() => setMobileOpen(false)}>About Us</NavLink>
-                  <NavLink to="team" onClick={() => setMobileOpen(false)}>Team</NavLink>
+                  <NavLink to="/team" onClick={() => setMobileOpen(false)}>Our Team</NavLink>
                 </MobileDropdown>
 
                 <NavLink to="/contact" onClick={() => setMobileOpen(false)}>Contact Us</NavLink>

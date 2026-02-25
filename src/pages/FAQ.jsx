@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "../components/banner";
 import faqBg from "../assets/faqs.jpg";
+import PageHelmet from "../components/pagehelmet";
 
 export default function FAQ() {
   const faqSections = [
@@ -374,7 +375,13 @@ export default function FAQ() {
 
 
   return (
-    <section className="max-w-7xl mx-auto space-y-16 px-4 sm:px-6 lg:px-8 ">
+    <section className="space-y-20 ">
+            <PageHelmet
+  title="Reach Out to Aven Health. Healthcare, Simplified. Connected. Built Around You."
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke/faq"
+/>
+
   <Banner backgroundImage={faqBg} slides={slides} interval={6000} />
      
 

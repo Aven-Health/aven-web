@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Banner from "../components/banner"; 
 import contactBg from "../assets/contact.jpg"; 
+import PageHelmet from "../components/pagehelmet";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -87,6 +88,13 @@ const handleSubmit = async (e) => {
 
   return (
     <section className=" mx-auto space-y-12">
+        <PageHelmet
+  title="Reach Out to Aven Health. Healthcare, Simplified. Connected. Built Around You."
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke/contact"
+/>
+
+
   <Banner backgroundImage={contactBg} slides={slides} interval={6000} />
 
     <section className="max-w-3xl mx-auto space-y-12">
