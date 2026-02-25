@@ -1,5 +1,6 @@
 import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
+import PageHelmet from "../components/pagehelmet";
 
 import pharmFeature1 from "../assets/pharmacy01.png";
 import pharmFeature2 from "../assets/pharmacy02.png";
@@ -59,7 +60,7 @@ export default function PharmacyDirectory() {
     image: pharmFeature2,
   },
   {
-    title: "Connect with Verified Sellers",
+    title: "Connect with Verified Health Stores",
     description:
       "Engage directly with pharmacy providers for expert guidance, advice, and timely support.",
     image: pharmFeature3,
@@ -86,7 +87,11 @@ export default function PharmacyDirectory() {
 
   return (
     <section className="space-y-12 text-left">
-
+        <PageHelmet
+  title="Connect with Verified Sellers. Healthcare, Simplified. Connected. Built Around You."
+  description="Find verified and licensed Health Stores in your area, ensuring safe and reliable healthcare services."
+  url="https://www.avenhealth.co.ke/pharmacies"
+/>
       <Banner backgroundImage={pharm1} slides={pharmacySlides} interval={6500} />
 
 <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">

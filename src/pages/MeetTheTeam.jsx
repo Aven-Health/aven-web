@@ -9,6 +9,7 @@ import safiaMohammed from "../assets/safia_mohammed.jpeg";
 import antonyOchieng from "../assets/antony_ochieng.jpg";
 import bruceLukwa from "../assets/bruce_lukwa.jpeg";
 import teamBg from "../assets/team.jpg";
+import PageHelmet from "../components/pagehelmet";
 
 export default function MeetTheTeam() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -104,7 +105,13 @@ export default function MeetTheTeam() {
 
 
   return (
-    <section className="max-w-6xl mx-auto space-y-16">
+    <section className=" mx-auto space-y-16">
+                <PageHelmet
+  title="Meet the Team Behind Aven Health."
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke/team"
+/>
+
       <Banner backgroundImage={teamBg} slides={slides} interval={6000} />
 
       <div className="space-y-8">

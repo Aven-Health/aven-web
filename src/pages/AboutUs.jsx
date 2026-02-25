@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, stagger } from "../utils/motion";
+import PageHelmet from "../components/pagehelmet";
 
 import aboutImage1 from "../assets/about.jpg";
 import aboutImage2 from "../assets/about2.avif";
@@ -39,6 +40,11 @@ export default function AboutUs({}) {
 
   return (
     <div className="space-y-10 md:space-y-10 max-w-7xl mx-auto">
+    <PageHelmet
+  title="Healthcare, Simplified. Connected. Built Around You.Aven Health"
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke/about"
+/>
       <motion.section
         className="relative"
         initial={{ opacity: 0 }}

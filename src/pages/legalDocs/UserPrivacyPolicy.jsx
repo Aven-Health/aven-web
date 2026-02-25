@@ -1,6 +1,8 @@
 import React from "react";
 import LegalCard from "../../components/LegalCard";
 import { FaShieldAlt } from "react-icons/fa";
+import PageHelmet from "../../components/pagehelmet";
+
 
 const UserPrivacyPolicy = () => {
   const sections = [
@@ -1363,17 +1365,18 @@ const UserPrivacyPolicy = () => {
 
   ];
 
-  const links = [
-    { name: "View Terms & Conditions", route: "/terms-conditions" }
-  ];
-
   return (
     <div>
+        <PageHelmet
+  title=" Aven Health: Users Privacy Policy"
+  description="Aven Health's  Users Privacy Policy"
+  url="https://www.avenhealth.co.ke/privacy-policy-users"
+
+/>
       <LegalCard
         title="USER PRIVACY POLICY"
         icon={<FaShieldAlt className="text-yellow-500" />}
         sections={sections}
-        links={links}
       />
     </div>
   );

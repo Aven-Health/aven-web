@@ -1,6 +1,8 @@
 import React from "react";
 import LegalCard from "../../components/LegalCard";
 import { FaShieldAlt } from "react-icons/fa";
+import PageHelmet from "../../components/pagehelmet";
+
 
 const userTermsSection1 = {
 
@@ -978,10 +980,19 @@ const userTermsSection1 = {
   ]
 
 };
-const UserTermsCard = () =>
+const UserTermsCard = () =>{
+return(
+  <div>
+      <PageHelmet
+  title="Users Terms and conditions"
+  description="Aven Health's Users Terms and Conditions"
+  url="https://www.avenhealth.co.ke/user-agreement"
 
+/>
   <LegalCard {...userTermsSection1} />;
-
+  </div>
+)
+}
 export default UserTermsCard;
 
 

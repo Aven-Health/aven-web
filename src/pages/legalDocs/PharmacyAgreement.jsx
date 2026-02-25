@@ -1,6 +1,8 @@
 import React from "react";
 import { FaShieldAlt } from "react-icons/fa";
 import LegalCard from "../../components/LegalCard";
+import PageHelmet from "../../components/pagehelmet";
+
 
 const PharmacyAgreement = () => {
   const sections = [
@@ -1715,11 +1717,16 @@ integrity, while ensuring clear communication and operational continuity.`,
 
   return (
     <div>
+        <PageHelmet
+  title=" Aven Heallth's Health Stores Terms And Conditions"
+  description="Aven Health's Health Stores Terms And Conditions"
+  url="https://www.avenhealth.co.ke/pharmacy-agreement"
+
+/>
       <LegalCard
         title="HEALTH STORES TERMS AND CONDITIONS"
         icon={<FaShieldAlt className="text-yellow-500" />}
         sections={sections}
-        links={links}
       />
     </div>
   );

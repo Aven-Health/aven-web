@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import GetStartedModal from "../components/getstarted";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import PageHelmet from "../components/pagehelmet";
 
 import heroImage from "../assets/01.jpg";
 import sectionImage1 from "../assets/02.png";
@@ -48,6 +49,12 @@ export default function Home() {
 
   return (
     <div className="space-y-20 md:space-y-28">
+            <PageHelmet
+  title="Aven Health. Healthcare, Simplified. Connected. Built Around You."
+  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  url="https://www.avenhealth.co.ke"
+/>
+
       <section className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           variants={stagger}
@@ -344,13 +351,13 @@ export default function Home() {
             {
               quote:
                 "Aven Health makes healthcare simple and accessible for me. And its very simple to use",
-              name: "Deborah Ayuma",
+              name: "Deborah",
               role: "User",
             },
             {
               quote:
                 "I can easily connect with pharmacies and providers in one place.",
-              name: "Sharon Potishoi",
+              name: "Sharon",
               role: "User",
             },
             {

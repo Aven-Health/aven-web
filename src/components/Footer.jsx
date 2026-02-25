@@ -49,6 +49,7 @@ export default function Footer() {
                 Communities
               </Link>
             </li>
+           
           </ul>
         </div>
 
@@ -77,6 +78,14 @@ export default function Footer() {
                 className="hover:text-accent transition-colors"
               >
                 Contact Us
+              </Link>
+            </li>
+              <li>
+              <Link
+                to="/team"
+                className="hover:text-accent transition-colors"
+              >
+               Our Team
               </Link>
             </li>
           </ul>

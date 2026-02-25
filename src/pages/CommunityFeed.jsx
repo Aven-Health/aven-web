@@ -5,6 +5,7 @@ import communityImg1 from "../assets/community.jpg";
 import communityImg2 from "../assets/comm02.jfif";
 import communityImg3 from "../assets/community03.jpg";
 import communityImg4 from "../assets/comm03.jpg";
+import PageHelmet from "../components/pagehelmet";
 
 
 export default function CommunityFeed() {
@@ -47,6 +48,11 @@ export default function CommunityFeed() {
 
   return (
     <div className="space-y-20">
+        <PageHelmet
+  title="Share Your Thoughts in a Safe Space. Aven Health"
+  description="Post updates, ask questions, and interact with other users’ thoughts in a supportive environment."
+  url="https://www.avenhealth.co.ke/communities"
+/>
       <Banner
         backgroundImage={communityImg1}
         interval={7000}
