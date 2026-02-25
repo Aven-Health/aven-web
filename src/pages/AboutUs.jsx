@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, stagger } from "../utils/motion";
 
-import aboutImage1 from "../assets/about01.png";
-import aboutImage2 from "../assets/about02.png";
+import aboutImage1 from "../assets/about.jpg";
+import aboutImage2 from "../assets/about2.avif";
 import aboutImage3 from "../assets/about03.png";
 
 export default function AboutUs({}) {
@@ -140,7 +140,7 @@ export default function AboutUs({}) {
       >
         <motion.div
           variants={fadeUp}
-          className=" p-10 rounded-2xl shadow-lg space-y-5"
+          className=" space-y-5"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold text-accent">
             Why Aven Health Was Created
@@ -190,7 +190,8 @@ export default function AboutUs({}) {
 
         <motion.div
           variants={fadeUp}
-          className="p-10 rounded-2xl shadow-lg space-y-5"
+          className=" space-y-5"
+
         >
           <h2 className="text-2xl font-semibold text-accent">
             What We Believe About the Future of Healthcare
@@ -210,7 +211,7 @@ export default function AboutUs({}) {
               learn, and support one another online
             </li>
             <li>
-              • Digital health technology should enhance human care — not
+              • Digital health technology should enhance human care not
               replace it
             </li>
             <li>

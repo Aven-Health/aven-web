@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import howImage2 from "../assets/how02.png";
+import howImage2 from "../assets/doc.jpg";
+import howImage1 from "../assets/circle.jpg";
+
 import Banner from "../components/banner";
+ 
 
 
 const fadeUp = {
@@ -129,7 +132,7 @@ export default function HowItWorks() {
           variants={fadeUp}
         >
           <img
-            src={howImage2}
+            src={howImage1}
             alt="User interacting with Aven Health digital healthcare app"
             className="rounded-2xl shadow-xl w-full object-cover"
           />

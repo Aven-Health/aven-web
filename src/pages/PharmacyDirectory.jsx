@@ -4,6 +4,10 @@ import Banner from "../components/banner";
 import pharmFeature1 from "../assets/pharmacy01.png";
 import pharmFeature2 from "../assets/pharmacy02.png";
 import pharmFeature3 from "../assets/pharmacy03.png";
+import pharmFeature4 from "../assets/chronic.png";
+import pharmFeature5 from "../assets/pharmacy03.png";
+import pharmFeature6 from "../assets/reminder.jfif";
+
 import pharm1 from "../assets/pharmacy01.png";
 
 export default function PharmacyDirectory() {
@@ -64,19 +68,19 @@ export default function PharmacyDirectory() {
     title: "Chronic Care & Specialty Meds",
     description:
       "Access Health Stores offering medications for chronic conditions like diabetes, hypertension, and asthma.",
-    image: pharmFeature1,
+    image: pharmFeature4,
   },
   {
     title: "Web Ordering Coming Soon",
     description:
       "Currently available via the app. Online ordering, delivery, and full web support will be coming soon.",
-    image: pharmFeature2,
+    image: pharmFeature5,
   },
   {
     title: "Medication Reminders & Alerts",
     description:
       "Receive timely reminders to refill prescriptions and take your medications, helping you stay on track with your health.",
-    image: pharmFeature3,
+    image: pharmFeature6,
   },
 ];
 
