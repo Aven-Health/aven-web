@@ -8,10 +8,10 @@ import "swiper/css";
 
 import heroImage from "../assets/01.jpg";
 import sectionImage1 from "../assets/02.png";
-import sectionImage2 from "../assets/03.jpg";
-import sectionImage3 from "../assets/04.jpg";
-import sectionImage4 from "../assets/05.png";
-import sectionImage5 from "../assets/06.jpg";
+import sectionImage2 from "../assets/circle.jpg";
+import sectionImage3 from "../assets/community.jpg";
+import sectionImage4 from "../assets/heath.png";
+import sectionImage5 from "../assets/note.png";
 
 export default function Home() {
   const slides = [

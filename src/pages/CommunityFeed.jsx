@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
-import communityImg1 from "../assets/community01.jpg";
-import communityImg2 from "../assets/community02.jpg";
+import communityImg1 from "../assets/community.jpg";
+import communityImg2 from "../assets/comm02.jfif";
 import communityImg3 from "../assets/community03.jpg";
+import communityImg4 from "../assets/comm03.jpg";
+
 
 export default function CommunityFeed() {
   const [showNotice, setShowNotice] = useState(false);
@@ -17,7 +19,7 @@ export default function CommunityFeed() {
       title: "Share Your Thoughts",
       description:
         "Post updates, ask questions, and interact with other users’ thoughts in a supportive environment.",
-      image: communityImg1,
+      image: communityImg4,
     },
     {
       title: "Join Different Communities",
@@ -35,7 +37,7 @@ export default function CommunityFeed() {
       title: "Create Your Own Community",
       description:
         "Start your own community around topics that matter to you and invite others to join and share.",
-      image: communityImg1,
+      image: communityImg4,
     },
   ];
 

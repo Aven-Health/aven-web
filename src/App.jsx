@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-
+import { Analytics } from '@vercel/analytics/react';
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -60,6 +60,8 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+       <Analytics />
+
       <Layout>
         <ErrorBoundary>
           <Suspense fallback={<div className="p-1 text-center">Loading...</div>}>

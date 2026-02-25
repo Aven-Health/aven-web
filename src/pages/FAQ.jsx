@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Banner from "../components/banner";
-import faqBg from "../assets/pharmacy01.png";
+import faqBg from "../assets/faqs.jpg";
 
 export default function FAQ() {
   const faqSections = [

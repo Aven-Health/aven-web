@@ -8,7 +8,7 @@ import paulWaithaka from "../assets/paul_waithaka.jpeg";
 import safiaMohammed from "../assets/safia_mohammed.jpeg";
 import antonyOchieng from "../assets/antony_ochieng.jpg";
 import bruceLukwa from "../assets/bruce_lukwa.jpeg";
-import teamBg from "../assets/pharmacy01.png";
+import teamBg from "../assets/team.jpg";
 
 export default function MeetTheTeam() {
   const [openIndex, setOpenIndex] = useState(null);

@@ -3,13 +3,19 @@ import { useState } from "react";
 
 export default function GetStartedModal({ isOpen, onClose }) {
 
-  const [form, setForm] = useState({ name: "", email: "" });
+  const [form, setForm] = useState({ 
+    name: "", 
+    email: "", 
+    entryType: "" 
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
   const validate = () => {
     if (!form.name.trim()) return "Name is required";
     if (!form.email.includes("@")) return "Valid email required";
+    if (!form.entryType) return "Please select how you want to join";
     return null;
   };
 
@@ -30,27 +36,27 @@ export default function GetStartedModal({ isOpen, onClose }) {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          type: "Get Started Signup",
+          type: "Early Access Signup",
           name: form.name,
           email: form.email,
+          entryType: form.entryType, // ✅ sent to Formspree
         }),
       });
+
       if (!response.ok) throw new Error("Failed");
 
       setSubmitted(true);
 
       setTimeout(() => {
         setSubmitted(false);
-        setForm({ name: "", email: "" });
+        setForm({ name: "", email: "", entryType: "" });
         onClose();
       }, 2000);
 
-      setSubmitted(true);
     } catch {
       setError("Something went wrong. Try again.");
     }
   };
-
 
   return (
     <AnimatePresence>
@@ -81,11 +87,11 @@ export default function GetStartedModal({ isOpen, onClose }) {
             </button>
 
             <h2 className="text-2xl font-bold mb-4">
-              Start Your Health Journey
+              Be the First to Join Aven
             </h2>
 
             <p className="text-gray-300 mb-6">
-              Join Aven Health and experience connected, smarter healthcare.
+              Get early access to Aven Health and help shape the future of connected healthcare.
             </p>
 
             {submitted ? (
@@ -94,11 +100,12 @@ export default function GetStartedModal({ isOpen, onClose }) {
                   You're on the list 🎉
                 </h3>
                 <p className="text-gray-300">
-                  We’ll notify you when Aven Health launches.
+                  We’ll notify you as soon as Aven launches.
                 </p>
               </div>
             ) : (
               <div className="space-y-4">
+
                 <input
                   type="text"
                   placeholder="Full Name"
@@ -115,11 +122,25 @@ export default function GetStartedModal({ isOpen, onClose }) {
                   className="w-full p-3 rounded bg-cardLight text-white focus:outline-none focus:ring-2 focus:ring-accent"
                 />
 
+                <select
+                  value={form.entryType}
+                  onChange={(e) => setForm({ ...form, entryType: e.target.value })}
+                  className="w-full p-3 rounded bg-cardLight text-white focus:outline-none focus:ring-2 focus:ring-accent"
+                >
+                  <option value="" className="text-gray-400">
+                    Select how you want to join
+                  </option>
+                  <option value="User">User</option>
+                  <option value="Health Store Provider">Health Store Provider</option>
+                  <option value="Investor">Investor</option>
+                  <option value="Medical Professional">Medical Professional</option>
+                </select>
+
                 <button
                   onClick={handleSubmit}
-                  className="w-full py-3 bg-accent text-white font-semibold rounded-lg shadow-lg"
+                  className="w-full py-3 bg-accent text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition"
                 >
-                  Join Now
+                  Join Aven Early
                 </button>
 
                 {error && (

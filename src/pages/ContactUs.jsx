@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Banner from "../components/banner"; 
-import contactBg from "../assets/pharmacy01.png"; 
+import contactBg from "../assets/contact.jpg"; 
 
 export default function ContactUs() {
   const [form, setForm] = useState({

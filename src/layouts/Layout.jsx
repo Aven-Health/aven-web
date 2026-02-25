@@ -13,13 +13,13 @@ export default function Layout({ children }) {
 
       <main className="flex-1 pt-24 px-6 max-w mx-auto w-full text-left">
 
-        <div className=" mx-auto px-2 pt-0 text-left">
+        <div className=" mx-auto px-2 pt-0 text-left pl-6">
           {children}
         </div>
       </main>
 
 
-      <footer className="w-full mt-12">
+      <footer className="w-full mt-6">
         <Footer />
       </footer>
 
