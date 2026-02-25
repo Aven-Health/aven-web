@@ -7,6 +7,7 @@ import PageHelmet from "../../components/pagehelmet";
 const userTermsSection1 = {
 
   title: "User Terms and Conditions",
+  icon: <FaShieldAlt className="text-yellow-500" />,
   sections: [
     {
       heading: "1. Introduction / Scope",
@@ -997,20 +998,19 @@ export default UserTermsCard;
 
 
 // const links = [
-//   { name: "View Privacy Policy", route: "/privacy-policy", route: "/pharmacy-terms-conditions" },
-// ];
+//     { name: "View Terms & Conditions", route: "/terms-conditions" },
+//   ];
 
-// return (
-//   <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center">
-//     <LegalCard
-//       title="User Terms & Conditions"
-//       icon={<FaShieldAlt className="text-yellow-500" />}
-//       sections={sections}
-//       links={links}
-//     />
-//   </div>
-// );
-
+//   return (
+//     <div className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center">
+//       <LegalCard
+//         subheading="User Terms & Conditions"
+//         icon={<FaShieldAlt className="text-blue-500" />}
+//         sections={sections}
+//         links={links}
+//       />
+//     </div>
+//   );
 // };
 
-//export default UserTermsAndConditions;
+// export default UserTermsAndConditions;
