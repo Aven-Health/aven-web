@@ -1,6 +1,29 @@
+import PageHelmet from "../components/pagehelmet";
+
 export default function OurApp() {
   return (
     <section className="space-y-24">
+      <PageHelmet
+        title="Aven Health App | Download Kenya's Digital Healthcare Platform"
+        description="Discover what the Aven Health app does — connect with doctors, find pharmacies, access preventive care insights, and join health communities. Download Kenya's integrated health app today."
+        url="https://www.avenhealth.co.ke/our-app"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Aven Health App",
+          applicationCategory: "HealthApplication",
+          operatingSystem: "Android, iOS",
+          description:
+            "Aven Health is a digital healthcare platform that connects users in Kenya with doctors, pharmacies, and health communities in one integrated ecosystem.",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+          url: "https://www.avenhealth.co.ke/our-app",
+          publisher: {
+            "@type": "Organization",
+            name: "Aven Health",
+            url: "https://www.avenhealth.co.ke",
+          },
+        }}
+      />
 
       {/* HEADER */}
       <div className="text-center">
@@ -50,16 +73,9 @@ export default function OurApp() {
             text: "Privacy-first architecture built with trust and security at its core.",
           },
         ].map(({ title, text }) => (
-          <div
-            key={title}
-            className="bg-cardLight p-6 rounded-xl"
-          >
-            <h3 className="text-xl font-semibold text-accent">
-              {title}
-            </h3>
-            <p className="mt-3 text-gray-300">
-              {text}
-            </p>
+          <div key={title} className="bg-cardLight p-6 rounded-xl">
+            <h3 className="text-xl font-semibold text-accent">{title}</h3>
+            <p className="mt-3 text-gray-300">{text}</p>
           </div>
         ))}
       </div>
@@ -75,7 +91,6 @@ export default function OurApp() {
           right information, empowering healthier daily decisions.
         </p>
       </div>
-
     </section>
   );
 }

@@ -1,3 +1,6 @@
+//DoctorProfile.jsx
+
+import PageHelmet from "../components/pagehelmet";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
@@ -26,6 +29,30 @@ export default function DoctorProfile() {
 
   return (
     <section className="max-w-4xl mx-auto space-y-10">
+      <PageHelmet
+  title={`Doctor ${id} | Book an Appointment – Aven Health Kenya`}
+  description={`View the profile of Doctor ${id} on Aven Health and book a secure online or in-person consultation. Access verified healthcare professionals in Kenya.`}
+  url={`https://www.avenhealth.co.ke/appointments/${id}`}
+  robots="noindex, follow"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name: `Doctor ${id}`,
+    url: `https://www.avenhealth.co.ke/appointments/${id}`,
+    medicalSpecialty: "General Practitioner",
+    description:
+      "Community-first healthcare professional focused on preventative and holistic care, available for online and in-person consultations through Aven Health.",
+    availableService: {
+      "@type": "MedicalTherapy",
+      name: "Online and In-Person Consultation",
+    },
+    memberOf: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+    },
+  }}
+/>
       {/* Doctor Card */}
       <div className="bg-cardDark rounded-xl overflow-hidden shadow">
         <img

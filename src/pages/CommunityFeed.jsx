@@ -1,3 +1,5 @@
+//CommunityFeed.jsx
+
 import { useState, useEffect } from "react";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
@@ -48,10 +50,23 @@ export default function CommunityFeed() {
 
   return (
     <div className="space-y-20">
-        <PageHelmet
-  title="Share Your Thoughts in a Safe Space. Aven Health"
-  description="Post updates, ask questions, and interact with other users’ thoughts in a supportive environment."
+  <PageHelmet
+  title="Aven Health Communities | Join Kenya's Health Discussion Platform"
+  description="Join patient support communities, share health experiences, and engage in trusted health discussions on the Aven Health community platform — covering mental wellness, fitness, nutrition, and chronic care."
   url="https://www.avenhealth.co.ke/communities"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Aven Health Communities",
+    url: "https://www.avenhealth.co.ke/communities",
+    description:
+      "A community health platform where Kenyans connect, share experiences, and support each other across mental wellness, fitness, nutrition, and chronic care topics.",
+    publisher: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+    },
+  }}
 />
       <Banner
         backgroundImage={communityImg1}

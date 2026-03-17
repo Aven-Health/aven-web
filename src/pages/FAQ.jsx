@@ -1,3 +1,5 @@
+//FAQ.jsx
+
 import { useState } from "react";
 import Banner from "../components/banner";
 import faqBg from "../assets/faqs.jpg";
@@ -377,9 +379,79 @@ export default function FAQ() {
   return (
     <section className="space-y-20 ">
             <PageHelmet
-  title="Reach Out to Aven Health. Healthcare, Simplified. Connected. Built Around You."
-  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  title="Aven Health FAQ | Your Healthcare Platform Questions Answered"
+  description="Find answers to common questions about Aven Health — including how to book doctors online, connect with pharmacies, manage your account, and use Kenya's integrated digital health platform."
   url="https://www.avenhealth.co.ke/faq"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Aven Health?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Aven Health is a community-first digital health platform designed to connect individuals with healthcare providers, services, and trusted health resources in Kenya.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Aven Health a hospital or clinic?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. Aven Health is not a healthcare provider. It serves as an access point that helps users discover, plan, and engage with healthcare services.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Aven Health free to use?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Core discovery and access features are designed to be widely accessible. Additional services may be introduced later.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I book an appointment on Aven Health?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Booking is currently available in the Aven Health app. Simply select a doctor, choose a time, and confirm. Web booking will be available in a future update.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are there telehealth doctors available on Aven Health?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Many doctors on Aven Health offer secure online consultations via in-app video call appointments, in addition to physical appointments.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is my consultation private?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. All one-on-one appointments and communications on Aven Health are fully encrypted end-to-end. Only you and your doctor can access your consultation content.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where is Aven Health available?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Currently, Aven Health operates in Kenya where local healthcare providers and pharmacies are registered on the platform. Coverage will expand over time.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I contact Aven Health support?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Use the in-app support chat or email avenhealthke@gmail.com for help with bookings, payments, account issues, or technical problems.",
+        },
+      },
+    ],
+  }}
 />
 
   <Banner backgroundImage={faqBg} slides={slides} interval={6000} />

@@ -40,10 +40,24 @@ export default function AboutUs({}) {
 
   return (
     <div className="space-y-10 md:space-y-10 max-w-7xl mx-auto">
-    <PageHelmet
-  title="Healthcare, Simplified. Connected. Built Around You.Aven Health"
-  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+<PageHelmet
+  title="About Aven Health | Kenya's Integrated Digital Healthcare Platform"
+  description="Aven Health is building Kenya's most connected digital health ecosystem — uniting patients, doctors, pharmacies, and communities into one seamless, empowering platform."
   url="https://www.avenhealth.co.ke/about"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Aven Health",
+    url: "https://www.avenhealth.co.ke/about",
+    description:
+      "Learn how Aven Health is building Kenya's most integrated digital health ecosystem — connecting patients, doctors, pharmacies, and communities.",
+    publisher: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+      address: { "@type": "PostalAddress", addressCountry: "KE" },
+    },
+  }}
 />
       <motion.section
         className="relative"

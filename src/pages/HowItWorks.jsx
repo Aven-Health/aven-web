@@ -1,3 +1,5 @@
+//HowitWorks.jsx
+
 import { motion } from "framer-motion";
 import howImage2 from "../assets/doc.jpg";
 import howImage1 from "../assets/circle.jpg";
@@ -46,9 +48,37 @@ export default function HowItWorks() {
   return (
     <section className="space-y-20">
             <PageHelmet
-  title="Aven Health. Healthcare, Simplified. Connected. Built Around You."
-  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+  title="How Aven Health Works | Discover, Connect & Access Healthcare in Kenya"
+  description="Learn how Aven Health works — discover verified doctors and pharmacies, connect with healthcare providers, and take control of your health journey through Kenya's integrated digital health platform."
   url="https://www.avenhealth.co.ke/how-it-works"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How Aven Health Works",
+    description:
+      "A step-by-step guide to using the Aven Health digital healthcare platform in Kenya.",
+    url: "https://www.avenhealth.co.ke/how-it-works",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Discover",
+        text: "Search and explore healthcare providers, pharmacies, and wellness resources in your area.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Connect",
+        text: "Engage directly with healthcare providers, pharmacies, and community experts.",
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Empower",
+        text: "Make informed health decisions using insights from your community, personalized guidance, and preventative care recommendations.",
+      },
+    ],
+  }}
 />
 
      <Banner backgroundImage={howImage2} slides={slides} interval={6000} />

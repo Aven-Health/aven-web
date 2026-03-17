@@ -1,3 +1,5 @@
+//DoctorDirectory.jsx
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ComingSoonModal from "../components/ui/ComingSoonModal";
@@ -90,9 +92,28 @@ const features = [
   return (
     <section className=" space-y-20">
 <PageHelmet
-  title="Book Appointments – Aven Health"
-  description="Access verified doctors, book appointments easily, and stay connected with trusted healthcare professionals on Aven Health."
+  title="Find & Book Verified Doctors in Kenya | Aven Health"
+  description="Browse verified doctors, specialists, and healthcare professionals on Aven Health. Book secure online or in-person appointments in Kenya through our integrated digital health platform."
   url="https://www.avenhealth.co.ke/appointments"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: "Doctor Directory – Aven Health Kenya",
+    url: "https://www.avenhealth.co.ke/appointments",
+    description:
+      "Find and book verified doctors, specialists, and healthcare professionals in Kenya through the Aven Health digital platform.",
+    about: {
+      "@type": "MedicalBusiness",
+      name: "Aven Health Doctor Directory",
+      description:
+        "A verified directory of doctors and medical professionals available for online and in-person consultations in Kenya.",
+    },
+    provider: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+    },
+  }}
 />
       <Banner
         backgroundImage={doctor1}

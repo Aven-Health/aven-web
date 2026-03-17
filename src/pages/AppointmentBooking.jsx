@@ -1,3 +1,5 @@
+//AppointmentBooking.jsx
+import PageHelmet from "../components/pagehelmet";
 import doctor1 from "../assets/01.png";
 import doctor2 from "../assets/02.png";
 import doctor3 from "../assets/03.png";
@@ -53,7 +55,28 @@ export default function AppointmentBooking() {
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
-
+<PageHelmet
+  title="Book a Doctor Online in Kenya | Aven Health Appointments"
+  description="Book online and in-person doctor consultations through the Aven Health app. Browse verified general practitioners, specialists, and mental health professionals in Kenya."
+  url="https://www.avenhealth.co.ke/appointment-booking"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: "Book Doctor Appointments – Aven Health",
+    url: "https://www.avenhealth.co.ke/appointment-booking",
+    description:
+      "Book online and in-person doctor appointments in Kenya through the Aven Health digital healthcare platform.",
+    about: {
+      "@type": "MedicalCondition",
+      name: "General Healthcare Consultation",
+    },
+    provider: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+    },
+  }}
+/>
       <div className="text-start mb-12">
         <header className="space-y-4">
           <h1 className="font-bold text-3xl text-left">Book Appointments</h1>

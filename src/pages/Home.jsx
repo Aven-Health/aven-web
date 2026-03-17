@@ -49,10 +49,57 @@ export default function Home() {
 
   return (
     <div className="space-y-20 md:space-y-28">
-            <PageHelmet
-  title="Aven Health. Healthcare, Simplified. Connected. Built Around You."
-  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+ <PageHelmet
+  title="Aven Health | Digital Healthcare Platform in Kenya – Telehealth & Online Doctor Consultation"
+  description="Aven Health is Kenya's leading digital healthcare platform. Connect with doctors online, access telehealth services, find pharmacies, and join a thriving health community — all in one integrated digital health ecosystem."
   url="https://www.avenhealth.co.ke"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.avenhealth.co.ke/#website",
+        url: "https://www.avenhealth.co.ke",
+        name: "Aven Health",
+        description: "Kenya's integrated digital healthcare platform",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate:
+              "https://www.avenhealth.co.ke/search?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "MedicalOrganization",
+        "@id": "https://www.avenhealth.co.ke/#organization",
+        name: "Aven Health",
+        url: "https://www.avenhealth.co.ke",
+        logo: "https://www.avenhealth.co.ke/favicon.ico",
+        description:
+          "Aven Health connects people with doctors, pharmacies, and wellness communities through a fully integrated digital health ecosystem in Kenya.",
+        address: { "@type": "PostalAddress", addressCountry: "KE" },
+        sameAs: ["https://twitter.com/avenHealth"],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          url: "https://www.avenhealth.co.ke/contact",
+        },
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Aven Health App",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Android, iOS",
+        description:
+          "Download the Aven Health app to connect with doctors, pharmacies, and health communities in Kenya.",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "KES" },
+        url: "https://www.avenhealth.co.ke/our-app",
+      },
+    ],
+  }}
 />
 
       <section className="grid lg:grid-cols-2 gap-12 items-center">

@@ -1,3 +1,5 @@
+//ContactUs.jsx
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Banner from "../components/banner"; 
@@ -88,10 +90,24 @@ const handleSubmit = async (e) => {
 
   return (
     <section className=" mx-auto space-y-12">
-        <PageHelmet
-  title="Reach Out to Aven Health. Healthcare, Simplified. Connected. Built Around You."
-  description="Creating a unified digital health ecosystem that brings providers, pharmacies, and communities into one seamless experience."
+       <PageHelmet
+  title="Contact Aven Health | Get Support & Share Feedback"
+  description="Reach out to the Aven Health team with questions, feedback, or support requests. We're here to help you navigate Kenya's leading digital healthcare platform."
   url="https://www.avenhealth.co.ke/contact"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Aven Health",
+    url: "https://www.avenhealth.co.ke/contact",
+    description:
+      "Contact the Aven Health support team for help with appointments, account issues, or platform feedback.",
+    publisher: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+      email: "avenhealthke@gmail.com",
+    },
+  }}
 />
 
 

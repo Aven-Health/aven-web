@@ -1,3 +1,5 @@
+//PharmacyDirectory.jsx
+
 import ComingSoonModal from "../components/ui/ComingSoonModal";
 import Banner from "../components/banner";
 import PageHelmet from "../components/pagehelmet";
@@ -88,9 +90,22 @@ export default function PharmacyDirectory() {
   return (
     <section className="space-y-12 text-left">
         <PageHelmet
-  title="Connect with Verified Sellers. Healthcare, Simplified. Connected. Built Around You."
-  description="Find verified and licensed Health Stores in your area, ensuring safe and reliable healthcare services."
+  title="Find Verified Pharmacies in Kenya | Aven Health"
+  description="Connect with licensed and verified pharmacies across Kenya through Aven Health. Browse medications, OTC products, chronic care supplies, and wellness items — all in one trusted platform."
   url="https://www.avenhealth.co.ke/pharmacies"
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "PharmacyPage",
+    name: "Pharmacy Directory – Aven Health",
+    url: "https://www.avenhealth.co.ke/pharmacies",
+    description:
+      "Find verified and licensed pharmacies in Kenya through the Aven Health digital healthcare platform.",
+    provider: {
+      "@type": "MedicalOrganization",
+      name: "Aven Health",
+      url: "https://www.avenhealth.co.ke",
+    },
+  }}
 />
       <Banner backgroundImage={pharm1} slides={pharmacySlides} interval={6500} />
 
